@@ -1,0 +1,2 @@
+class BettingsController < ApplicationController
+end
