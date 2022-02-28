@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_02_28_151522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "bets", force: :cascade do |t|
+    t.string "question"
+    t.text "description"
+    t.date "expiring_at"
+    t.string "result"
+    t.date "result_published_at"
+    t.string "category"
+    t.string "hashtag"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_bets_on_user_id"
+  end
+
+  create_table "bettings", force: :cascade do |t|
+    t.string "answer"
+    t.boolean "won"
+    t.bigint "user_id", null: false
+    t.bigint "bet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bet_id"], name: "index_bettings_on_bet_id"
+    t.index ["user_id"], name: "index_bettings_on_user_id"
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "source"
+    t.string "url"
+    t.bigint "bet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bet_id"], name: "index_media_on_bet_id"
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -51,10 +87,19 @@ ActiveRecord::Schema.define(version: 2022_02_28_151522) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
+    t.integer "phone_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+
+  add_foreign_key "bets", "users"
+  add_foreign_key "bettings", "bets"
+  add_foreign_key "bettings", "users"
+  add_foreign_key "media", "bets"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end
