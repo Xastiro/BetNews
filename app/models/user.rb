@@ -12,5 +12,5 @@ class User < ApplicationRecord
   validates :username, presence: true
   validates :encrypted_password, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :phone_number, format: { with: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ }
+  # validates :phone_number, format: { with: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ }
 end
