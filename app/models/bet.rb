@@ -2,7 +2,7 @@ class Bet < ApplicationRecord
   has_one_attached :photo
   has_many :medias
   has_many :bettings
-  belongs_to :user
+  belongs_to :publisher, class_name: "User"
 
   validates :hashtag, presence: true, format: { with: /#[\S+]+/, message: "only allows hashtags" }
   validates :description, presence: true, length: { maximum: 1000, too_long: "%{count} characters is the maximum allowed" }
