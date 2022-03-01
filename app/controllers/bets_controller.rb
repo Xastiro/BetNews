@@ -1,5 +1,7 @@
 class BetsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  # à supprimer une fois la vue new créee :
+  skip_before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @bets = Bet.all
