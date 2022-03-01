@@ -3,19 +3,21 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :bets, only: %i[index show new create edit update] do
-    resources :bettings, only: %i[create update]
+  resources :bets, only: %i[index show new create] do
+    resources :bettings, only: %i[create]
     member do
-      get :confirmation
+      get :publication_confirmation
+      get :closing
+      patch :close
     end
   end
 
   # get '/bets/:id/confirmation', to: 'bets#confirmation'
 
-  resource :profile, only: [] do
-    resources :betting, only: [:index] do
+  resource :profile, only: [:edit, :update] do
+    resources :bettings, only: [:index]
+    resources :bets, only: [] do
       collection do
-        get :ended
         get :published
       end
     end
