@@ -1,3 +1,14 @@
-<% @bets.each do |bet| %>
-  <%= bet.title %>
-<% end %>
+<div class="container">
+
+<div class="cards">
+  <% @bets.each do |bet| %>
+    <div class="card">
+      <%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY", class: "card-img-top", alt: "Image that illustrates the bet") %>
+      <div class="card-body">
+        <h5 class="card-title"><%= bet.question %></h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  <% end %>
+</div>

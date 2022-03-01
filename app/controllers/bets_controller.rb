@@ -1,4 +1,5 @@
 class BetsController < ApplicationController
+  skip_before_action :authenticate_user! 
 
   def index
     @bets = Bet.all
