@@ -1,4 +1,5 @@
 class BetsController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
   # à supprimer une fois la vue new créee :
   skip_before_action :authenticate_user!, only: [:new, :create]
@@ -8,6 +9,9 @@ class BetsController < ApplicationController
   end
 
   def show
+    @bet = Bet.find(params[:id])
+    # @user = @bet.user
+    # @betting = Betting.new
   end
 
   def new
@@ -32,9 +36,11 @@ class BetsController < ApplicationController
   def update
   end
 
+
   private
 
   def bet_params
     params.require(:bet).permit(:hashtag, :descritpion, :photo, :expiring_at, :question)
   end
+
 end
