@@ -31,7 +31,7 @@ macron = Bet.create!(
 )
 
 zemmour = Bet.create!(
-  hashtag: "#election #france #parrainage",
+  hashtag: "#election #parrainage",
   description: "Tout citoyen français âgé de 18 ans et plus, jouissant de ses droits civiques, peut se présenter à l’élection pour la présidence de la République, mais sa candidature n’est validée par le Conseil constitutionnel que s’il obtient au minimum 500 parrainages d’élus. Ce système a été mis en place par la loi du 6 novembre 1962 instaurant l’élection du président au suffrage universel afin d’en limiter le nombre de candidats. Il exige actuellement un minimum de 500 parrainages (ou présentations), que les élus suivants sont habilités à donner. Les candidats à la présidence de la République sont contraints de collecter des parrainages dans au moins 30 départements ou collectivités d’outre-mer différents, sans que l’un d’entre eux dépasse un dixième des parrainages (soit 50). Cela assure un minimum de représentativité géographique.",
   question: "Eric Zemmour aura t-il ses 500 parrainages ?",
   expiring_at: Date.new(2022,03,04),
@@ -69,7 +69,7 @@ chomage = Bet.create!(
 
 
 cesar = Bet.create!(
-  hashtag: "#cinema #cesar #pierreniney",
+  hashtag: "#cinema #cesar #niney",
   description: "Sont nommés pour le César du meilleur acteur: Damien Bonnard dans Les Intranquilles, Adam Driver dans Annette, Gilles Lellouche dans BAC Nord, Vincent Macaigne dans Médecin de nuit, Benoît Magimel dans De son vivant, Pio Marmaï dans La Fracture, Pierre Niney dans Boîte noire",
   expiring_at: Date.new(2022,02,25),
   question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire",
@@ -79,7 +79,7 @@ cesar = Bet.create!(
 )
 
 foot = Bet.create!(
-  hashtag: "#cinema #cesar #pierreniney",
+  hashtag: "#psg #om",
   description: "Le match PSG - Marseille de Ligue 1 est programmé pour le Dimanche 17 Avril 2022. Au lundi 28 février 2022, l'équipe de Paris Saint-Germain se classe 1e de la Ligue 1, avec un total de 59 points. Elle totalise 18 victoires, 5 matchs nuls et 1 défaites. PSG a marqué 52 buts et en a encaissés 19, ce qui lui donne un goal average de 33. De son côté, l'équipe de Olympique de Marseille se classe 2e de la Ligue 1, avec un total de 46 points. Elle compte 13 victoires, 7 matchs nuls et 4 défaites. Marseille a inscrit 38 buts et en a encaissés 21. Elle présente un goal average de 17.",
   expiring_at: Date.new(2022,04,17),
   question: "Le PSG va t-il gagner face à l'OM le 24/04?",
