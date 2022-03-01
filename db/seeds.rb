@@ -50,7 +50,7 @@ ukraine = Bet.new(
   publisher: lea
 )
 
-russie = Bet.new(
+petrole = Bet.new(
   hashtag: "#petrole #baril",
   description: "Jusqu'où iront les cours du pétrole et du gaz ? Comme redouté ces derniers jours, le prix du baril de brent a franchi pour la première fois depuis 2014 la barre des 100 dollars. En début de matinée, quand Vladimir Poutine a annoncé le déclenchement de son opération militaire en Ukraine, il a même culminé brièvement à 105 dollars. Même tendance pour le WTI, référence américaine du baril de pétrole, qui se négocie à 96 dollars, après un pic à plus de 100 dollars dans la matinée.",
   expiring_at: Date.new(2022,04,30),
@@ -173,4 +173,38 @@ Betting.create(
 )
 
 # For photos
+
+file_macron = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646139629/betnews/Presidentielle-2022-Emmanuel-Macron-voit-sa-candidature-retardee-par-la-guerre-en-Ukraine_mtevtv.webp')
+macron.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_zemmour = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141681/betnews/aktgskzvjni0yt2dnwpu.jpg')
+zemmour.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_ukraine = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141745/betnews/olxqzaqg8ty14pqwuilq.jpg')
+ukraine.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_petrole = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141920/betnews/svtxu7o3johzesnmsphb.jpg')
+petrole.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_chomage = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141506/betnews/d84b4cee75f0b160c14c7257e8c5548a9f907c993ea6e7485792d98b2d9dafad_jipdtk.jpg')
+petrole.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_cesar = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142009/betnews/hxc1rxqigfrqnmfl8nib.jpg')
+cesar.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_foot = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142089/betnews/images_vqub15.jpg')
+foot.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_kohlanta = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142215/betnews/iyooa89kaqshrbxhxu4b.jpg')
+kohlanta.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_thevoice = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142182/betnews/charles-kaylan-1_bureau-233_lou-breton_itv_tf1_em3-9f4687-40dc0b-0_1x_p2uouf.jpg')
+thevoice.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_covid = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142294/betnews/images_etm5np.jpg')
+covid.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file_chasse = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142326/betnews/hh2magy2leqbea8xj8ne.jpg')
+chasse.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
 
