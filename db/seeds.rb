@@ -12,15 +12,54 @@ puts 'Creating Users Bets Bettings and Medias'
 
 hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo')
 sarah = User.create!(email: 'sarah@outlook.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille')
-christiane = User.create!(email: 'christiane@orange.fr', last_name: 'Bugel', first_name: 'christiane', password: 'azerty', username: 'Christiane44')
-matthias = User.create!(email: 'matthias@gmail.com', last_name: 'Seeburger', first_name: 'matthias', password: 'azerty', username: 'Xastiro')
-john = User.create!(email: 'john@gmail.com', last_name: 'Smith', first_name: 'john', password: 'azerty', username: 'Joe')
-lea = User.create!(email: 'lea@gmail.com', last_name: 'de la Tour', first_name: 'léa', password: 'azerty', username: 'madameIrma')
-gaelle = User.create!(email: 'gaelle@gmail.com', last_name: 'antoine', first_name: 'gaelle', password: 'azerty', username: 'gaelle')
-mathis = User.create!(email: 'mathis@gmail.com', last_name: 'correz', first_name: 'mathis', password: 'azerty', username: 'Mat89')
+christiane = User.create!(email: 'christiane@orange.fr', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44')
+matthias = User.create!(email: 'matthias@gmail.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro')
+john = User.create!(email: 'john@gmail.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe')
+lea = User.create!(email: 'lea@gmail.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma')
+gaelle = User.create!(email: 'gaelle@gmail.com', last_name: 'Antoine', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle')
+mathis = User.create!(email: 'mathis@gmail.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89')
+julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne')
+malo = User.create!(email: 'malo@sfr.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos')
+juliette = User.create!(email: 'juliette@orange.fr', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23')
+marin = User.create!(email: 'marin@gmail.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce')
+louis = User.create!(email: 'louis@icloud.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2')
+karl = User.create!(email: 'karl@yahoo.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI')
+charlotte = User.create!(email: 'charlotte@gmail.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25')
+leo = User.create!(email: 'leo@gmail.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A')
+arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98')
+nina = User.create!(email: 'nina@outlook.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE')
+armand = User.create!(email: 'armand@orange.fr', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90')
+luc = User.create!(email: 'luc@icloud.com', last_name: 'Faux', first_name: 'Luc', password: 'azerty', username: 'LucFX')
 
 puts 'Users well generated'
 
+chomage = Bet.create!(
+  hashtag: "#chomage #zoneeuro",
+  description: "En décembre 2021, le taux de chômage corrigé des variations saisonnières de la zone euro était de 7,0%, en baisse par rapport au taux de 7,1% enregistré en novembre 2021 et au taux de 8,2% de décembre 2020. Le taux de chômage de l'UE était de 6,4% en décembre 2021, en baisse par rapport au taux de 6,5% de novembre 2021 et au taux de 7,5% enregistré en décembre 2020. Ces chiffres sont publiés par Eurostat, l’office statistique de l’Union européenne",
+  expiring_at: Date.new(2022,03,03),
+  question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en mars 2022?",
+  category: "Economie",
+  publisher: hugo
+)
+
+cesar = Bet.create!(
+  hashtag: "#cinema #cesar #niney",
+  description: "Sont nommés pour le César du meilleur acteur: Damien Bonnard dans Les Intranquilles, Adam Driver dans Annette, Gilles Lellouche dans BAC Nord, Vincent Macaigne dans Médecin de nuit, Benoît Magimel dans De son vivant, Pio Marmaï dans La Fracture, Pierre Niney dans Boîte noire",
+  expiring_at: Date.new(2022,02,25),
+  question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire",
+  category: "Culture",
+  publisher: sarah,
+  result: "non"
+)
+
+kohlanta = Bet.create!(
+  hashtag: "#kohlanta #tvshow",
+  description: "Cette nouvelle saison de Koh-Lanta est totalement inédite. C’est du jamais vu : il n’y aura pas un, mais 2 totems cette année ! Celui que vous connaissez, le totem d’immunité, qui protège les gagnants… et le Totem maudit ! Perdre une épreuve, c’est en hériter, et subir l’une de ses nombreuses malédictions. Son ombre plane sur cette saison, du premier au dernier jour de l’aventure. C’est une certitude, le Totem maudit va bousculer les destins des 24 nouveaux aventuriers qui ont décidé de se mesurer les uns aux autres. Dans des conditions dantesques, au pied des spectaculaires falaises de l’archipel de Palawan aux Philippines, ces 24 apprentis Robinsons vont découvrir la vie à la dure, la faim, la fatigue et les stratégies. Avec courage et détermination, ces 12 femmes et ces 12 hommes vont tout faire pour réaliser leur rêve, et gagner Koh-Lanta. Mais la route longue, et semée d’embûches, au premier rang desquelles se trouve, cette année, le Totem maudit.",
+  expiring_at: Date.new(2022,03,10),
+  question: "Alexandra va t-elle se faire éliminer de koh lanta mardi prochain?",
+  category: "Divertissement",
+  publisher: christiane
+)
 macron = Bet.create!(
   hashtag: "#election #france",
   description: "L'élection présidentielle 2022 permettra d'élire le ou la futur(e) président(e) de la République pour un mandat de cinq ans. Le premier tour aura lieu dimanche 10 avril 2022, et le second tour entre les deux premiers candidats dimanche 24 avril 2022.",
@@ -30,13 +69,13 @@ macron = Bet.create!(
   publisher: matthias
 )
 
-zemmour = Bet.create!(
-  hashtag: "#election #parrainage",
-  description: "Tout citoyen français âgé de 18 ans et plus, jouissant de ses droits civiques, peut se présenter à l’élection pour la présidence de la République, mais sa candidature n’est validée par le Conseil constitutionnel que s’il obtient au minimum 500 parrainages d’élus. Ce système a été mis en place par la loi du 6 novembre 1962 instaurant l’élection du président au suffrage universel afin d’en limiter le nombre de candidats. Il exige actuellement un minimum de 500 parrainages (ou présentations), que les élus suivants sont habilités à donner. Les candidats à la présidence de la République sont contraints de collecter des parrainages dans au moins 30 départements ou collectivités d’outre-mer différents, sans que l’un d’entre eux dépasse un dixième des parrainages (soit 50). Cela assure un minimum de représentativité géographique.",
-  question: "Eric Zemmour aura t-il ses 500 parrainages ?",
-  expiring_at: Date.new(2022,03,04),
-  category: "Politique",
-  publisher: mathis
+foot = Bet.create!(
+  hashtag: "#psg #om",
+  description: "Le match PSG - Marseille de Ligue 1 est programmé pour le Dimanche 17 Avril 2022. Au lundi 28 février 2022, l'équipe de Paris Saint-Germain se classe 1e de la Ligue 1, avec un total de 59 points. Elle totalise 18 victoires, 5 matchs nuls et 1 défaites. PSG a marqué 52 buts et en a encaissés 19, ce qui lui donne un goal average de 33. De son côté, l'équipe de Olympique de Marseille se classe 2e de la Ligue 1, avec un total de 46 points. Elle compte 13 victoires, 7 matchs nuls et 4 défaites. Marseille a inscrit 38 buts et en a encaissés 21. Elle présente un goal average de 17.",
+  expiring_at: Date.new(2022,04,17),
+  question: "Le PSG va t-il gagner face à l'OM le 24/04?",
+  category: "Sport",
+  publisher: john
 )
 
 ukraine = Bet.create!(
@@ -58,42 +97,13 @@ petrole = Bet.create!(
   publisher: gaelle
 )
 
-chomage = Bet.create!(
-  hashtag: "#chomage #zoneeuro",
-  description: "En décembre 2021, le taux de chômage corrigé des variations saisonnières de la zone euro était de 7,0%, en baisse par rapport au taux de 7,1% enregistré en novembre 2021 et au taux de 8,2% de décembre 2020. Le taux de chômage de l'UE était de 6,4% en décembre 2021, en baisse par rapport au taux de 6,5% de novembre 2021 et au taux de 7,5% enregistré en décembre 2020. Ces chiffres sont publiés par Eurostat, l’office statistique de l’Union européenne",
-  expiring_at: Date.new(2022,03,03),
-  question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en mars 2022?",
-  category: "Economie",
-  publisher: hugo
-)
-
-
-cesar = Bet.create!(
-  hashtag: "#cinema #cesar #niney",
-  description: "Sont nommés pour le César du meilleur acteur: Damien Bonnard dans Les Intranquilles, Adam Driver dans Annette, Gilles Lellouche dans BAC Nord, Vincent Macaigne dans Médecin de nuit, Benoît Magimel dans De son vivant, Pio Marmaï dans La Fracture, Pierre Niney dans Boîte noire",
-  expiring_at: Date.new(2022,02,25),
-  question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire",
-  category: "Culture",
-  publisher: sarah,
-  result: "non"
-)
-
-foot = Bet.create!(
-  hashtag: "#psg #om",
-  description: "Le match PSG - Marseille de Ligue 1 est programmé pour le Dimanche 17 Avril 2022. Au lundi 28 février 2022, l'équipe de Paris Saint-Germain se classe 1e de la Ligue 1, avec un total de 59 points. Elle totalise 18 victoires, 5 matchs nuls et 1 défaites. PSG a marqué 52 buts et en a encaissés 19, ce qui lui donne un goal average de 33. De son côté, l'équipe de Olympique de Marseille se classe 2e de la Ligue 1, avec un total de 46 points. Elle compte 13 victoires, 7 matchs nuls et 4 défaites. Marseille a inscrit 38 buts et en a encaissés 21. Elle présente un goal average de 17.",
-  expiring_at: Date.new(2022,04,17),
-  question: "Le PSG va t-il gagner face à l'OM le 24/04?",
-  category: "Sport",
-  publisher: john
-)
-
-kohlanta = Bet.create!(
-  hashtag: "#kohlanta #tvshow",
-  description: "Cette nouvelle saison de Koh-Lanta est totalement inédite. C’est du jamais vu : il n’y aura pas un, mais 2 totems cette année ! Celui que vous connaissez, le totem d’immunité, qui protège les gagnants… et le Totem maudit ! Perdre une épreuve, c’est en hériter, et subir l’une de ses nombreuses malédictions. Son ombre plane sur cette saison, du premier au dernier jour de l’aventure. C’est une certitude, le Totem maudit va bousculer les destins des 24 nouveaux aventuriers qui ont décidé de se mesurer les uns aux autres. Dans des conditions dantesques, au pied des spectaculaires falaises de l’archipel de Palawan aux Philippines, ces 24 apprentis Robinsons vont découvrir la vie à la dure, la faim, la fatigue et les stratégies. Avec courage et détermination, ces 12 femmes et ces 12 hommes vont tout faire pour réaliser leur rêve, et gagner Koh-Lanta. Mais la route longue, et semée d’embûches, au premier rang desquelles se trouve, cette année, le Totem maudit.",
-  expiring_at: Date.new(2022,03,10),
-  question: "Alexandra va t-elle se faire éliminer de koh lanta mardi prochain?",
-  category: "Divertissement",
-  publisher: christiane
+zemmour = Bet.create!(
+  hashtag: "#election #parrainage",
+  description: "Tout citoyen français âgé de 18 ans et plus, jouissant de ses droits civiques, peut se présenter à l’élection pour la présidence de la République, mais sa candidature n’est validée par le Conseil constitutionnel que s’il obtient au minimum 500 parrainages d’élus. Ce système a été mis en place par la loi du 6 novembre 1962 instaurant l’élection du président au suffrage universel afin d’en limiter le nombre de candidats. Il exige actuellement un minimum de 500 parrainages (ou présentations), que les élus suivants sont habilités à donner. Les candidats à la présidence de la République sont contraints de collecter des parrainages dans au moins 30 départements ou collectivités d’outre-mer différents, sans que l’un d’entre eux dépasse un dixième des parrainages (soit 50). Cela assure un minimum de représentativité géographique.",
+  question: "Eric Zemmour aura t-il ses 500 parrainages ?",
+  expiring_at: Date.new(2022,03,04),
+  category: "Politique",
+  publisher: mathis
 )
 
 thevoice = Bet.create!(
@@ -102,7 +112,7 @@ thevoice = Bet.create!(
   expiring_at: Date.new(2022,05,15),
   question: "Charles va t-il gagner The Voice 2022?",
   category: "Divertissement",
-  publisher: sarah
+  publisher: julien
 )
 
 covid = Bet.create!(
@@ -111,7 +121,7 @@ covid = Bet.create!(
   expiring_at: Date.new(2022,04,15),
   question: "Le masque sera t-il toujours obligatoire en France en avril 2022?",
   category: "Santé",
-  publisher: christiane
+  publisher: malo
 )
 
 chasse = Bet.create!(
@@ -120,71 +130,211 @@ chasse = Bet.create!(
   expiring_at: Date.new(2023,03,15),
   question: "La chasse à courre sera t-elle interdite en France en 2023 ?",
   category: "Planète",
-  publisher: gaelle
+  publisher: juliette
+)
+
+cac40 = Bet.create!(
+  hashtag: "#CAC40 #bourse",
+  description: "Le CAC40, l'indice qui regroupe les 40 plus grosses sociétés françaises cotées, a perdu 5,73% en 5 jours à cause de la guerre en Ukraine. Entre espoir de voir la guerre prendre fin et craintes de voir le conflit durer, les jours à venir sont bien incertains pour les marchés financiers.",
+  expiring_at: Date.new(2023,03,11),
+  question: "Le CAC40 clôturera t-il au dessus de 6500 points le 11 mars 2022 ?",
+  category: "Economie",
+  publisher: marin
+)
+
+rugby = Bet.create!(
+  hashtag: "#6nations #15deFrance",
+  description: "Le IV de France de Fabien Galthié réalise de très bonnes performances en ce tournois des 6 nations. Après avoir battu les All Black en novembre, le groupe emmené par Antoine Dupont, a gagné se matchs du tournois des 6 nations.",
+  expiring_at: Date.new(2023,03,19),
+  question: "Le 19/03 le XV de France remportera le tournois des 6 nations ?",
+  category: "Sport",
+  publisher: louis
+)
+
+rassemblementNational = Bet.create!(
+  hashtag: "#présidentielle #RN",
+  description: "Alors que certains aimeraient voir Marine Le Pen rallier Eric Zemmour, ce n'est pas chose faite. La rivalité entre les deux candidats d'extrême droite ne cesse d'augmenter... Pourtant certains aimeraient voir les deux candidats s'allier.",
+  expiring_at: Date.new(2023,04,10),
+  question: "Marine Le Pen aura annoncé son ralliement à Eric Zemmour avant la présidentielle ? ",
+  category: "Politique",
+  publisher: karl
+)
+
+quiveutêtremonassocié = Bet.create!(
+  hashtag: "#QVEMA #business",
+  description: "Alors que la Startup nation est sur un nuage depuis plusieurs maintenant, les startups francaises continuent à nous faire rêver. La création de certaines licornes représentent de belles opportunités d'investissement pour des investisseurs fortunés.",
+  expiring_at: Date.new(2023,03,31),
+  question: "Elone Musk aura rejoint les investisseurs de Qui veut être mon associé avant avril ?",
+  category: "Divertissement",
+  publisher: charlotte
+)
+
+train = Bet.create!(
+  hashtag: "#SNCF #mobilité",
+  description: "Depuis décembre 2021, l'opérateur italien Trenitalia propose son service de voyage sur la ligne Paris Lyon à des tarifs bien moins élevés que ceux du TGV français. Beaucoup d'autres passagers aimeraient voir d'autres lignes s'ouvrir à la concurrence. D'un autre côté, certains s'inquiètent de la baisse de qualité de service qui pourrait en résulter.",
+  expiring_at: Date.new(2023,05,31),
+  question: "D'ici fin mai, une entreprise ferroviaire, autre que la SNCF, opérera sur la ligne Paris Nantes ?",
+  category: "Economie",
+  publisher: leo
+)
+
+tennis = Bet.create!(
+  hashtag: "#djocko #tennis",
+  description: "Alors que le monde entier a suivi l'expulsion de Novak Djokovic de l'Open d'Australie 2022, l'avenir du l'expulsion du N°1 mondial est incertain. Sa participation aux prochains tournois ne serait envisageable uniquement si le Serbe accepte de se faire vacciner contre la Covid-19.",
+  expiring_at: Date.new(2023,05,10),
+  question: "Novak Djokovic participera à Roland-Garros 2022 ?",
+  category: "Sport",
+  publisher: arthur
+)
+
+truthsocial = Bet.create!(
+  hashtag: "#réseau_social #Trump",
+  description: "Le groupe de l’ancien président américain Donald Trump prévoit de lancer l’application mobile de son nouveau réseau social, TRUTH Social, le 21 février 2022. TRUTH Social, présentée par le Trump Media & Technology Group (TMTG) comme une alternative à Twitter, dont Donald Trump a été exclu après l’assaut de ses partisans contre le Capitole le 6 janvier 2021",
+  expiring_at: Date.new(2023,06,01),
+  question: "Le réseau social de Donal Trump, TRUTH Social, sera disponible en France avant l'été ?",
+  category: "Divertissement",
+  publisher: nina
+)
+
+parité = Bet.create!(
+  hashtag: "#présidentille #mixité",
+  description: "Alors que plusieurs femmes sont engagées dans la course à l'Élysée, peut-être que l'une d'elles deviendra la première femme présidente de France. Pour rappel, Valérie Pécresse, Anne Hidalgo Marine Le Pen sont toutes les trois candidates de grands partis",
+  expiring_at: Date.new(2023,04,24),
+  question: "Une femme sera élue Présidente de la République en 2022 ?",
+  category: "Politique",
+  publisher: armand
+)
+
+tourdefrance = Bet.create!(
+  hashtag: "#alaphilippe #TDF",
+  description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que lechampion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
+  expiring_at: Date.new(2023,07,24),
+  question: "Le francais Julian alaphilippe gagnera le tour de France 2022 ?",
+  category: "Sport",
+  publisher: luc
 )
 
 puts 'Bets well generated'
 
 Betting.create!(
-  answer: "oui",
-  user: john,
-  bet: macron
-)
-
-Betting.create!(
-  answer: "oui",
-  user: sarah,
-  bet: macron
-)
-
-Betting.create!(
-  answer: "oui",
-  user: mathis,
-  bet: macron
-)
-
-Betting.create!(
   answer: "non",
-  user: gaelle,
-  bet: macron
-)
-
-Betting.create!(
-  answer: "non",
-  user: hugo,
+  user: luc,
   bet: chomage
 )
 
 Betting.create!(
+  answer: "oui",
+  user: armand,
+  bet: cesar
+)
+
+Betting.create!(
   answer: "non",
-  user: christiane,
+  user: nina,
+  bet: kohlanta
+)
+
+Betting.create!(
+  answer: "oui",
+  user: arthur,
+  bet: macron
+)
+
+Betting.create!(
+  answer: "non",
+  user: leo,
   bet: foot
+)
+
+Betting.create!(
+  answer: "oui",
+  user: charlotte,
+  bet: ukraine
+)
+
+Betting.create!(
+  answer: "non",
+  user: karl,
+  bet: petrole
+)
+
+Betting.create!(
+  answer: "oui",
+  user: louis,
+  bet: zemmour
+)
+
+Betting.create!(
+  answer: "non",
+  user: marin,
+  bet: thevoice
+)
+
+Betting.create!(
+  answer: "oui",
+  user: juliette,
+  bet: covid
+)
+
+Betting.create!(
+  answer: "non",
+  user: malo,
+  bet: chasse
+)
+
+Betting.create!(
+  answer: "oui",
+  user: julien,
+  bet: cac40
+)
+
+Betting.create!(
+  answer: "non",
+  user: mathis,
+  bet: rugby
+)
+
+Betting.create!(
+  answer: "oui",
+  user: gaelle,
+  bet: rassemblementNational
+)
+
+Betting.create!(
+  answer: "non",
+  user: lea,
+  bet: quiveutêtremonassocié
+)
+
+Betting.create!(
+  answer: "oui",
+  user: john,
+  bet: train
+)
+
+Betting.create!(
+  answer: "non",
+  user: matthias,
+  bet: tennis
 )
 
 Betting.create!(
   answer: "oui",
   user: hugo,
-  bet: foot
-)
-
-
-Betting.create!(
-  answer: "oui",
-  user: sarah,
-  bet: kohlanta
+  bet: truthsocial
 )
 
 Betting.create!(
   answer: "non",
-  user: gaelle,
-  bet: kohlanta
+  user: sarah,
+  bet: parité
 )
 
-# Betting.create(
-#   answer: "yes",
-#   user: gaelle,
-#   bet: zemmour
-# )
+Betting.create!(
+  answer: "oui",
+  user: hugo,
+  bet: tourdefrance
+)
 
 # Bets photos
 
