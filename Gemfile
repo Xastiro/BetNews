@@ -33,6 +33,9 @@ gem 'devise'
 # Online image hamnder
 gem 'cloudinary'
 
+# Bootstrap design
+gem 'bootstrap-sass'
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
