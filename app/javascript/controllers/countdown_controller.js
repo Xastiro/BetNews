@@ -34,18 +34,15 @@ export default class extends Controller {
     // console.log(this.dateValue);
     // Output the result in an element with id="countdown"
       if (days > 0) {
-        this.element.innerHTML = " J-" + days;
+        this.element.innerHTML = "Clôture : " + days + " j";
       } else if (hours > 0) {
-        this.element.innerHTML = " H-" + hours;
+        this.element.innerHTML = "Clôture : " + hours + " h";
       } else if (minutes > 0) {
-        this.element.innerHTML = " M-" + minutes  + " S-" + seconds;
+        this.element.innerHTML = "Clôture : " + minutes + " m";
+      } else if (seconds > 0) {
+        this.element.innerHTML = "Clôture : " + seconds + " s";
       } else {
-        this.element.innerHTML = " S-" + seconds;
-      }
-
-    // // If the count down is over, write some text
-      if (distance < 0) {
-        clearInterval(x);
+        // clearInterval(x);
         this.element.innerHTML = "Pari clos";
       }
   }, 1000)
