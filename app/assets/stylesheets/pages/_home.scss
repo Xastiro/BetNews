@@ -1,4 +1,15 @@
-.container-home {
+.home-container {
+  height: calc(100vh - #{$navbar-height});
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.home-header {
   padding-top: 20px;
   background-color: white;
   padding-bottom: 10px;
@@ -14,6 +25,7 @@
   #btn-start-betting {
     background-color: yellow;
     border-color: yellow;
+    border-radius: 100px;
     color: black;
   }
 }
