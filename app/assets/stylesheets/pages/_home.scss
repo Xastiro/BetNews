@@ -1,1 +1,19 @@
-// Specific CSS for your home-page
+.container-home {
+  padding-top: 20px;
+  background-color: white;
+  padding-bottom: 10px;
+  h1 {
+    text-align: center;
+  }
+}
+
+.start-betting {
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 65px;
+  #btn-start-betting {
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
+  }
+}

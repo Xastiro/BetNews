@@ -1,2 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container-home">
+  <h1>WELCOME ON BetNews</h1>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide bg-secondary" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dbitcpujz/image/upload/v1646142197/logo.png" class="d-block me-auto ms-auto" width="375" height="375">
+        </div>
+        <div class="carousel-item">
+          <!--si PBM PHOTOS NILclass décommenter le ByPass-->
+          <img src="https://www.touteleurope.eu/wp-content/uploads/2022/02/Ukraine_ue-1024x683.png" class="d-block me-auto ms-auto" width="375" height="375">
+        </div>
+        <div class="carousel-item active">
+        <!--si PBM PHOTOS NILclass décommenter le ByPass-->
+            <img src="https://www.touteleurope.eu/wp-content/uploads/2020/08/3-minutes-pour-comprendre-782.png" width="375" height="375">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+</div>
+
+<div class="start-betting d-flex justify-content-center">
+  <button id="btn-start-betting" type="button" class="btn btn-warning">Commencer à parier</button>
+</div>
