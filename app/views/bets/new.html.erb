@@ -1,0 +1,12 @@
+<h1>Publie ton pari !</h1>
+
+<div class="publish-form">
+  <%= simple_form_for [ @bet ] do |f| %>
+    <%= f.input :hashtag %>
+    <%= f.input :question %>
+    <%= f.input :description %>
+    <%= f.input :expiring_at %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Publier", class: "btn btn-primary" %>
+  <% end %>
+</div>
