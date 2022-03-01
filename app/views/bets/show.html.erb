@@ -3,10 +3,12 @@
 <h1><%= @bet.question %></h1>
 <br>
 <div class="image-show">
-  <%= cl_image_tag(@bet.photo.key, crop: :fill, width: 250, height: 170) %>
+  <%= cl_image_tag(@bet.photo.key, class:'card-img-top image-show-style') %>
 </div>
 <br>
 <%= @bet.description %>
 <br>
-<button type="button" class="btn btn-primary btn-lg padding-b-5">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<div class='button-show'>
+  <button type="button" class="btn btn-primary btn-lg">OUI</button>
+  <button type="button" class="btn btn-secondary btn-lg">NON</button>
+</div>
