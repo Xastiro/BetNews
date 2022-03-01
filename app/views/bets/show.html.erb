@@ -1,41 +1,12 @@
-<div class="baobab_page">
-  <div class="navigation">
-    <p> < <%= link_to "Back", trees_path %><p>
-  </div>
-  <div class="baobab_container d-flex justify-content-around">
-    <div class="description_baobab">
-      <h1><%= "#{@tree.species.capitalize}🌴" %></h1>
-      <div class="baobab_image">
-        <% if @tree.photo.attached?%>
-          <%= cl_image_tag(@tree.photo.key, crop: :fill) %>
-        <% end %>
-      </div>
-      <div class="description">
-        <p><%= "#{@tree.description}" %></p>
-        <p><i class="fas fa-map-marker-alt"></i> <%= " #{@tree.street}, #{@tree.city}, #{@tree.countryname}" %></p>
-        <p><%= cl_image_tag(@tree.user.photo.key, width: 50, height: 45, class: "avatar dropdown-toggle", crop: :fill) %> Contact <%= @tree.user.first_name.capitalize %> </p>
-      </div>
-    </div>
-    <div class="booking_baobab">
-      <span><i class="fas fa-euro-sign"></i> <%= "#{@tree.price} / day"%></span>
-      <%= simple_form_for [ @tree, @booking ] do |f| %>
-        <p>Start date*</p>
-        <%= f.date_field :start_date, as: :string,
-          data: {
-            # controller: "flatpickr",
-            # flatpickr_date_format: "d-m-Y",
-            # flatpickr_min_date: Time.zone.now
-          }, class:"form-control text optional" %>
-        <p>End date*</p>
-        <%= f.date_field :end_date,
-          data: {
-            # controller: "flatpickr",
-            # flatpickr_date_format: "d-m-Y",
-            # flatpickr_min_date: Time.zone.now
-          }, class:"form-control text optional" %>
-        <%= f.input :comment %>
-        <%= f.submit "Book now", class: "btn btn-flat" %>
-      <% end %>
-    </div>
-  </div>
-<div>
+<br>
+<p> < <%= link_to "Back", bets_path %><p>
+<h1><%= @bet.question %></h1>
+<br>
+<div class="image-show">
+  <%= cl_image_tag(@bet.photo.key, crop: :fill, width: 250, height: 170) %>
+</div>
+<br>
+<%= @bet.description %>
+<br>
+<button type="button" class="btn btn-primary btn-lg padding-b-5">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>

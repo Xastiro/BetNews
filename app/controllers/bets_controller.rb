@@ -1,11 +1,14 @@
 class BetsController < ApplicationController
-  skip_before_action :authenticate_user! 
+  skip_before_action :authenticate_user!
 
   def index
     @bets = Bet.all
   end
 
   def show
+    @bet = Bet.find(params[:id])
+    # @user = @bet.user
+    # @betting = Betting.new
   end
 
   def confirmation
@@ -16,7 +19,5 @@ class BetsController < ApplicationController
 
   def update
   end
-
-  private
 
 end
