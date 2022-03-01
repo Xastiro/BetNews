@@ -6,11 +6,13 @@
     <div class="card">
       <div class="p-1 m-1">
         <p class="card-title d-inline float-start"><%= bet.hashtag %></p>
-        <div class="float-end">
-          <i class="far fa-clock"></i><p class="card-title d-inline" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
-        </div>
       </div>
-      <%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY", class: "card-img-top", alt: "Image that illustrates the bet") %>
+      <div class="image-position">
+        <%= cl_image_tag(bet.photo.key, class: "card-img-top image-index-style", alt: "Image that illustrates the bet") %>
+        <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
+      </div>
+
+
       <div class="card-body">
         <h5 class="card-title"><%= bet.question %></h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
