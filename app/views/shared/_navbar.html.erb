@@ -1,19 +1,25 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+<div class="navbar navbar-expand-sm d-flex align-items-center flex-column ">
+  <%# <div class="container-fluid"> %>
     <%= link_to root_path do  %>
-      <%= '<i class="fas fa-home"></i>'.html_safe %>
+      <div class="d-flex align-items-center flex-column">
+        <%= '<i class="fas fa-home"></i>'.html_safe %>
+        <p>Paris</p>
+      </div>
     <% end %>
-    <%= link_to root_path do  %>
-      <%= '<i class="fas fa-trophy"></i>'.html_safe %>
-    <% end %>
-    <%= link_to new_bet_path do  %>
+
+  <%= link_to new_bet_path do  %>
+    <div class="d-flex align-items-center flex-column">
       <%= '<i class="fas fa-plus-circle"></i>'.html_safe %>
-    <% end %>
-    <%= link_to root_path do  %>
-      <%= '<i class="fas fa-users"></i>'.html_safe %>
-    <% end %>
-    <%= link_to profile_bettings_path do  %>
-      <%= '<i class="far fa-user"></i>'.html_safe %>
-    <% end %>
-  </div>
+      <p>Publier</p>
+    </div>
+  <% end %>
+
+  <%= link_to profile_bettings_path do  %>
+    <div class="d-flex align-items-center flex-column">
+      <%= '<i class="fas fa-user-circle"></i>'.html_safe %>
+      <p>Profil</p>
+    </div>
+  <% end %>
+  <%# </div> %>
 </div>
+<%# navbar-light navbar-lewagon %>

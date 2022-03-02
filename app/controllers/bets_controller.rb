@@ -49,8 +49,4 @@ class BetsController < ApplicationController
     params.require(:bet).permit(:hashtag, :description, :photo, :expiring_at, :question, :category, medias_attributes: [ :url ])
   end
 
-  # def media_params
-  #   params.require(:media).permit(:url)
-  # end
-
 end
