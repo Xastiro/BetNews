@@ -1,3 +1,7 @@
+h1 {
+  margin: 20px;
+}
+
 .publication-form {
   width: 80%;
   padding-bottom: 100px;
@@ -13,9 +17,26 @@
   transform: scale(0);
 }
 
+.form-check {
+  display: inline-block;
+  padding: 0;
+}
+
 .form-check-input + label {
   cursor: pointer;
   border: solid black 1px;
   padding: 4px;
   border-radius: 10px;
+  display: inline-block;
+  margin: 2px;
+  font-size: 15px;
+  &:hover {
+    background-color: yellow;
+  }
+}
+
+.form-label.url.required {
+  #url-second {
+    display: none;
+  }
 }
