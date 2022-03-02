@@ -34,9 +34,12 @@ class BetsController < ApplicationController
   def confirmation
   end
 
-
+  def published
+    @bettings_published = Bet.where(publisher: current_user)
+  end
 
   def update
+
   end
 
 
