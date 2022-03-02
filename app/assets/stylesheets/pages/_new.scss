@@ -7,3 +7,15 @@
     color: rgb(184, 179, 179);
   }
 }
+
+.form-check-input {
+  position: absolute;
+  transform: scale(0);
+}
+
+.form-check-input + label {
+  cursor: pointer;
+  border: solid black 1px;
+  padding: 4px;
+  border-radius: 10px;
+}
