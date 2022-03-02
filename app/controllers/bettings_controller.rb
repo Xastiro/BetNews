@@ -41,12 +41,7 @@ class BettingsController < ApplicationController
   end
 
   def index
-  end
-
-  def ongoing
-  end
-
-  def finished
+    @bettings = current_user.bettings
   end
 
   private

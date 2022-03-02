@@ -1,0 +1,22 @@
+<%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle mt-5", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+<br>
+<%= current_user.username%>
+<br>
+<br>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <%= link_to "Mes paris publiés",  published_profile_bets_path, class: "btn-base btn-black-outline" %>
+  <%= link_to "Mes paris répondus", profile_bettings_path, class: "btn-base btn-black" %>
+</div>
+<br>
+<br>
+<% @bettings.each do |betting| %>
+  <%= betting.bet.question %>
+    <p class="index-learn-more-button index-learn-more-hover"><%= link_to "+ Relire ce pari", bet_path(betting.bet), class: "text-decoration-none" %></p>
+    <% if betting.won.nil? %>
+    <p>Réponse le <%= betting.bet.expiring_at %> </p>
+    <% else %>
+    <p>Tu as Perdu/Gagné ton pari </p>
+    <% end %>
+  <br>
+  <br>
+<% end %>

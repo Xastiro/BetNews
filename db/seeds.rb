@@ -127,8 +127,8 @@ covid = Bet.new(
 chasse = Bet.new(
   hashtag: "#chasse #france",
   description: "La chasse à courre, aussi appelée vénerie, consiste à traquer un animal (un cerf, sanglier, chevreuil, renard ou lièvre) jusqu’à épuisement à l’aide d’une meute de chiens et de cavaliers à cheval. 84% des Français sont opposés à cette pratique (sondage Ifop 2017) et la chasse à courre est déjà interdite dans plusieurs pays, dont la Grande-Bretagne et l’Allemagne. Très tôt dans la campagne, Yannick Jadot a fait de cette question l’un des marqueurs de sa candidature. Le candidat écologiste propose que les accidents de chasse soient davantage réprimés et que le permis de chasse soit renouvelé tous les cinq ans. Il veut aussi mettre fin à l’agrainage et à la chasse à enclos. Sur cette question, la candidate socialiste Anne Hidalgo ne s’est pas directement prononcée, mais sa porte-parole, Carole Delga, se disait fin octobre sur France Bleu ,pas d’accord ​avec cette proposition du candidat écologiste. Jean-Luc Mélenchon rejoint Yannick Jadot sur l’interdiction de la chasse le week-end et lors des vacances scolaires. C’est là que le risque serait le plus grand​, a-t-il déclaré dimanche dernier sur France 3 . Le leader de La France Insoumise propose également de cesser de vendre des armes qui sont aussi puissantes​. Dans son programme, il promet enfin d’interdire les pratiques cruelles telles que le déterrage et la chasse à courre. À droite, tous les candidats s’accordent plus ou moins pour défendre cette pratique. Il faut arrêter la chasse aux chasseurs​, a lancé Valérie Pécresse la semaine dernière lors du grand oral du Mouvement de la ruralité (anciennement ' Chasse, pêche, nature et traditions '​). On n’entrave pas la pêche et la chasse qui sont des libertés issues de la Révolution​, a insisté la candidate LR. Également présent, Eric Zemmour a plaidé pour un grand ministère de l’agriculture de la protection de l’environnement et de la ruralité qui regroupera agriculture, environnement, biodiversité ainsi que la chasse, la pêche et la forêt​.",
-  expiring_at: Date.new(2023,03,15),
-  question: "La chasse à courre sera t-elle interdite en France en 2023 ?",
+  expiring_at: Date.new(2022,03,15),
+  question: "La chasse à courre sera t-elle interdite en France en 2022 ?",
   category: "Planète",
   publisher: juliette
 )
@@ -136,7 +136,7 @@ chasse = Bet.new(
 cac40 = Bet.new(
   hashtag: "#CAC40 #bourse",
   description: "Le CAC40, l'indice qui regroupe les 40 plus grosses sociétés françaises cotées, a perdu 5,73% en 5 jours à cause de la guerre en Ukraine. Entre espoir de voir la guerre prendre fin et craintes de voir le conflit durer, les jours à venir sont bien incertains pour les marchés financiers.",
-  expiring_at: Date.new(2023,03,11),
+  expiring_at: Date.new(2022,03,11),
   question: "Le CAC40 clôturera t-il au dessus de 6500 points le 11 mars 2022 ?",
   category: "Economie",
   publisher: marin
@@ -145,7 +145,7 @@ cac40 = Bet.new(
 rugby = Bet.new(
   hashtag: "#6nations #15deFrance",
   description: "Le IV de France de Fabien Galthié réalise de très bonnes performances en ce tournois des 6 nations. Après avoir battu les All Black en novembre, le groupe emmené par Antoine Dupont, a gagné se matchs du tournois des 6 nations.",
-  expiring_at: Date.new(2023,03,19),
+  expiring_at: Date.new(2022,03,19),
   question: "Le 19/03 le XV de France remportera le tournois des 6 nations ?",
   category: "Sport",
   publisher: louis
@@ -154,7 +154,7 @@ rugby = Bet.new(
 rassemblementNational = Bet.new(
   hashtag: "#présidentielle #RN",
   description: "Alors que certains aimeraient voir Marine Le Pen rallier Eric Zemmour, ce n'est pas chose faite. La rivalité entre les deux candidats d'extrême droite ne cesse d'augmenter... Pourtant certains aimeraient voir les deux candidats s'allier.",
-  expiring_at: Date.new(2023,04,10),
+  expiring_at: Date.new(2022,04,10),
   question: "Marine Le Pen aura annoncé son ralliement à Eric Zemmour avant la présidentielle ? ",
   category: "Politique",
   publisher: karl
@@ -163,7 +163,7 @@ rassemblementNational = Bet.new(
 quiveutêtremonassocié = Bet.new(
   hashtag: "#QVEMA #business",
   description: "Alors que la Startup nation est sur un nuage depuis plusieurs maintenant, les startups francaises continuent à nous faire rêver. La création de certaines licornes représentent de belles opportunités d'investissement pour des investisseurs fortunés.",
-  expiring_at: Date.new(2023,03,31),
+  expiring_at: Date.new(2022,03,31),
   question: "Elone Musk aura rejoint les investisseurs de Qui veut être mon associé avant avril ?",
   category: "Divertissement",
   publisher: charlotte
@@ -172,7 +172,7 @@ quiveutêtremonassocié = Bet.new(
 train = Bet.new(
   hashtag: "#SNCF #mobilité",
   description: "Depuis décembre 2021, l'opérateur italien Trenitalia propose son service de voyage sur la ligne Paris Lyon à des tarifs bien moins élevés que ceux du TGV français. Beaucoup d'autres passagers aimeraient voir d'autres lignes s'ouvrir à la concurrence. D'un autre côté, certains s'inquiètent de la baisse de qualité de service qui pourrait en résulter.",
-  expiring_at: Date.new(2023,05,31),
+  expiring_at: Date.new(2022,05,31),
   question: "D'ici fin mai, une entreprise ferroviaire, autre que la SNCF, opérera sur la ligne Paris Nantes ?",
   category: "Economie",
   publisher: leo
@@ -181,7 +181,7 @@ train = Bet.new(
 tennis = Bet.new(
   hashtag: "#djocko #tennis",
   description: "Alors que le monde entier a suivi l'expulsion de Novak Djokovic de l'Open d'Australie 2022, l'avenir du l'expulsion du N°1 mondial est incertain. Sa participation aux prochains tournois ne serait envisageable uniquement si le Serbe accepte de se faire vacciner contre la Covid-19.",
-  expiring_at: Date.new(2023,05,10),
+  expiring_at: Date.new(2022,05,10),
   question: "Novak Djokovic participera à Roland-Garros 2022 ?",
   category: "Sport",
   publisher: arthur
@@ -190,7 +190,7 @@ tennis = Bet.new(
 truthsocial = Bet.new(
   hashtag: "#réseau_social #Trump",
   description: "Le groupe de l’ancien président américain Donald Trump prévoit de lancer l’application mobile de son nouveau réseau social, TRUTH Social, le 21 février 2022. TRUTH Social, présentée par le Trump Media & Technology Group (TMTG) comme une alternative à Twitter, dont Donald Trump a été exclu après l’assaut de ses partisans contre le Capitole le 6 janvier 2021",
-  expiring_at: Date.new(2023,06,01),
+  expiring_at: Date.new(2022,06,01),
   question: "Le réseau social de Donal Trump, TRUTH Social, sera disponible en France avant l'été ?",
   category: "Divertissement",
   publisher: nina
@@ -199,7 +199,7 @@ truthsocial = Bet.new(
 parité = Bet.new(
   hashtag: "#présidentille #mixité",
   description: "Alors que plusieurs femmes sont engagées dans la course à l'Élysée, peut-être que l'une d'elles deviendra la première femme présidente de France. Pour rappel, Valérie Pécresse, Anne Hidalgo Marine Le Pen sont toutes les trois candidates de grands partis",
-  expiring_at: Date.new(2023,04,24),
+  expiring_at: Date.new(2022,04,24),
   question: "Une femme sera élue Présidente de la République en 2022 ?",
   category: "Politique",
   publisher: armand
@@ -208,7 +208,7 @@ parité = Bet.new(
 tourdefrance = Bet.new(
   hashtag: "#alaphilippe #TDF",
   description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que lechampion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
-  expiring_at: Date.new(2023,07,24),
+  expiring_at: Date.new(2022,07,24),
   question: "Le francais Julian alaphilippe gagnera le tour de France 2022 ?",
   category: "Sport",
   publisher: luc
