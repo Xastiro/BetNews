@@ -9,8 +9,8 @@ export default class extends Controller {
 
 
   connect() {
-    console.log("Hello");
-    console.log(new Date(this.dateValue))
+    // console.log("Hello");
+    // console.log(new Date(this.dateValue))
     // Set the date we're counting down to
     // Update the count down every 1 second
     this.calculate()
@@ -18,7 +18,7 @@ export default class extends Controller {
 
   calculate(event) {
     setInterval(() => {
-      console.log(this.element)
+      // console.log(this.element)
 
       const now = new Date().getTime();
 

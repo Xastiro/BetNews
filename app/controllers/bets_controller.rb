@@ -6,12 +6,13 @@ class BetsController < ApplicationController
 
   def index
     @bets = Bet.all
+    # @bets = Bet.all.select { |bet| bet.photo.attached? } # Si des bets n'ont pas de photos, on ne prend que les bets avec photo attached
   end
 
   def show
     @bet = Bet.find(params[:id])
     # @user = @bet.user
-    # @betting = Betting.new
+    @betting = Betting.new
   end
 
   def new
