@@ -10,7 +10,6 @@
     <%= f.input :description, :placeholder => "La 22ème édition de la Coupe du monde de football 2022, organisée par la FIFA, se déroulera au Qatar du 21 novembre au 18 décembre 2022...", :label => "Parle nous du sujet, du contexte... " %>
     <%= f.simple_fields_for :medias do |f| %>
       <%= render 'medias_simple_fields', f: f %>
-      <%# <%= link_to_add_fields 'Add links', f, :medias %> 
     <% end %>
     <%= f.submit "Valider", class: "btn btn-primary" %>
   <% end %>
