@@ -23,6 +23,7 @@ class BetsController < ApplicationController
   def create
     @bet=Bet.new(bet_params)
     @bet.publisher = current_user
+    # binding.pry
     if @bet.save
       redirect_to bet_path(@bet)
     else

@@ -1,16 +1,18 @@
-<h1>Lance ton pari !</h1>
-
-<div class="publication-form">
-  <%= simple_form_for [ @bet ] do |f| %>
-    <%= f.input :category, :label => "Choisis ta catégorie",:collection => ["Culture", "Economie", "Politique", "Sport", "Planète", "Science", "Technologie", "Santé", "Divertissement"] %>
-    <%= f.input :hashtag, :placeholder => "#foot #coupedumonde", :label => "Cible ton sujet à l'aide de #Hashtags" %>
-    <%= f.input :question, :placeholder => "La france va t-elle gagner ?", :label => "Pose ta question" %>
-    <%= f.input :expiring_at, :label => "Date de clôture du pari" %>
-    <%= f.input :photo, as: :file, :label => "Télécharge une photo" %>
-    <%= f.input :description, :placeholder => "La 22ème édition de la Coupe du monde de football 2022, organisée par la FIFA, se déroulera au Qatar du 21 novembre au 18 décembre 2022...", :label => "Parle nous du sujet, du contexte... " %>
-    <%= f.simple_fields_for :medias do |f| %>
-      <%= render 'medias_simple_fields', f: f %>
+<div class="new-bet">
+  <h1>Lance ton pari !</h1>
+  <div class="publication-form">
+    <%= simple_form_for [ @bet ] do |f| %>
+      <%= f.input :category, as: :radio_buttons, :collection => ["Culture", "Economie", "Politique", "Sport", "Planète", "Science", "Technologie", "Santé", "Divertissement"], :label => "Choisis ta catégorie" %>
+      <%= f.input :hashtag, :placeholder => "#foot #coupedumonde", :label => "Cible ton sujet à l'aide de #Hashtags" %>
+      <%= f.input :question, :placeholder => "La france va t-elle gagner ?", :label => "Pose ta question" %>
+      <%= f.input :expiring_at, :label => "Date de clôture du pari" %>
+      <%= f.input :photo, as: :file, :label => "Télécharge une photo" %>
+      <%= f.input :description, :placeholder => "La 22ème édition de la Coupe du monde de football 2022, organisée par la FIFA, se déroulera au Qatar du 21 novembre au 18 décembre 2022...", :label => "Parle nous du sujet, du contexte... " %>
+      <%= f.simple_fields_for :medias do |f| %>
+        <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", :label => "As-tu des articles à nous partager sur cet actualité  ?" %>
+        <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", label: false %>
+      <% end %>
+      <%= f.submit "Valider", class: "btn btn-primary" %>
     <% end %>
-    <%= f.submit "Valider", class: "btn btn-primary" %>
-  <% end %>
+  </div>
 </div>
