@@ -15,6 +15,8 @@ class Bet < ApplicationRecord
   validates :expiring_at, presence: true
   # validate :expiration_date_cannot_be_in_the_past
 
+  scope :filter_by_category, ->(category) { where category: category }
+
   def expiration_date_cannot_be_in_the_past
     if expiring_at.present? && expiring_at < Date.today
       errors.add(:expiring_at, "can't be in the past")
