@@ -1,7 +1,11 @@
-.image-index-style {
+.index-border-radius-style {
   border-radius: 10px;
 }
 
+.index-bottom-border-radius-style{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
 .image-position {
   position: relative;
@@ -16,4 +20,63 @@
   background-color: #FEFD02;
   padding: 5px 15px 5px 15px;
   color: black;
+}
+
+.index-learn-more-button {
+  width: fit-content;
+  border-radius: 50px;
+  background-color: black;
+  padding: 5px 15px 5px 15px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.index-card-grey-background {
+  background-color: #c4c4c4;
+}
+
+.index-card-question{
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.index-button-cote{
+  border-radius: 10px;
+}
+
+.index-button-oui{
+  background-color: #FEFD02;
+
+  p:nth-child(1) {
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    color: black;
+  }
+
+  p:nth-child(2) {
+    font-family: inter;
+    font-size: 13px;
+    color: black;
+
+  }
+
+  p:nth-child(3) {
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+
+  }
+}
+
+.index-button-non{
+  background-color: black;
+
 }

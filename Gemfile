@@ -37,7 +37,7 @@ gem 'cloudinary'
 gem 'bootstrap-sass'
 
 # Countdown handler
-gem 'jquery-countdown-rails'
+# gem 'jquery-countdown-rails'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
