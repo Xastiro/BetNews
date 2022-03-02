@@ -41,7 +41,7 @@ class BetsController < ApplicationController
   private
 
   def bet_params
-    params.require(:bet).permit(:hashtag, :descritpion, :photo, :expiring_at, :question)
+    params.require(:bet).permit(:hashtag, :descritpion, :photo, :expiring_at, :question, :category)
   end
 
 end
