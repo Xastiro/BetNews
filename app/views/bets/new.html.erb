@@ -1,15 +1,17 @@
-<h1>Publie ton pari !</h1>
+<h1>Lance ton pari !</h1>
 
-<div class="publish-form">
+<div class="publication-form">
   <%= simple_form_for [ @bet ] do |f| %>
     <%= f.input :category, :label => "Choisis ta catégorie",:collection => ["Culture", "Economie", "Politique", "Sport", "Planète", "Science", "Technologie", "Santé", "Divertissement"] %>
-    <%= f.input :hashtag, :label => "Cible ton sujet à l'aide de #Hashtags" %>
-    <%= f.input :question, :label => "Pose ta question" %>
-    <%= f.input :description, :label => "Parles-nous un peu du sujet... " %>
+    <%= f.input :hashtag, :placeholder => "#foot #coupedumonde", :label => "Cible ton sujet à l'aide de #Hashtags" %>
+    <%= f.input :question, :placeholder => "La france va t-elle gagner ?", :label => "Pose ta question" %>
+    <%= f.input :expiring_at, :label => "Date de clôture du pari" %>
     <%= f.input :photo, as: :file, :label => "Télécharge une photo" %>
-  <%= f.fields_for :medias do |form| %>
-    <%= f.input :url, :label => "As-tu des liens à nous partager pour en savoir plus sur le sujet ?" %>
-  <% end %>
-    <%= f.submit "Publie", class: "btn btn-primary" %>
+    <%= f.input :description, :placeholder => "La 22ème édition de la Coupe du monde de football 2022, organisée par la FIFA, se déroulera au Qatar du 21 novembre au 18 décembre 2022...", :label => "Parle nous du sujet, du contexte... " %>
+    <%= f.simple_fields_for :medias do |f| %>
+      <%= render 'medias_simple_fields', f: f %>
+      <%# <%= link_to_add_fields 'Add links', f, :medias %> 
+    <% end %>
+    <%= f.submit "Valider", class: "btn btn-primary" %>
   <% end %>
 </div>

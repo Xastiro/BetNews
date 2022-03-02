@@ -1,6 +1,9 @@
-.publish-form {
+.publication-form {
   width: 80%;
+  padding-bottom: 100px;
   align-content: center;
   margin: auto;
-
+  ::placeholder {
+    color: rgb(184, 179, 179);
+  }
 }
