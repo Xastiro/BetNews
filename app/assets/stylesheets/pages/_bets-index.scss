@@ -26,6 +26,15 @@
   color: black;
 }
 
+.text-decoration-none {
+  text-decoration: none;
+  color: white;
+}
+
+.index-learn-more-hover:hover {
+  background: #FEFD02;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,1);
+}
 .index-learn-more-button {
   width: fit-content;
   border-radius: 50px;

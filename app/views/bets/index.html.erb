@@ -12,7 +12,9 @@
           <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
         </div>
         <div class="pt-3">
-          <p class="index-learn-more-button">En savoir plus</p>
+          <%# <%= link_to bet_path(bet), class: "text-decoration-none index-learn-more-hover" do %>
+            <p class="index-learn-more-button index-learn-more-hover"><%= link_to "En savoir plus", bet_path(bet), class: "text-decoration-none" %></p>
+          <%# <% end %>
         </div>
         <div class="index-card-grey-background index-bottom-border-radius-style pb-3">
           <p class="index-card-question"><%= bet.question %></p>
@@ -34,7 +36,7 @@
           </div>
         </div>
       </div>
-      
+
     <% end %>
   </div>
 
