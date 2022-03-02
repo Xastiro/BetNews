@@ -13,26 +13,30 @@
         </div>
         <div class="pt-3">
           <%# <%= link_to bet_path(bet), class: "text-decoration-none index-learn-more-hover" do %>
-            <p class="index-learn-more-button index-learn-more-hover"><%= link_to "En savoir plus", bet_path(bet), class: "text-decoration-none" %></p>
+            <p class="index-learn-more-button index-learn-more-hover index-shadow"><%= link_to "En savoir plus", bet_path(bet), class: "text-decoration-none" %></p>
           <%# <% end %>
         </div>
         <div class="index-card-grey-background index-bottom-border-radius-style pb-3">
           <p class="index-card-question"><%= bet.question %></p>
           <div class="d-flex justify-content-around">
-            <div class="btn index-button-cote index-button-oui index-shadow">
-              <p>oui</p>
-              <div>
-                <p>cote</p>
-                <p>1.9</p>
+            <%= link_to bet_path(bet) do %>
+              <div class="btn index-button-cote index-button-oui index-shadow">
+                <p>oui</p>
+                <div>
+                  <p>cote</p>
+                  <p>1.9</p>
+                </div>
               </div>
-            </div>
-            <div class="btn index-button-cote index-button-non index-shadow">
-              <p>non</p>
-              <div>
-                <p>cote</p>
-                <p>2.1</p>
+            <% end %>
+            <%= link_to bet_path(bet) do %>
+              <div class="btn index-button-cote index-button-non index-shadow">
+                <p>non</p>
+                <div>
+                  <p>cote</p>
+                  <p>2.1</p>
+                </div>
               </div>
-            </div>
+            <% end %>
           </div>
         </div>
       </div>
