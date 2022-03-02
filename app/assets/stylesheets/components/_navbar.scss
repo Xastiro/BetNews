@@ -1,6 +1,5 @@
 .navbar {
   justify-content: space-around;
-  // align-items: center;
   background-color: $myblack;
   color: $mywhite;
   height: $navbar-height;
@@ -9,7 +8,7 @@
   width: 100%;
   a {
     color: white;
-    display: block;
+    display: block; 
     text-decoration: none;
   }
 
