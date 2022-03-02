@@ -16,11 +16,12 @@ class BetsController < ApplicationController
 
   def new
     @bet = Bet.new
+    @bet.medias.build
   end
 
   def create
     @bet=Bet.new(bet_params)
-    @bet.user = current_user
+    @bet.publisher = current_user
     if @bet.save
       redirect_to bet_path(@bet)
     else
@@ -40,7 +41,11 @@ class BetsController < ApplicationController
   private
 
   def bet_params
-    params.require(:bet).permit(:hashtag, :descritpion, :photo, :expiring_at, :question, :category)
+    params.require(:bet).permit(:hashtag, :description, :photo, :expiring_at, :question, :category, medias_attributes: [ :url ])
   end
+
+  # def media_params
+  #   params.require(:media).permit(:url)
+  # end
 
 end
