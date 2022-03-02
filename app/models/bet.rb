@@ -3,6 +3,7 @@ class Bet < ApplicationRecord
   has_many :medias
   has_many :bettings
   belongs_to :publisher, class_name: "User"
+  accepts_nested_attributes_for :medias
 
   validates :hashtag, presence: true, format: { with: /#[\S+]+/, message: "only allows hashtags" }, length: { maximum: 22 }
   validates :description, presence: true, length: { maximum: 2000, too_long: "%{count} characters is the maximum allowed" }

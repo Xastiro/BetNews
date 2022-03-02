@@ -2,12 +2,14 @@
 
 <div class="publish-form">
   <%= simple_form_for [ @bet ] do |f| %>
-    <%= f.input :category %>
-    <%= f.input :hashtag %>
-    <%= f.input :question %>
-    <%= f.input :description %>
-    <%= f.input :expiring_at %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "Publier", class: "btn btn-primary" %>
+    <%= f.input :category, :label => "Choisis ta catégorie",:collection => ["Culture", "Economie", "Politique", "Sport", "Planète", "Science", "Technologie", "Santé", "Divertissement"] %>
+    <%= f.input :hashtag, :label => "Cible ton sujet à l'aide de #Hashtags" %>
+    <%= f.input :question, :label => "Pose ta question" %>
+    <%= f.input :description, :label => "Parles-nous un peu du sujet... " %>
+    <%= f.input :photo, as: :file, :label => "Télécharge une photo" %>
+  <%= f.fields_for :medias do |form| %>
+    <%= f.input :url, :label => "As-tu des liens à nous partager pour en savoir plus sur le sujet ?" %>
+  <% end %>
+    <%= f.submit "Publie", class: "btn btn-primary" %>
   <% end %>
 </div>
