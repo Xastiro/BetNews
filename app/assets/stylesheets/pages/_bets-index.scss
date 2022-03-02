@@ -20,7 +20,7 @@
   position: absolute;
   right: 15px;
   bottom: -2px;
-  z-index: 1000;
+  z-index: 0;
   background-color: #FEFD02;
   padding: 5px 15px 5px 15px;
   color: black;
@@ -67,7 +67,7 @@
   height: fit-content;
 
   p {
-    margin-bottom: 0.1rem;
+    margin-bottom: -0.5rem;
   }
   p:nth-child(1) {
     font-family: poppins;
@@ -81,7 +81,7 @@
     display: flex;
     justify-content: space-evenly;
     p {
-      margin-bottom: 0.1rem;
+      margin-bottom: 0rem;
     }
   }
 
@@ -106,7 +106,7 @@
   height: fit-content;
 
   p {
-    margin-bottom: 0.1rem;
+    margin-bottom: -0.5rem;
   }
   p:nth-child(1) {
     font-family: poppins;
@@ -120,7 +120,7 @@
     display: flex;
     justify-content: space-evenly;
     p {
-      margin-bottom: 0.1rem;
+      margin-bottom:0rem;
     }
   }
 
