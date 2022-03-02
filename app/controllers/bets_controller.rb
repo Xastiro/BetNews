@@ -5,8 +5,8 @@ class BetsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    # @bets = Bet.all
-    @bets = Bet.all.select { |bet| bet.photo.attached? }
+    @bets = Bet.all
+    # @bets = Bet.all.select { |bet| bet.photo.attached? } # Si des bets n'ont pas de photos, on ne prend que les bets avec photo attached
   end
 
   def show

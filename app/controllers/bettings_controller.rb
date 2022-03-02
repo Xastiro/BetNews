@@ -10,6 +10,14 @@ class BettingsController < ApplicationController
       bet: @bet,
       user: current_user
     )
+
+    if @betting.save!
+      flash[:notice] = "Votre pari a bien été pris en compte"
+      redirect_to bets_path
+    else
+      flash[:alert] = "Votre pari n'a pas été pris en compte"
+      redirect bet_path(@bet)
+    end
   end
 
   def index
