@@ -34,7 +34,7 @@
 }
 
 .index-card-grey-background {
-  background-color: #c4c4c4;
+  background-color:rgba(196,196,196,0.2);
 }
 
 .index-card-question{
@@ -46,10 +46,12 @@
 
 .index-button-cote{
   border-radius: 10px;
+  width: 130px;
 }
 
 .index-button-oui{
   background-color: #FEFD02;
+  height: fit-content;
 
   p:nth-child(1) {
     font-family: poppins;
@@ -59,24 +61,56 @@
     color: black;
   }
 
-  p:nth-child(2) {
-    font-family: inter;
-    font-size: 13px;
-    color: black;
-
+  div {
+    display: flex;
+    justify-content: space-evenly;
   }
 
-  p:nth-child(3) {
+  div p:nth-child(1) {
+    font-family: inter;
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+  }
+
+  div p:nth-child(2) {
     font-family: poppins;
     font-weight: bold;
     font-size: 18px;
     text-align: center;
     color: black;
-
   }
 }
 
 .index-button-non{
   background-color: black;
+  height: fit-content;
 
+  p:nth-child(1) {
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    color: #FEFD02;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  div p:nth-child(1) {
+    font-family: inter;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+
+  }
+  div p:nth-child(2) {
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+  }
 }
