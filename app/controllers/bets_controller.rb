@@ -4,7 +4,7 @@ class BetsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @bets = Bet.all
+    @bets = Bet.all.sort_by(&:expiring_at).select{ |bet| bet.expiring_at > DateTime.now }
     # @bets = Bet.all.select { |bet| bet.photo.attached? } # Si des bets n'ont pas de photos, on ne prend que les bets avec photo attached
   end
 
