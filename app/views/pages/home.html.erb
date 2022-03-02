@@ -1,7 +1,5 @@
-<div class="d-flex flex-column home-container">
-  <div class="home-header">
-    <h1>WELCOME ON BetNews</h1>
-  </div>
+<div class="home-container">
+  <h1>WELCOME ON BetNews</h1>
 
   <div id="carouselExampleIndicators" class="carousel slide bg-white" data-bs-interval="false" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -29,18 +27,11 @@
 
           </div>
         </div>
-        <%# <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> %>
   </div>
 
-  <div class="start-betting d-flex justify-content-center flex-grow-1">
-      <%= link_to "Paris disponibles", bets_path %>
-  </div>
+  <p class="bets-available-button bets-available-hover bets-available-shadow"><%= link_to "Paris disponibles", bets_path %></p>
 
 </div>
+
+
+

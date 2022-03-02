@@ -1,5 +1,11 @@
 .home-container {
   height: calc(100vh - #{$navbar-height});
+  h1 {
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
 .carousel-indicators [data-bs-target] {
@@ -9,25 +15,17 @@
   border-radius: 100%;
 }
 
-.home-header {
-  padding-top: 20px;
-  background-color: white;
-  padding-bottom: 10px;
-  h1 {
-    text-align: center;
+.bets-available-button {
+  a {
+    color: white;
+    text-decoration: none;
   }
-}
-
-.start-betting {
-  background-color: white;
-  padding-top: 50px;
-  padding-bottom: 65px;
-  .btn-warning {
-    background-color: yellow;
-    border-color: yellow;
-    text-align: center;
-    margin: auto;
-    border-radius: 100px;
-    color: black;
-  }
+  width: fit-content;
+  border-radius: 50px;
+  background-color: black;
+  padding: 5px 15px 5px 15px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
