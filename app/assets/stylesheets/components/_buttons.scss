@@ -1,0 +1,31 @@
+.btn-base {
+  padding:     1em;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+.btn-black {
+  background-color: $black;
+  color:            $yellow;
+}
+
+.btn-black-outline {
+  background-color: $white;
+  color:            $black;
+  border: 2px solid $black;
+}
+
+.btn-yellow {
+  background-color: $yellow;
+  color:            $black;
+}
+
+.btn-yellow-outline {
+  background-color: $white;
+  color:            $yellow;
+  border: 2px solid $yellow;
+}
