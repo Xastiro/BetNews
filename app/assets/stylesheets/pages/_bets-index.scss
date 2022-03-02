@@ -53,6 +53,9 @@
   background-color: #FEFD02;
   height: fit-content;
 
+  p {
+    margin-bottom: 0.1rem;
+  }
   p:nth-child(1) {
     font-family: poppins;
     font-weight: bold;
@@ -64,6 +67,9 @@
   div {
     display: flex;
     justify-content: space-evenly;
+    p {
+      margin-bottom: 0.1rem;
+    }
   }
 
   div p:nth-child(1) {
@@ -86,6 +92,9 @@
   background-color: black;
   height: fit-content;
 
+  p {
+    margin-bottom: 0.1rem;
+  }
   p:nth-child(1) {
     font-family: poppins;
     font-weight: bold;
@@ -97,6 +106,9 @@
   div {
     display: flex;
     justify-content: space-evenly;
+    p {
+      margin-bottom: 0.1rem;
+    }
   }
 
   div p:nth-child(1) {
