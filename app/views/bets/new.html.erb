@@ -2,6 +2,7 @@
 
 <div class="publish-form">
   <%= simple_form_for [ @bet ] do |f| %>
+    <%= f.input :category %>
     <%= f.input :hashtag %>
     <%= f.input :question %>
     <%= f.input :description %>
