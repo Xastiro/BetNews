@@ -9,6 +9,8 @@
 <%= @bet.description %>
 <br>
 <div class='button-show'>
-  <button type="button" class="btn btn-primary btn-lg">OUI</button>
-  <button type="button" class="btn btn-secondary btn-lg">NON</button>
+  <%= simple_form_for [@bet, @betting] do |f| %>
+    <%= f.submit 'OUI', class: "btn btn-primary btn-lg" %>
+    <%= f.submit 'NON', class: "btn btn-secondary btn-lg" %>
+  <% end %>
 </div>

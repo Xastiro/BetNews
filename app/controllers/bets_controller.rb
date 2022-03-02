@@ -5,13 +5,14 @@ class BetsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @bets = Bet.all
+    # @bets = Bet.all
+    @bets = Bet.all.select { |bet| bet.photo.attached? }
   end
 
   def show
     @bet = Bet.find(params[:id])
     # @user = @bet.user
-    # @betting = Betting.new
+    @betting = Betting.new
   end
 
   def new
