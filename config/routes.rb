@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :bets, only: %i[index show new create] do
-    resources :bettings, only: %i[create]
+    resources :bettings, only: %i[create] do
+      collection do
+        post :yes
+        post :no
+      end
+    end
     member do
       get :publication_confirmation
       get :closing

@@ -19,7 +19,7 @@
         <div class="index-card-grey-background index-bottom-border-radius-style pb-3">
           <p class="index-card-question"><%= bet.question %></p>
           <div class="d-flex justify-content-around">
-            <%= link_to bet_path(bet) do %>
+            <%= link_to yes_bet_bettings_path(bet), method: :post do %>
               <div class="btn index-button-cote index-button-oui index-shadow">
                 <p>oui</p>
                 <div>
@@ -28,7 +28,7 @@
                 </div>
               </div>
             <% end %>
-            <%= link_to bet_path(bet) do %>
+            <%= link_to no_bet_bettings_path(bet), method: :post do %>
               <div class="btn index-button-cote index-button-non index-shadow">
                 <p>non</p>
                 <div>
