@@ -1,16 +1,14 @@
 <div class="container">
 
 <div class="index-category-scroll d-flex mt-3">
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("politique.png", class: "smiley-category-scroll-bar") %> Politique</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("economie.png", class: "smiley-category-scroll-bar") %> Economie</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("sport.png", class: "smiley-category-scroll-bar") %> Sport</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("planete.png", class: "smiley-category-scroll-bar") %> Planete</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("science.png", class: "smiley-category-scroll-bar") %> Science</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("divertissement.png", class: "smiley-category-scroll-bar") %> Divertissement</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("sante.png", class: "smiley-category-scroll-bar") %> Sante</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("technologie.png", class: "smiley-category-scroll-bar") %> Technologie</p>
-  <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("culture.png", class: "smiley-category-scroll-bar") %> Culture</p>
+  <% Bet::CATEGORIES.each do |category| %>
+    <p class="index-learn-more-button mx-1 d-flex"><%= image_tag("#{category}.png", class: "smiley-category-scroll-bar") %> <%= category %></p>
+  <% end %>
 </div>
+
+  <% Bet::CATEGORIES.each do |category| %>
+    <%= link_to "#{category}", bets_path, class: "index-learn-more-button mx-1 d-flex" %>
+  </div>
 
   <div class="cards">
     <% @bets.each do |bet| %>
