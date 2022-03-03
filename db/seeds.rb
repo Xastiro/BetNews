@@ -217,7 +217,7 @@ tourdefrance = Bet.new(
 
 # Bets photos
 
-file_macron = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646139629/betnews/Presidentielle-2022-Emmanuel-Macron-voit-sa-candidature-retardee-par-la-guerre-en-Ukraine_mtevtv.webp')
+file_macron = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324610/betnews/Presidentielle-p[…]uerre-en-Ukraine-peut-profiter-a-Emmanuel-Macron_qe3l6u.jpg')
 macron.photo.attach(io: file_macron, filename: 'nes.jpg', content_type: 'image/jpg')
 macron.save
 
@@ -293,7 +293,7 @@ file_truthsocial = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v
 truthsocial.photo.attach(io: file_truthsocial, filename: 'nes.jpg', content_type: 'image/jpg')
 truthsocial.save
 
-file_tourdefrance = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216699/betnews/3161436-64784448-2560-1440_btosoq.webp')
+file_tourdefrance = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324698/betnews/qkjqzmlrtxmu2yzo9ohv.jpg')
 tourdefrance.photo.attach(io: file_tourdefrance, filename: 'nes.jpg', content_type: 'image/jpg')
 tourdefrance.save
 
