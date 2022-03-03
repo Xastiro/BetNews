@@ -217,7 +217,7 @@ tourdefrance = Bet.new(
 
 # Bets photos
 
-file_macron = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324610/betnews/Presidentielle-p[…]uerre-en-Ukraine-peut-profiter-a-Emmanuel-Macron_qe3l6u.jpg')
+file_macron = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324610/betnews/Presidentielle-pourquoi-la-guerre-en-Ukraine-peut-profiter-a-Emmanuel-Macron_qe3l6u.jpg')
 macron.photo.attach(io: file_macron, filename: 'nes.jpg', content_type: 'image/jpg')
 macron.save
 
