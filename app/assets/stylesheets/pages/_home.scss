@@ -1,5 +1,5 @@
 .home-container {
-  height: calc(100vh - #{$navbar-height});
+  height: calc(100vh - #{$navbar-bottom-height});
   h1 {
     font-family: roboto;
     font-weight: bold;
