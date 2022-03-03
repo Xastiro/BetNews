@@ -52,6 +52,24 @@ cesar = Bet.new(
   result: "no"
 )
 
+goldman = Bet.new(
+  hashtag: "#musique #goldman",
+  description: "Et si le chanteur aux quelques 30 millions d'albums vendus faisait son grand retour dans les studios ? C'est en tout cas ce qu'espèrent très fort les fans de Jean-Jacques Goldman qui attendent depuis près de 20 ans un nouveau titre de leur idole. Et leurs espoirs ont été réchauffés par une petite phrase, non pas du chanteur mais de l'un de ses proches. Erick Benzi, l’arrangeur historique de Jean-Jacques Goldman s'est confié lors d'une interview avec nos confrères du Figaro. Il a mentionné un éventuel prochain album de Jean-Jacques Goldman en disant : C’est drôle, dans les notes de pochette de Chansons pour les pieds, son dernier disque, il avait inscrit : Erick, tu es libre pour le prochain ?.",
+  expiring_at: Date.new(2022,02,25),
+  question: "JJ Goldman va t-il sortir un nouvel album?",
+  category: "Culture",
+  publisher: sarah,
+)
+
+goncourt = Bet.new(
+  hashtag: "#livre #goncourt",
+  description: "Et si le chanteur aux quelques 30 millions d'albums vendus faisait son grand retour dans les studios ? C'est en tout cas ce qu'espèrent très fort les fans de Jean-Jacques Goldman qui attendent depuis près de 20 ans un nouveau titre de leur idole. Et leurs espoirs ont été réchauffés par une petite phrase, non pas du chanteur mais de l'un de ses proches. Erick Benzi, l’arrangeur historique de Jean-Jacques Goldman s'est confié lors d'une interview avec nos confrères du Figaro. Il a mentionné un éventuel prochain album de Jean-Jacques Goldman en disant : C’est drôle, dans les notes de pochette de Chansons pour les pieds, son dernier disque, il avait inscrit : Erick, tu es libre pour le prochain ?.",
+  expiring_at: Date.new(2022,02,25),
+  question: "?",
+  category: "Culture",
+  publisher: sarah,
+)
+
 kohlanta = Bet.new(
   hashtag: "#kohlanta #tvshow",
   description: "Cette nouvelle saison de Koh-Lanta est totalement inédite. C’est du jamais vu : il n’y aura pas un, mais 2 totems cette année ! Celui que vous connaissez, le totem d’immunité, qui protège les gagnants… et le Totem maudit ! Perdre une épreuve, c’est en hériter, et subir l’une de ses nombreuses malédictions. Son ombre plane sur cette saison, du premier au dernier jour de l’aventure. C’est une certitude, le Totem maudit va bousculer les destins des 24 nouveaux aventuriers qui ont décidé de se mesurer les uns aux autres. Dans des conditions dantesques, au pied des spectaculaires falaises de l’archipel de Palawan aux Philippines, ces 24 apprentis Robinsons vont découvrir la vie à la dure, la faim, la fatigue et les stratégies. Avec courage et détermination, ces 12 femmes et ces 12 hommes vont tout faire pour réaliser leur rêve, et gagner Koh-Lanta. Mais la route longue, et semée d’embûches, au premier rang desquelles se trouve, cette année, le Totem maudit.",
@@ -156,7 +174,7 @@ rassemblementNational = Bet.new(
   hashtag: "#présidentielle #RN",
   description: "Alors que certains aimeraient voir Marine Le Pen rallier Eric Zemmour, ce n'est pas chose faite. La rivalité entre les deux candidats d'extrême droite ne cesse d'augmenter... Pourtant certains aimeraient voir les deux candidats s'allier.",
   expiring_at: Date.new(2022,04,10),
-  question: "Marine Le Pen aura annoncé son ralliement à Eric Zemmour avant la présidentielle ? ",
+  question: "Marine Le Pen aura t-elle annoncé son ralliement à Eric Zemmour avant la présidentielle ? ",
   category: "Politique",
   publisher: karl
 )
@@ -165,7 +183,7 @@ quiveutêtremonassocié = Bet.new(
   hashtag: "#QVEMA #business",
   description: "Alors que la Startup nation est sur un nuage depuis plusieurs maintenant, les startups francaises continuent à nous faire rêver. La création de certaines licornes représentent de belles opportunités d'investissement pour des investisseurs fortunés.",
   expiring_at: Date.new(2022,03,31),
-  question: "Elone Musk aura rejoint les investisseurs de Qui veut être mon associé avant avril ?",
+  question: "Elone Musk aura t-il rejoint les investisseurs de Qui veut être mon associé avant avril ?",
   category: "Divertissement",
   publisher: charlotte
 )
@@ -183,7 +201,7 @@ tennis = Bet.new(
   hashtag: "#djocko #tennis",
   description: "Alors que le monde entier a suivi l'expulsion de Novak Djokovic de l'Open d'Australie 2022, l'avenir du l'expulsion du N°1 mondial est incertain. Sa participation aux prochains tournois ne serait envisageable uniquement si le Serbe accepte de se faire vacciner contre la Covid-19.",
   expiring_at: Date.new(2022,05,10),
-  question: "Novak Djokovic participera à Roland-Garros 2022 ?",
+  question: "Novak Djokovic participera t-il à Roland-Garros 2022 ?",
   category: "Sport",
   publisher: arthur
 )
@@ -201,7 +219,7 @@ parité = Bet.new(
   hashtag: "#présidentille #mixité",
   description: "Alors que plusieurs femmes sont engagées dans la course à l'Élysée, peut-être que l'une d'elles deviendra la première femme présidente de France. Pour rappel, Valérie Pécresse, Anne Hidalgo Marine Le Pen sont toutes les trois candidates de grands partis",
   expiring_at: Date.new(2022,04,24),
-  question: "Une femme sera élue Présidente de la République en 2022 ?",
+  question: "Une femme élue Présidente de la République en 2022 ?",
   category: "Politique",
   publisher: armand
 )
@@ -296,6 +314,10 @@ truthsocial.save
 file_tourdefrance = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324698/betnews/qkjqzmlrtxmu2yzo9ohv.jpg')
 tourdefrance.photo.attach(io: file_tourdefrance, filename: 'nes.jpg', content_type: 'image/jpg')
 tourdefrance.save
+
+file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324698/betnews/qkjqzmlrtxmu2yzo9ohv.jpg')
+goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
+goldman.save
 
 puts 'Bets well generated'
 
@@ -581,6 +603,11 @@ tennismedia = Media.create(
   source: "Le Point",
   url: "https://www.lepoint.fr/tennis/tennis-djokovic-pret-a-rater-roland-garros-pour-eviter-le-vaccin-15-02-2022-2464950_580.php",
   bet: tennis,
+)
+goldmanmedia = Media.create(
+  source: "Cosmopolitan",
+  url: "https://www.cosmopolitan.fr/jean-jacques-goldman-retour-chanson,2054963.asp",
+  bet: media,
 )
 
 truthsocialmedia = Media.create(
