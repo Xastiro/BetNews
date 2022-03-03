@@ -43,7 +43,7 @@ class BetsController < ApplicationController
   end
 
   def published
-    @bettings_published = Bet.where(publisher: current_user)
+    @bets_published = Bet.where(publisher: current_user)
   end
 
   def update
