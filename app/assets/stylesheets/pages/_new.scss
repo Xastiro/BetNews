@@ -1,11 +1,11 @@
 h1 {
   margin: 20px;
-  padding-top: $navbarlogo-height-padding;
+  padding-top: $navbar-top-padding;
 }
 
 .publication-form {
   width: 80%;
-  padding-bottom: $navbar-height-padding;
+  padding-bottom: $navbar-bottom-padding;
   align-content: center;
   margin: auto;
   ::placeholder {
