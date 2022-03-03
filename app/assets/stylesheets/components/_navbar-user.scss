@@ -1,11 +1,12 @@
 .background-navbar {
-  height: 120px;
+  height: 160px;
   background-color: $mybackgroundlightgrey;
   position: fixed;
   top: 50px;
   width: 100%;
   z-index: 1;
   padding-top: 15px;
+  padding-bottom: 30px;
   .navbar-user {
     display: inline-block;
     margin-bottom: 15px;
@@ -17,7 +18,7 @@
     width: 90%;
     height: 60px;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 18px;
     z-index: 1;
     .avatar {
       width: 80px;
