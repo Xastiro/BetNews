@@ -1,4 +1,4 @@
-.navbarlogo {
+.navbar-top {
   position: fixed;
   top: 0;
   justify-content: space-between;
@@ -8,6 +8,7 @@
   color: $myblack;
   padding-top: 6px;
   padding-bottom: 6px;
+  z-index: 1;
   img {
     height: 95%;
     margin-left: auto;

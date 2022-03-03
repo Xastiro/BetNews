@@ -13,7 +13,7 @@
         <div class="px-1 pt-1 mx-1">
           <p class="card-title d-inline float-start"><%= bet.hashtag %></p>
         </div>
-        <div class="image-position">
+        <div class="image-position">  
           <%= cl_image_tag(bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
           <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
         </div>

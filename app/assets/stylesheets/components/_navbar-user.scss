@@ -1,0 +1,29 @@
+.background-navbar {
+  height: 120px;
+  background-color: $mybackgroundlightgrey;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1;
+  padding-top: 15px;
+  .navbar-user {
+    display: inline-block;
+    margin-bottom: 15px;
+    background-color: $myblack;
+    color: $myblack;
+    font-weight: 600;
+    position: fixed;
+    // top: 50px;
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 20px;
+    z-index: 1;
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 5px solid $mywhite;
+    }
+  }
+}

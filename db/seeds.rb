@@ -46,7 +46,7 @@ cesar = Bet.new(
   hashtag: "#cinema #cesar #niney",
   description: "Sont nommés pour le César du meilleur acteur: Damien Bonnard dans Les Intranquilles, Adam Driver dans Annette, Gilles Lellouche dans BAC Nord, Vincent Macaigne dans Médecin de nuit, Benoît Magimel dans De son vivant, Pio Marmaï dans La Fracture, Pierre Niney dans Boîte noire",
   expiring_at: Date.new(2022,02,25),
-  question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire",
+  question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire?",
   category: "Culture",
   publisher: sarah,
   result: "no"
