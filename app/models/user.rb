@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :bettings
   has_many :bets, foreign_key: :publisher_id
+
+  has_many :bettings
+  has_many :user_bets, through: :bettings, source: :bet
 
   has_one_attached :photo
 
