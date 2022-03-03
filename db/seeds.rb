@@ -598,7 +598,7 @@ paritémedia = Media.create(
 tourdefrancemedia = Media.create(
   source: "RMC Sport",
   url: "https://rmcsport.bfmtv.com/cyclisme/tour-de-france/cyclisme-alaphilippe-ne-pense-pas-avoir-l-equipe-pour-gagner-le-tour-de-france_AV-202202090418.html",
-  bet: parité,
+  bet: tourdefrance,
 )
 
 puts 'Medias well generated'
