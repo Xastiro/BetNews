@@ -21,20 +21,21 @@
         padding: 8px;
       }
     }
-    .btn-group-user{
+    .btn-group-user {
       position: fixed;
       top: 200px;
       background-color: $mybackgroundlightgrey;
       width: 100%;
-      z-index: 1  ;
+      z-index: 1;
       padding-bottom: 15px;
+      display: flex;
+      justify-content: space-evenly;
       .btn-active-bet {
         background-color: $mybackgroundlightgrey;
         color: $myblack;
         font-weight: 700;
         text-decoration: none;
         border-bottom: 5px solid $myblack;
-        margin-right: 20px;
       }
       .btn-bet {
         background-color: $mybackgroundlightgrey;
@@ -43,7 +44,7 @@
         font-weight: 600;
       }
     }
-    .black-info{
+    .black-info {
       background-color: $mygrey;
       color: $myblack;
       font-weight: 700;
@@ -52,7 +53,7 @@
       margin: 0 auto;
       margin-bottom: 15px;
     }
-    .yellow{
+    .yellow {
       background-color: $myyellow;
       color: $myblack;
       width: 80%;
@@ -62,6 +63,17 @@
       // padding-top: 2px;
       // padding-bottom: 2px;
       box-shadow: 0px 4px 4px 0px rgba(0,0,0,1);
+    }
+    .yellow-black {
+      background-color: $myblack;
+      color: $myyellow;
+      font-weight: 800;
+      border-radius: 10px;
+      width: 80%;
+      margin: 0 auto;
+      padding: 5px;
+      margin-bottom: 15px;
+
     }
   }
 }
