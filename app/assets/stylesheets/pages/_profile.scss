@@ -1,0 +1,52 @@
+.userbets {
+  padding-top: $navbar-top-padding;
+  background-color: $mybackgroundlightgrey;
+  text-align: center;
+  align-items: center;
+  padding-bottom: $navbar-bottom-padding;
+
+  .betlist {
+    margin-top: 190px;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    .btn-group-user{
+      position: fixed;
+      top: 200px;
+      background-color: $mybackgroundlightgrey;
+      width: 100%;
+      z-index: 1  ;
+      padding-bottom: 15px;
+      .btn-active-bet {
+        background-color: $mybackgroundlightgrey;
+        color: $myblack;
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 5px solid $myblack;
+        margin-right: 20px;
+      }
+      .btn-bet {
+        background-color: $mybackgroundlightgrey;
+        color: $myblack;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+    .black-yellow{
+      background-color: $mywhite;
+      color: $myblack;
+      font-weight: 600;
+      width: 80%;
+      border-radius: 10px;
+    }
+    .yellow{
+      background-color: $myyellow;
+      color: $myblack;
+      width: 80%;
+      font-size: 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0px 4px 4px 0px rgba(0,0,0,1);
+    }
+  }
+}
