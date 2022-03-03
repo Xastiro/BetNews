@@ -14,15 +14,15 @@
           <div class="image-position">
             <%= cl_image_tag(bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
           </div>
-          <div class="index-card-grey-background index-bottom-border-radius-style pb-3">
+          <div class="index-card-grey-background index-bottom-border-radius-style mb-3">
             <p class="index-card-question"><%= bet.question %></p>
+            <p class="index-learn-more-button black index-learn-more-hover"><%= link_to "Relire le pari", bet_path(bet), class: "text-decoration-none" %></p>
           </div>
           <div>
-            <p class="index-learn-more-button black index-learn-more-hover"><%= link_to "Relire le pari", bet_path(bet), class: "text-decoration-none" %></p>
             <% if bet.expiring_at < Time.now %>
               <p black-yellow> Pari clôturé le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
             <% else %>
-              <p class="index-learn-more-button yellow index-learn-more-hover"> Réponse à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></link_to>
+              <p class="index-learn-more-button yellow index-learn-more-hover"> Réponse à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
             <% end %>
           </div>
         </div>
