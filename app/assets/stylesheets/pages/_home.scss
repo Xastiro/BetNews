@@ -20,12 +20,29 @@
     color: white;
     text-decoration: none;
   }
-  width: fit-content;
-  border-radius: 50px;
+  width: 200px;
   background-color: black;
   padding: 5px 15px 5px 15px;
   color: white;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.carousel-item {
+  height: 350px;
+  h5 {
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+  }
+  p {
+    font-family: roboto;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #888888
+    }
 }
