@@ -1,10 +1,11 @@
-<div class="container mt-5">
-
-<div class="index-category-scroll d-flex mt-3">
+<div class="index-category-scroll d-flex">
+  <%= link_to image_tag("Tout.png", class: "smiley-category-scroll-bar") + "Tout", bets_path, class: "index-learn-more-button mx-1 d-flex text-decoration-none" %>
   <% Bet::CATEGORIES.each do |category| %>
     <%= link_to image_tag("#{category}.png", class: "smiley-category-scroll-bar") + "#{category}", bets_path(category: "#{category}"), class: "index-learn-more-button mx-1 d-flex text-decoration-none" %>
   <% end %>
 </div>
+
+<div class="container ">
 
   <div class="cards">
     <% @bets.each do |bet| %>
