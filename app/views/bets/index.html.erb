@@ -5,7 +5,7 @@
   <% end %>
 </div>
 
-<div class="container ">
+<div class="container mb-5 ">
 
   <div class="cards">
     <% @bets.each do |bet| %>
@@ -23,7 +23,7 @@
             <p class="index-learn-more-button index-learn-more-hover index-shadow"><%= link_to "En savoir plus", bet_path(bet), class: "text-decoration-none" %></p>
           <%# <% end %>
         </div>
-        <div class="index-card-grey-background index-bottom-border-radius-style pb-3">
+        <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5">
           <p class="index-card-question"><%= bet.question %></p>
           <div class="d-flex justify-content-around">
             <% if bet.bettings == [] %>
