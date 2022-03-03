@@ -22,13 +22,11 @@
             <% if bet.expiring_at < Time.now %>
               <p black-yellow> Pari clôturé le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
             <% else %>
-              <link_to>
               <p class="index-learn-more-button yellow index-learn-more-hover"> Réponse à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></link_to>
             <% end %>
           </div>
         </div>
       <% end %>
-
     </div>
   </div>
 </div>

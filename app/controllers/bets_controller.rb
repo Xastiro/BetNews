@@ -6,7 +6,9 @@ class BetsController < ApplicationController
 
   def index
     @bets = Bet.where(nil)
-    @bets = @bets.filter_by_category(params[:category]) if params[:category].present?
+    unless params[:category] == "Tout"
+      @bets = @bets.filter_by_category(params[:category]) if params[:category].present?
+    end
     @bets = @bets.sort_by(&:expiring_at).select { |bet| bet.expiring_at > DateTime.now }
 
     @betting = Betting.new
@@ -16,6 +18,7 @@ class BetsController < ApplicationController
 
   def show
     @bet = Bet.find(params[:id])
+    @medias = @bet.medias
     # @user = @bet.user
     @betting = Betting.new
   end

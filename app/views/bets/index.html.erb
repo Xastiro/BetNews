@@ -1,10 +1,11 @@
-<div class="container mt-5">
-
-<div class="index-category-scroll d-flex mt-3">
+<div class="index-category-scroll d-flex">
   <% Bet::CATEGORIES.each do |category| %>
-    <%= link_to image_tag("#{category}.png", class: "smiley-category-scroll-bar") + "#{category}", bets_path(category: "#{category}"), class: "index-learn-more-button mx-1 d-flex text-decoration-none" %>
+    <%= link_to image_tag("#{category}.png", class: "smiley-category-scroll-bar") + "#{category}", bets_path(category: "#{category}"), class: "index-category-button mx-1 d-flex text-decoration-none-category #{"active" if params[:category]==category}" %>
+  <%# data: { controller: 'category-toggle-active', action: 'click->category-toggle-active#toggle', category_toggle_active_target: "category" } %>
   <% end %>
 </div>
+
+<div class="container mb-5 ">
 
   <div class="cards">
     <% @bets.each do |bet| %>
@@ -22,7 +23,7 @@
             <p class="index-learn-more-button index-learn-more-hover index-shadow"><%= link_to "En savoir plus", bet_path(bet), class: "text-decoration-none" %></p>
           <%# <% end %>
         </div>
-        <div class="index-card-grey-background index-bottom-border-radius-style pb-3">
+        <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5">
           <p class="index-card-question"><%= bet.question %></p>
           <div class="d-flex justify-content-around">
             <% if bet.bettings == [] %>

@@ -11,25 +11,25 @@ User.destroy_all
 puts 'Creating Users Bets Bettings and Medias'
 
 hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo')
-sarah = User.create!(email: 'sarah@outlook.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille')
-christiane = User.create!(email: 'christiane@orange.fr', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44')
-matthias = User.create!(email: 'matthias@gmail.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro')
-john = User.create!(email: 'john@gmail.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe')
-lea = User.create!(email: 'lea@gmail.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma')
-gaelle = User.create!(email: 'gaelle@gmail.com', last_name: 'Antoine', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle')
-mathis = User.create!(email: 'mathis@gmail.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89')
+sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille')
+christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44')
+matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro')
+john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe')
+lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma')
+gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Antoine', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle')
+mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89')
 julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne')
-malo = User.create!(email: 'malo@sfr.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos')
-juliette = User.create!(email: 'juliette@orange.fr', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23')
-marin = User.create!(email: 'marin@gmail.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce')
-louis = User.create!(email: 'louis@icloud.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2')
-karl = User.create!(email: 'karl@yahoo.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI')
-charlotte = User.create!(email: 'charlotte@gmail.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25')
-leo = User.create!(email: 'leo@gmail.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A')
+malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos')
+juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23')
+marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce')
+louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2')
+karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI')
+charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25')
+leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A')
 arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98')
-nina = User.create!(email: 'nina@outlook.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE')
-armand = User.create!(email: 'armand@orange.fr', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90')
-luc = User.create!(email: 'luc@icloud.com', last_name: 'Faux', first_name: 'Luc', password: 'azerty', username: 'LucFX')
+nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE')
+armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90')
+luc = User.create!(email: 'luc@email.com', last_name: 'Faux', first_name: 'Luc', password: 'azerty', username: 'LucFX')
 
 puts 'Users well generated'
 
@@ -39,7 +39,7 @@ chomage = Bet.new(
   expiring_at: Date.new(2022,03,03),
   question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en mars 2022?",
   category: "Economie",
-  publisher: hugo
+  publisher: hugo,
 )
 
 cesar = Bet.new(
@@ -60,6 +60,7 @@ kohlanta = Bet.new(
   category: "Divertissement",
   publisher: christiane
 )
+
 macron = Bet.new(
   hashtag: "#election #france",
   description: "L'élection présidentielle 2022 permettra d'élire le ou la futur(e) président(e) de la République pour un mandat de cinq ans. Le premier tour aura lieu dimanche 10 avril 2022, et le second tour entre les deux premiers candidats dimanche 24 avril 2022.",
@@ -418,8 +419,6 @@ Betting.create!(
   bet: tourdefrance
 )
 
-
-
 # Users photos
 
 file_hugo = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142557/betnews/Users/photo-1615109398623-88346a601842_rpviwa.jpg')
@@ -481,3 +480,125 @@ armand.photo.attach(io: file_armand, filename: 'nes.jpg', content_type: 'image/j
 
 file_luc= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215810/betnews/Users/photo-1645830166230-187caf791b90_rmwg3v.jpg')
 luc.photo.attach(io: file_luc, filename: 'nes.jpg', content_type: 'image/jpg')
+
+chomagemedia = Media.create(
+  source: "Le Figaro",
+  url: "https://www.lefigaro.fr/conjoncture/le-chomage-de-la-zone-euro-bat-un-nouveau-record-a-la-baisse-a-6-8-en-janvier-20220303",
+  bet: chomage,
+)
+
+cesarmedia = Media.create(
+  source: "L'Internaute",
+  url: "https://www.linternaute.com/cinema/evenement/1259663-cesar-2022-palmares-et-temps-forts-de-la-47e-ceremonie/",
+  bet: cesar,
+)
+
+kohlantamedia = Media.create(
+  source: "Huffingtonpos",
+  url: "https://www.huffingtonpost.fr/entry/franck-quitte-koh-lanta-et-sattire-les-foudres-de-son-equipe_fr_621f289ae4b0783a8f089531",
+  bet: kohlanta,
+)
+
+macronmedia = Media.create(
+  source: "20 minutes",
+  url: "https://www.20minutes.fr/elections/sondage-election/3244915-20220302-sondages-presidentielle-2022-emmanuel-macron-forte-hausse-valerie-pecresse-chute-libre",
+  bet: macron,
+)
+
+footmedia = Media.create(
+  source: "Culture PSG",
+  url: "https://www.culturepsg.com/news/club/le-psg-champion-pour-la-10e-fois-contre-l-om-un-scenario-possible/41116",
+  bet: foot,
+)
+
+ukrainemedia = Media.create(
+  source: "Le Figaro",
+  url: "https://www.lefigaro.fr/international/l-ukraine-peut-elle-adherer-sans-delai-a-l-union-europeenne-comme-le-demande-zelensky-20220228",
+  bet: ukraine,
+)
+
+petrolemedia = Media.create(
+  source: "Le Monde",
+  url: "https://www.lemonde.fr/economie/article/2022/03/03/les-cours-du-petrole-retrouvent-des-sommets-inquietants_6115953_3234.html",
+  bet: petrole,
+)
+
+zemmourmedia = Media.create(
+  source: "Le Point",
+  url: "https://www.lepoint.fr/presidentielle/et-si-zemmour-melenchon-le-pen-ne-pouvaient-pas-se-presenter-08-02-2022-2463858_3121.php",
+  bet: zemmour,
+)
+
+thevoicemedia = Media.create(
+  source: "TF1",
+  url: "https://www.tf1.fr/tf1/the-voice/videos/the-voice-2022-charles-kaylan-shadow-chante-bruises-de-lewis-capaldi-auditions-a-laveugle-28919378.html",
+  bet: thevoice,
+)
+
+covidmedia = Media.create(
+  source: "Ouest France",
+  url: "https://www.ouest-france.fr/sante/virus/coronavirus/covid-19-port-du-masque-quels-sont-les-lieux-ou-il-n-est-plus-obligatoire-29b44b78-97f6-11ec-a02d-e4daad81e3f4",
+  bet: covid,
+)
+
+chassemedia = Media.create(
+  source: "Francetvinfo",
+  url: "https://www.francetvinfo.fr/elections/presidentielle/candidats/interdire-la-chasse-la-limiter-la-defendre-que-proposent-les-candidats-a-l-election-presidentielle_4973484.html",
+  bet: chasse,
+)
+
+cac40media = Media.create(
+  source: "Bourse Direct",
+  url: "https://www.boursedirect.fr/fr/actualites/categorie/marche-francais/preouverture-paris-la-russie-attaque-l-ukraine-le-cac40-va-plonger-boursier-86bbbcbd1e0415c3c69afd2d6502850636b8a2f5",
+  bet: cac40,
+)
+
+rugbymedia = Media.create(
+  source: "L'équipe",
+  url: "https://www.lequipe.fr/Rugby/Actualites/Apres-sa-victoire-en-ecosse-la-france-passe-au-troisieme-rang-mondial/1319699",
+  bet: rugby,
+)
+
+rassemblementNationalmedia = Media.create(
+  source: "France culture",
+  url: "https://www.franceculture.fr/emissions/le-billet-politique/eric-zemmour-l-enfant-terrible-de-marine-le-pen",
+  bet: rassemblementNational,
+)
+
+quiveutêtremonassociémedia = Media.create(
+  source: "C News",
+  url: "https://www.cnews.fr/divertissement/2022-02-03/qui-veut-etre-mon-associe-quel-investisseur-depense-le-plus-dargent-dans",
+  bet: quiveutêtremonassocié,
+)
+
+trainmedia = Media.create(
+  source: "Le Point",
+  url: "https://www.lepoint.fr/economie/les-debuts-difficiles-de-la-concurrence-ferroviaire-en-france-16-02-2022-2465170_28.php",
+  bet: train,
+)
+
+tennismedia = Media.create(
+  source: "Le Point",
+  url: "https://www.lepoint.fr/tennis/tennis-djokovic-pret-a-rater-roland-garros-pour-eviter-le-vaccin-15-02-2022-2464950_580.php",
+  bet: tennis,
+)
+
+truthsocialmedia = Media.create(
+  source: "Le Parisien",
+  url: "https://www.leparisien.fr/international/le-lancement-de-truth-social-le-reseau-social-de-donald-trump-est-prevu-pour-le-21-fevrier-07-01-2022-SX3Z2RSURJEFPGWNAGQVXEAEGM.php",
+  bet: truthsocial,
+)
+
+paritémedia = Media.create(
+  source: "Le Parisien",
+  url: "https://www.leparisien.fr/sentinelles/presidentielle-la-france-est-elle-vraiment-prete-a-elire-une-femme-presidente-05-10-2021-P3Z2GKYBOREKRMHSUCL6NLLP2A.php",
+  bet: parité,
+)
+
+tourdefrancemedia = Media.create(
+  source: "RMC Sport",
+  url: "https://rmcsport.bfmtv.com/cyclisme/tour-de-france/cyclisme-alaphilippe-ne-pense-pas-avoir-l-equipe-pour-gagner-le-tour-de-france_AV-202202090418.html",
+  bet: tourdefrance,
+)
+
+puts 'Medias well generated'
