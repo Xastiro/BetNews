@@ -1,5 +1,5 @@
 class BetsController < ApplicationController
-  before_action :bet_params, only: [:show, :create]
+  before_action :bet_params, only: [:create]
   skip_before_action :authenticate_user!, only: [:index]
   # à supprimer une fois la vue new créee :
   skip_before_action :authenticate_user!, only: [:new, :create]
