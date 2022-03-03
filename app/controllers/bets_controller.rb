@@ -46,10 +46,16 @@ class BetsController < ApplicationController
     @bets_published = Bet.where(publisher: current_user)
   end
 
-  def update
-
+  # started by Hugo to publish answer to my bet published
+  def edit
+    @bet = Bet.find(params[:id])
   end
 
+  # def update
+  #   @bet = Bet.find(params[:id])
+  #   @bet.result = @bet.find(params[answer:])
+  #   @bet.save
+  # end
 
   private
 

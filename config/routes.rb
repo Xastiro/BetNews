@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :bets, only: %i[index show new create] do
+  resources :bets, only: %i[index show new create edit update] do
     resources :bettings, only: %i[create] do
       collection do
         post :yes
