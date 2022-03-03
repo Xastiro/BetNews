@@ -1,5 +1,5 @@
 class Bet < ApplicationRecord
-  CATEGORIES = ["Culture", "Economie", "Politique", "Sport", "Planète", "Science", "Technologie", "Santé", "Divertissement"]
+  CATEGORIES = ["Tout", "Culture", "Economie", "Politique", "Sport", "Planète", "Science", "Technologie", "Santé", "Divertissement"]
 
   has_one_attached :photo
   has_many :medias

@@ -1,7 +1,7 @@
 <div class="index-category-scroll d-flex">
-  <%= link_to image_tag("Tout.png", class: "smiley-category-scroll-bar") + "Tout", bets_path, class: "index-learn-more-button mx-1 d-flex text-decoration-none" %>
   <% Bet::CATEGORIES.each do |category| %>
-    <%= link_to image_tag("#{category}.png", class: "smiley-category-scroll-bar") + "#{category}", bets_path(category: "#{category}"), class: "index-learn-more-button mx-1 d-flex text-decoration-none" %>
+    <%= link_to image_tag("#{category}.png", class: "smiley-category-scroll-bar") + "#{category}", bets_path(category: "#{category}"), class: "index-category-button mx-1 d-flex text-decoration-none-category #{"active" if params[:category]==category}" %>
+  <%# data: { controller: 'category-toggle-active', action: 'click->category-toggle-active#toggle', category_toggle_active_target: "category" } %>
   <% end %>
 </div>
 
