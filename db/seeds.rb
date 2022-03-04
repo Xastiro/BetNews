@@ -37,9 +37,10 @@ chomage = Bet.new(
   hashtag: "#chomage #zoneeuro",
   description: "En décembre 2021, le taux de chômage corrigé des variations saisonnières de la zone euro était de 7,0%, en baisse par rapport au taux de 7,1% enregistré en novembre 2021 et au taux de 8,2% de décembre 2020. Le taux de chômage de l'UE était de 6,4% en décembre 2021, en baisse par rapport au taux de 6,5% de novembre 2021 et au taux de 7,5% enregistré en décembre 2020. Ces chiffres sont publiés par Eurostat, l’office statistique de l’Union européenne",
   expiring_at: Date.new(2022,03,03),
-  question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en mars 2022?",
+  question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en janvier 2022?",
   category: "Economie",
   publisher: hugo,
+  result: "no"
 )
 
 cesar = Bet.new(
@@ -48,7 +49,7 @@ cesar = Bet.new(
   expiring_at: Date.new(2022,02,25),
   question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire?",
   category: "Culture",
-  publisher: sarah,
+  publisher: gaelle,
   result: "no"
 )
 
@@ -63,9 +64,9 @@ goldman = Bet.new(
 
 goncourt = Bet.new(
   hashtag: "#livre #goncourt",
-  description: "Et si le chanteur aux quelques 30 millions d'albums vendus faisait son grand retour dans les studios ? C'est en tout cas ce qu'espèrent très fort les fans de Jean-Jacques Goldman qui attendent depuis près de 20 ans un nouveau titre de leur idole. Et leurs espoirs ont été réchauffés par une petite phrase, non pas du chanteur mais de l'un de ses proches. Erick Benzi, l’arrangeur historique de Jean-Jacques Goldman s'est confié lors d'une interview avec nos confrères du Figaro. Il a mentionné un éventuel prochain album de Jean-Jacques Goldman en disant : C’est drôle, dans les notes de pochette de Chansons pour les pieds, son dernier disque, il avait inscrit : Erick, tu es libre pour le prochain ?.",
-  expiring_at: Date.new(2022,02,25),
-  question: "?",
+  description: "Qui succédera à Hervé Le Tellier, dont l’Anomalie a franchi la barre symbolique du million de tirages après avoir été auréolé d’un des plus prestigieux prix littéraire français ? L’Académie Goncourt a dévoilé ce mardi sa première sélection. Seize romans ont été retenus. Parmi eux : le Voyage dans l’Est (Flammarion), de Christine Angot, dans lequel elle décrit comment l’inceste détruit, Enfant de salaud (Grasset), de l’ancien journaliste à Libération Sorj Chalandon, et la Porte du voyage sans retour (Seuil), de David Diop, couronné il y a quelques mois par l’International Booker Prize pour son précédent ouvrage, Frère d’âme, également lauréat du Goncourt des lycéens en 2018. Le très réussi roman de Mohammed Mbougar Sarr, la Plus secrète mémoire des hommes (Philippe Rey) est également de la partie.",
+  expiring_at: Date.new(2022,11,03),
+  question: "David Diop recevra t-il le prix Goncourt 2022 ?",
   category: "Culture",
   publisher: sarah,
 )
@@ -76,7 +77,7 @@ kohlanta = Bet.new(
   expiring_at: Date.new(2022,03,10),
   question: "Alexandra va t-elle se faire éliminer de koh lanta mardi prochain?",
   category: "Divertissement",
-  publisher: christiane
+  publisher: hugo
 )
 
 macron = Bet.new(
@@ -122,7 +123,7 @@ zemmour = Bet.new(
   question: "Eric Zemmour aura t-il ses 500 parrainages ?",
   expiring_at: Date.new(2022,03,04),
   category: "Politique",
-  publisher: mathis
+  publisher: hugo
 )
 
 thevoice = Bet.new(
@@ -221,14 +222,14 @@ parité = Bet.new(
   expiring_at: Date.new(2022,04,24),
   question: "Une femme élue Présidente de la République en 2022 ?",
   category: "Politique",
-  publisher: armand
+  publisher: marin
 )
 
 tourdefrance = Bet.new(
   hashtag: "#alaphilippe #TDF",
   description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que lechampion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
   expiring_at: Date.new(2022,07,24),
-  question: "Le francais Julian alaphilippe gagnera le tour de France 2022 ?",
+  question: "Le francais Julian alaphilippe gagnera t-il le tour de France 2022 ?",
   category: "Sport",
   publisher: luc
 )
@@ -254,6 +255,10 @@ petrole.save
 file_chomage = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141506/betnews/d84b4cee75f0b160c14c7257e8c5548a9f907c993ea6e7485792d98b2d9dafad_jipdtk.jpg')
 chomage.photo.attach(io: file_chomage, filename: 'nes.jpg', content_type: 'image/jpg')
 chomage.save
+
+file_goncourt = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646391156/betnews/TT65MBZSVBDEXKM7LJ4GAJZ3OE_iyvrmw.jpg')
+goncourt.photo.attach(io: file_goncourt, filename: 'nes.jpg', content_type: 'image/jpg')
+goncourt.save
 
 file_cesar = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142009/betnews/hxc1rxqigfrqnmfl8nib.jpg')
 cesar.photo.attach(io: file_cesar, filename: 'nes.jpg', content_type: 'image/jpg')
@@ -358,6 +363,24 @@ Betting.create!(
 )
 
 Betting.create!(
+  answer: "yes",
+  user: hugo,
+  bet: cesar
+)
+
+Betting.create!(
+  answer: "no",
+  user: hugo,
+  bet: chomage
+)
+
+Betting.create!(
+  answer: "no",
+  user: hugo,
+  bet: parité
+)
+
+Betting.create!(
   answer: "no",
   user: karl,
   bet: petrole
@@ -416,6 +439,7 @@ Betting.create!(
   user: john,
   bet: train
 )
+
 
 Betting.create!(
   answer: "no",
@@ -607,7 +631,7 @@ tennismedia = Media.create(
 goldmanmedia = Media.create(
   source: "Cosmopolitan",
   url: "https://www.cosmopolitan.fr/jean-jacques-goldman-retour-chanson,2054963.asp",
-  bet: media,
+  bet: goldman,
 )
 
 truthsocialmedia = Media.create(
@@ -626,6 +650,12 @@ tourdefrancemedia = Media.create(
   source: "RMC Sport",
   url: "https://rmcsport.bfmtv.com/cyclisme/tour-de-france/cyclisme-alaphilippe-ne-pense-pas-avoir-l-equipe-pour-gagner-le-tour-de-france_AV-202202090418.html",
   bet: tourdefrance,
+)
+
+goncourtmedia = Media.create(
+  source: "Libération",
+  url: "https://www.liberation.fr/culture/livres/sorj-chalandon-agnes-desarthe-christine-angot-decouvrez-la-premiere-selection-du-goncourt-2022-20210907_YTKINPFFPVHFHNITYENMMVIHIU/",
+  bet: goncourt,
 )
 
 puts 'Medias well generated'
