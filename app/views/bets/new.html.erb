@@ -7,7 +7,7 @@
 
 
       <%= render "#{@bet.current_step}_step", :f => f %>
-      <p><%= f.submit "Continuer" %></p>
+      <p class="next-button-alignment"><%= f.submit "Suivant", class: "next-button ml-auto" %></p>
       <p><%= f.submit "Retour", :name => "back_button" unless @bet.first_step? %></p>
 
       <%# <%= f.submit "Valider", class: "invisible" unless @bet.last_step? %>
