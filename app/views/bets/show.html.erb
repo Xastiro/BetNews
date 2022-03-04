@@ -3,9 +3,11 @@
   <div class="cards">
 
       <div class="card index-border-radius-style index-shadow my-3">
-        <div class="px-1 pt-1 mx-1">
+        <div class="px-1 pt-1 mx-1 d-flex justify-content-between">
           <p class="card-title d-inline float-start"><%= @bet.hashtag %></p>
-          <p class="return-to-index"><%= link_to "X", bets_path %></p>
+          <%= link_to bets_path do %>
+            <i class="far fa-times-circle" style="color:black"></i>
+          <%end%>
         </div>
         <div class="image-position">
           <%= cl_image_tag(@bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
