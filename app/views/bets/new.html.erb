@@ -7,9 +7,10 @@
 
 
       <%= render "#{@bet.current_step}_step", :f => f %>
-      <p class="next-button-alignment"><%= f.submit "Suivant", class: "next-button ml-auto" %></p>
-      <p><%= f.submit "Retour", :name => "back_button" unless @bet.first_step? %></p>
-
+      <div class="publish-form-buttons d-flex justify-content-around">
+        <p><%= f.submit "Précedent", class: "publish-form-button", :name => "back_button" unless @bet.first_step? %></p>
+        <p><%= f.submit "Suivant", class: "publish-form-button" %></p>
+      </div>
       <%# <%= f.submit "Valider", class: "invisible" unless @bet.last_step? %>
     <% end %>
   </div>

@@ -30,7 +30,7 @@ class Bet < ApplicationRecord
   end
 
   def steps
-    %w[category information question]
+    %w[category question information]
   end
 
   def next_step
