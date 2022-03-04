@@ -34,6 +34,7 @@ class BetsController < ApplicationController
     # binding.pry
     if @bet.save
       redirect_to bet_path(@bet)
+      flash[:notice] = "Ton pari a bien été publié"
     else
       render :new
     end
