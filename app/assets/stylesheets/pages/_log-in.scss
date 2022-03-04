@@ -22,27 +22,29 @@ input {
 	border-radius: 0;
 }
 
-
-
-
 .card-form {
 	padding: 2rem 1rem 0;
+}
+
+.center-button {
+  text-align : center;
 }
 
 .input {
 	display: flex;
 	flex-direction: column-reverse;
 	position: relative;
-	padding-top: 1.5rem;
+	padding-top: 1em;
 	&+.input {
-		margin-top: 1.5rem;
+		margin-top: 1rem;
 	}
 }
 
 .input-label {
-	color: #8597a3;
+	color: black;
+  font-weight: bold;
 	position: absolute;
-	top: 1.5rem;
+	top: 1rem;
 	transition: .25s ease;
 }
 
@@ -67,7 +69,7 @@ input {
 }
 
 .action {
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 
 .action-button {
@@ -83,4 +85,43 @@ input {
 	&:focus {
 		outline: 0;
 	}
+}
+
+.forgotten-password {
+  text-decoration: none;
+  color: black;
+  font-family: roboto;
+  font-size: 17px;
+}
+
+
+.log-in-button {
+  width: 267px;
+  height: 40px;
+  background-color: #FEFD02;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+
+  .btn {
+    color: black;
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    }
+}
+
+.sign-in-button {
+  width: 267px;
+  height: 40px;
+  line-height: 40px;
+  background-color: black;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FEFD02;
+  font-family: poppins;
+  font-size: 18px;
+  font-weight: bold;
 }
