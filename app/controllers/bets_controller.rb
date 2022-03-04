@@ -46,16 +46,29 @@ class BetsController < ApplicationController
     @bets_published = Bet.where(publisher: current_user)
   end
 
-  # started by Hugo to publish answer to my bet published
-  def edit
+  def closing
     @bet = Bet.find(params[:id])
   end
 
-  # def update
-  #   @bet = Bet.find(params[:id])
-  #   @bet.result = @bet.find(params[answer:])
-  #   @bet.save
-  # end
+  def close
+    @bet = Bet.find(params[:id])
+    @result = params[:result]
+    @bet.result = @result
+    @bet.save
+
+    bettings = @bet.bettings
+
+    bettings.each do |betting|
+      if betting.answer == @result
+        betting.won = true
+      else
+        betting.won = false
+      end
+      betting.save
+    end
+
+    redirect_to bet_path(@bet)
+  end
 
   private
 
