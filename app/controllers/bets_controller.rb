@@ -18,6 +18,7 @@ class BetsController < ApplicationController
 
   def show
     @bet = Bet.find(params[:id])
+    @medias = @bet.medias
     # @user = @bet.user
     @betting = Betting.new
   end
@@ -42,13 +43,19 @@ class BetsController < ApplicationController
   end
 
   def published
-    @bettings_published = Bet.where(publisher: current_user)
+    @bets_published = Bet.where(publisher: current_user)
   end
 
-  def update
-
+  # started by Hugo to publish answer to my bet published
+  def edit
+    @bet = Bet.find(params[:id])
   end
 
+  # def update
+  #   @bet = Bet.find(params[:id])
+  #   @bet.result = @bet.find(params[answer:])
+  #   @bet.save
+  # end
 
   private
 

@@ -1,20 +1,43 @@
-<h2>Log in</h2>
+<div class="container">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  <div class="d-flex justify-content-around pt-5">
+    <%= image_tag("logo.png", class: "logo-log-in") %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+  <div class="container">
+    <%= simple_form_for resource, as: resource_name, url: session_path(resource_name), html: { class: "card-form"} do |f| %>
+      <div class="input">
+        <%= f.label 'Email', class: "input-label" %>
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", class: "input-field" } %>
+      </div>
+      <div class="input">
+        <%= f.label 'password', class: "input-label" %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password", class: "input-field" }  %>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="d-flex justify-content-around">
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Mot de passe oublié?", new_password_path(resource_name), class: "forgotten-password" %><br />
+        <% end %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+
+      <div class="center-button">
+        <div class="log-in-button mb-3">
+          <%= f.button :submit, "Se connecter" %>
+        </div>
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Créer un compte", new_registration_path(resource_name), class: "sign-in-button" %><br />
+        <% end %>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -13,10 +13,10 @@
   </head>
 
   <body  class="bg-white">
-    <%= render 'shared/navbarlogo' %>
+    <%= render 'shared/navbar-top' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || current_page?(root_path) %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar-bottom' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || current_page?(root_path) %>
   </body>
 </html>

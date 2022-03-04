@@ -1,16 +1,58 @@
-<br>
-<p> < <%= link_to "Back", bets_path %><p>
-<h1><%= @bet.question %></h1>
-<br>
-<div class="image-show">
-  <%= cl_image_tag(@bet.photo.key, class:'card-img-top image-show-style') %>
-</div>
-<br>
-<%= @bet.description %>
-<br>
-<div class='button-show'>
-  <%= simple_form_for [@bet, @betting] do |f| %>
-    <%= f.submit 'OUI', class: "btn btn-primary btn-lg" %>
-    <%= f.submit 'NON', class: "btn btn-secondary btn-lg" %>
-  <% end %>
+<div class="container mt-5 mb-5">
+
+  <div class="cards">
+
+      <div class="card index-border-radius-style index-shadow my-3">
+        <div class="px-1 pt-1 mx-1">
+          <p class="card-title d-inline float-start"><%= @bet.hashtag %></p>
+          <p class="return-to-index"><%= link_to "X", bets_path %></p>
+        </div>
+        <div class="image-position">
+          <%= cl_image_tag(@bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
+          <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= @bet.expiring_at %>"></p>
+        </div>
+        <div class="user-infos">
+            <p > <%= cl_image_tag @bet.publisher.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <a href="https://user.com/en/"><%= @bet.publisher.username %></a> </p>
+        </div>
+          <div class="container">
+            <p class="index-card-description"><%= @bet.description %></p>
+          </div>
+          <p class="index-card-url">
+            <% @medias.each do |media| %>
+              <a href="<%= media.url %>"><%= media.url[0..40] %></a>
+            <% end %>
+          </p>
+          <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5">
+            <p class="index-card-question"><%= @bet.question %></p>
+            <div class="d-flex justify-content-around">
+            <% if !current_user.user_bets.include?(@bet) %>
+              <%= link_to yes_bet_bettings_path(@bet), method: :post do %>
+                <div class="btn index-button-cote index-button-oui index-shadow">
+                  <p>oui</p>
+                  <div>
+                    <p>cote</p>
+                    <p>1.9</p>
+                  </div>
+                </div>
+              <% end %>
+              <%= link_to no_bet_bettings_path(@bet), method: :post do %>
+                <div class="btn index-button-cote index-button-non index-shadow">
+                  <p>non</p>
+                  <div>
+                    <p>cote</p>
+                    <p>2.1</p>
+                  </div>
+                </div>
+              <% end %>
+            <% else %>
+              <div class="validated-bet-tag">
+                <i class="far fa-check-circle"></i> Ton pari a été validé
+              </div>
+            <% end %>
+            </div>
+          </div>
+      </div>
+
+  </div>
+
 </div>

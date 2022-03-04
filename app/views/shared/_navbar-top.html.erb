@@ -1,0 +1,12 @@
+<div class="navbar-top d-flex justify-content-around">
+  <%= link_to destroy_user_session_path, style: "visibility: hidden" do %>
+    <i class="fas fa-grip-lines"></i>
+  <% end %>
+  <%= link_to root_path do %>
+    <%= image_tag "logo.png", width: "70" %>
+  <% end %>
+  <%= link_to destroy_user_session_path, style: "#{"visibility: hidden" unless current_page?(profile_bettings_path) || current_page?(published_profile_bets_path)}", method: :delete do %>
+    <i class="fas fa-grip-lines pt-2"></i>
+  <% end %>
+
+</div>
