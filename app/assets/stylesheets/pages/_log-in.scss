@@ -23,7 +23,7 @@ input {
 }
 
 .card-form {
-	padding: 2rem 1rem 0;
+	padding: 1rem 1rem 0;
 }
 
 .center-button {
@@ -34,7 +34,7 @@ input {
 	display: flex;
 	flex-direction: column-reverse;
 	position: relative;
-	padding-top: 1em;
+	padding-top: 10px;
 	&+.input {
 		margin-top: 1rem;
 	}
@@ -44,7 +44,7 @@ input {
 	color: black;
   font-weight: bold;
 	position: absolute;
-	top: 1rem;
+	top: 10px;
 	transition: .25s ease;
 }
 

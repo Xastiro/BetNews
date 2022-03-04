@@ -13,10 +13,10 @@
   </head>
 
   <body  class="bg-white">
-    <%= render 'shared/navbar-top' unless current_page?(new_user_session_path) %>
+    <%= render 'shared/navbar-top' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
-    <%= render 'shared/navbar-bottom' unless current_page?(new_user_session_path) %>
+    <%= render 'shared/navbar-bottom' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
   </body>
 </html>

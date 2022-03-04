@@ -1,25 +1,47 @@
-<h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+
+<div class="container">
+
+  <div class="d-flex justify-content-around pt-5">
+    <%= image_tag("logo.png", class: "logo-log-in") %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+  <div class="container">
+    <%= simple_form_for resource, as: resource_name, url: registration_path(resource_name), html: { class: "card-form"}  do |f| %>
+      <%= f.error_notification %>
 
-<%= render "devise/shared/links" %>
+      <div class="input">
+        <%= f.label 'Email', class: "input-label" %>
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", class: "input-field" } %>
+      </div>
+      <div class="input">
+        <%= f.label 'password', class: "input-label" %>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password", class: "input-field" } %>
+      </div>
+      <div class="input">
+          <%= f.label 'password_confirmation', class: "input-label" %>
+          <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password", class: "input-field" } %>
+      </div>
+
+
+      <div class="center-button">
+        <div class="log-in-button mb-3">
+          <%= f.button :submit, "Créer un compte" %>
+        </div>
+        <%= link_to "Se connecter", new_session_path(resource_name), class: "sign-in-button" %><br/>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>
