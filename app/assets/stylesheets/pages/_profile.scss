@@ -25,6 +25,7 @@
         color: $myblack;
         font-weight: 600;
         margin-bottom: 5px;
+        font-size: 15px;
         }
       }
     }
@@ -62,14 +63,16 @@
     }
     .yellow {
       background-color: $myyellow;
-      color: $myblack;
       width: 80%;
-      font-size: 16px;
       border-radius: 10px;
-      font-weight: 700;
-      // padding-top: 2px;
-      // padding-bottom: 2px;
       box-shadow: 0px 4px 4px 0px rgba(0,0,0,1);
+      a {
+        display: block;
+        text-decoration: none;
+        color: $myblack;
+        font-weight: 700;
+        font-size: 16px;
+      }
     }
     .yellow-black {
       background-color: $myblack;

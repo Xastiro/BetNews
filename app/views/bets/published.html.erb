@@ -25,8 +25,10 @@
             <% if bet.expiring_at < Date.current %>
               <p class="black-info"> Pari clôturé le <%= (bet.expiring_at).strftime("%d/%m/%y") %></p>
             <% elsif bet.expiring_at == Date.current %>
-              <p class="description-info"> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
-              <p class="index-learn-more-button yellow index-learn-more-hover"> Publie le résultat ! </p>
+              <div class="description-info">
+                <p> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
+              </div>
+              <p class="index-learn-more-button yellow index-learn-more-hover"> <%= link_to "Publie le résultat !", closing_bet_path(bet) %> </p>
             <% else %>
               <p class="yellow-black"> Résultat à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
             <% end %>
