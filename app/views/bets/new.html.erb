@@ -1,6 +1,6 @@
 <div class="new-bet">
-  <h1>Lance ton pari !</h1>
-  <div class="publication-form">
+  <%# <h1>Lance ton pari !</h1> %>
+  <div class="publication-form d-flex align-items-center">
 
     <%= simple_form_for [ @bet ] do |f| %>
       <%# <%= f.error_messages %>
@@ -10,7 +10,7 @@
       <p><%= f.submit "Continuer" %></p>
       <p><%= f.submit "Retour", :name => "back_button" unless @bet.first_step? %></p>
 
-      <%# <%= f.submit "Valider", class: "invisible" unless @bet.last_step? %> 
+      <%# <%= f.submit "Valider", class: "invisible" unless @bet.last_step? %>
     <% end %>
   </div>
 </div>

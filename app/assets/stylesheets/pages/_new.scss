@@ -1,10 +1,17 @@
-h1 {
-  margin: 20px;
+.new-bet {
   padding-top: $navbar-top-padding;
+
+}
+
+.smiley-category-publish {
+  margin: auto 5px auto auto;
+  height: 20px;
+  width: auto;
 }
 
 .publication-form {
   width: 80%;
+  height:600px;
   padding-bottom: $navbar-bottom-padding;
   align-content: center;
   margin: auto;
@@ -25,14 +32,17 @@ h1 {
 
 .form-check-input + label {
   cursor: pointer;
-  border: solid black 1px;
-  padding: 4px;
-  border-radius: 10px;
+  // border: solid black 1px;
+  background-color: black;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 50px;
   display: inline-block;
   margin: 2px;
-  font-size: 15px;
+  font-size: 20px;
   &:hover {
     background-color: yellow;
+    color: black;
   }
 }
 
