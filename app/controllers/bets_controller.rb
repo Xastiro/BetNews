@@ -43,7 +43,7 @@ class BetsController < ApplicationController
   end
 
   def published
-    @bets_published = Bet.where(publisher: current_user)
+    @bets_published = Bet.where(publisher: current_user).order("expiring_at desc")
   end
 
   # started by Hugo to publish answer to my bet published

@@ -22,10 +22,13 @@
           </div>
           <div class="card-grey">
             <p class="card-subtitle index-card-question"><%= bet.question %></p>
-            <% if bet.expiring_at < Time.now %>
+            <% if bet.expiring_at < Date.current %>
               <p class="black-info"> Pari clôturé le <%= (bet.expiring_at).strftime("%d/%m/%y") %></p>
+            <% elsif bet.expiring_at == Date.current %>
+              <p class="description-info"> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
+              <p class="index-learn-more-button yellow index-learn-more-hover"> Publie le résultat ! </p>
             <% else %>
-              <p class="index-learn-more-button yellow index-learn-more-hover"> Résultat à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
+              <p class="yellow-black"> Résultat à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
             <% end %>
           </div>
         </div>

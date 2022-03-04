@@ -20,6 +20,13 @@
         font-size: 22px;
         padding: 8px;
       }
+      .description-info {
+        p {
+        color: $myblack;
+        font-weight: 600;
+        margin-bottom: 5px;
+        }
+      }
     }
     .btn-group-user {
       position: fixed;
@@ -57,7 +64,7 @@
       background-color: $myyellow;
       color: $myblack;
       width: 80%;
-      // font-size: 16px;
+      font-size: 16px;
       border-radius: 10px;
       font-weight: 700;
       // padding-top: 2px;
@@ -73,7 +80,6 @@
       margin: 0 auto;
       padding: 5px;
       margin-bottom: 15px;
-
     }
   }
 }

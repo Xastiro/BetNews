@@ -41,7 +41,7 @@ class BettingsController < ApplicationController
   end
 
   def index
-    @bettings = current_user.bettings
+    @bettings = current_user.bettings.includes(:bet).order("bets.expiring_at desc")
   end
 
   private
