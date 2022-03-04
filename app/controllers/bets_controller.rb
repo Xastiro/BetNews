@@ -48,6 +48,7 @@ class BetsController < ApplicationController
 
   def closing
     @bet = Bet.find(params[:id])
+    @medias = @bet.medias
   end
 
   def close
@@ -65,6 +66,9 @@ class BetsController < ApplicationController
         betting.won = false
       end
       betting.save
+
+      flash[:notice] = "Ta réponse a bien été publiée"
+
     end
 
     redirect_to bet_path(@bet)
