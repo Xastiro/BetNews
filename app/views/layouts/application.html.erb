@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BetNews</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BetNews | Des paris ludiques sur l'actu</title>
+    <meta name="description" content="BetNews est l'app pour parier gratuitement sur l'actualité. Chaque pari est donné avec des éléments d'information pour parier de manière éclairée. Informe-toi de manière ludique en pariant sur BetNews.">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="BetNews | Des paris ludiques sur l'actu" />
+    <meta property="og:description" content="BetNews est l'app pour parier gratuitement sur l'actualité. Chaque pari est donné avec des éléments d'information pour parier de manière éclairée. Informe-toi de manière ludique en pariant sur BetNews." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.betnews.fr/" />
+    <meta property="og:image" content="https://res.cloudinary.com/dbitcpujz/image/upload/v1646560019/og:image.png" />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -10,6 +18,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag %>
   </head>
 
   <body  class="bg-white">
