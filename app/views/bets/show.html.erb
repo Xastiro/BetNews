@@ -10,7 +10,11 @@
           <%end%>
         </div>
         <div class="image-position">
+        <% if @bet.photo.key? %>
           <%= cl_image_tag(@bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
+        <% else %>
+         <p> No pohto available </p>
+         <% end %>
           <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= @bet.expiring_at %>"></p>
         </div>
         <div class="user-infos">

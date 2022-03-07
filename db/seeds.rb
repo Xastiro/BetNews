@@ -36,7 +36,7 @@ puts 'Users well generated'
 chomage = Bet.new(
   hashtag: "#chomage #zoneeuro",
   description: "En décembre 2021, le taux de chômage corrigé des variations saisonnières de la zone euro était de 7,0%, en baisse par rapport au taux de 7,1% enregistré en novembre 2021 et au taux de 8,2% de décembre 2020. Le taux de chômage de l'UE était de 6,4% en décembre 2021, en baisse par rapport au taux de 6,5% de novembre 2021 et au taux de 7,5% enregistré en décembre 2020. Ces chiffres sont publiés par Eurostat, l’office statistique de l’Union européenne",
-  expiring_at: Date.new(2022,03,03),
+  expiring_at: Date.new(2022,03,07),
   question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en janvier 2022?",
   category: "Economie",
   publisher: hugo,
@@ -228,7 +228,7 @@ parité = Bet.new(
 tourdefrance = Bet.new(
   hashtag: "#alaphilippe #TDF",
   description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que lechampion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
-  expiring_at: Date.new(2022,07,24),
+  expiring_at: Date.new(2022,03,07),
   question: "Le francais Julian alaphilippe gagnera t-il le tour de France 2022 ?",
   category: "Sport",
   publisher: luc
@@ -320,7 +320,7 @@ file_tourdefrance = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/
 tourdefrance.photo.attach(io: file_tourdefrance, filename: 'nes.jpg', content_type: 'image/jpg')
 tourdefrance.save
 
-file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324698/betnews/qkjqzmlrtxmu2yzo9ohv.jpg')
+file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646325451/betnews/iryspvjz5ndpbee9pk8s.jpg')
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
 goldman.save
 

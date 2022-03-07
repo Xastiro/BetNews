@@ -15,7 +15,6 @@ class BetsController < ApplicationController
     # @bets = Bet.all.select { |bet| bet.photo.attached? } # Si des bets n'ont pas de photos, on ne prend que les bets avec photo attached
   end
 
-
   def show
     @bet = Bet.find(params[:id])
     @medias = @bet.medias
@@ -24,18 +23,47 @@ class BetsController < ApplicationController
   end
 
   def new
+    # session[:bet_params] ||= {}
+    # @bet = Bet.new(session[:bet_params])
     @bet = Bet.new
+    # @bet.current_step = session[:bet_step]
     @bet.medias.build
   end
 
   def create
+    # session[:bet_params].deep_merge!(bet_params) if bet_params
+    # @bet = Bet.new(session[:bet_params])
+    
     @bet = Bet.new(bet_params)
     @bet.publisher = current_user
-    # binding.pry
+
+
+    # @bet.current_step = session[:bet_step]
+
+    # if @bet.valid?
+    #   if params[:back_button]
+    #     @bet.previous_step
+    #   elsif @bet.last_step?
+    #     @bet.save if @bet.all_valid?
+    #   else
+    #     @bet.next_step
+    #   end
+    #   session[:bet_step] = @bet.current_step
+    # end
+
+    # if @bet.new_record?
+    #   redirect_to new_bet_path
+    # else
+    #   session[:bet_step] = session[:bet_params] = nil
+    #   flash[:notice] = "Pari publié."
+    #   redirect_to bet_path(@bet)
+    # end
+
     if @bet.save
       redirect_to bet_path(@bet)
+      flash[:notice] = "Ton pari a bien été publié"
     else
-      render :new
+    render :new
     end
   end
 
@@ -57,6 +85,13 @@ class BetsController < ApplicationController
     @bet.result = @result
     @bet.save
 
+    if @bet.save
+      respond_to do |format|
+        format.html { redirect_to bets_path(anchor: "card-#{@bet.id}") }
+        format.text { render(partial: "bets/publishedconfirmed", formats: [:html]) }
+      end
+    end
+
     bettings = @bet.bettings
 
     bettings.each do |betting|
@@ -66,12 +101,9 @@ class BetsController < ApplicationController
         betting.won = false
       end
       betting.save
-
-      flash[:notice] = "Ta réponse a bien été publiée"
-
     end
 
-    redirect_to bet_path(@bet)
+    # redirect_to bet_path(@bet)
   end
 
   private
