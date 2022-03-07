@@ -7,7 +7,6 @@
       <%= link_to "Mes paris publiés",  published_profile_bets_path, class: "btn-active-bet" %>
       <%= link_to "Mes paris répondus", profile_bettings_path,       class: "btn-bet" %>
     </div>
-
     <div class="cards">
       <%# <div class="px-1 pt-1 mx-1">
           <p class="card-title d-inline float-start"></p>
@@ -18,6 +17,7 @@
             <div class="image-position">
               <%= cl_image_tag(bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
             </div>
+            <%= current_user.total_points %>
             <div class="card-grey">
               <p class="card-subtitle index-card-question"><%= bet.question %></p>
               <% if bet.result %>
