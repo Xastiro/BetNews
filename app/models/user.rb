@@ -14,5 +14,11 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :username, presence: true
+
+  def total_points
+    score = Betting.where(user_id: self.id, won: true)
+    score.count
+  end
+
   # validates :phone_number, format: { with: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ }
 end
