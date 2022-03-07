@@ -28,6 +28,61 @@
         font-size: 15px;
         }
       }
+      .right-answer {
+        border: 5px solid rgb(80, 175, 80);
+      }
+
+      .wrong-answer {
+        border: 5px solid rgb(255, 96, 96);
+      }
+
+      .other-choice {
+        transform: scale(0.6);
+      }
+      .user-choice {
+        transform: scale(0.85);
+      }
+      .lose-reminder {
+        background-color: rgb(255, 96, 96);
+        color: $mywhite;
+        font-weight: 700;
+        font-size: larger;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        font-family: poppins;
+        width: 40%;
+        border-radius: 5px;
+        // margin: 8px auto;
+      }
+      .win-reminder {
+        background-color: rgb(80, 175, 80);
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        color: $mywhite;
+        font-weight: 700;
+        font-size: larger;
+        font-family: poppins;
+        width: 40%;
+        border-radius: 5px;
+        // margin: 8px auto;
+      }
+    }
+    .image-card-link {
+      a {
+      display: block;
+      text-decoration: none;
+      color: $myblack;
+      }
+      .clos-tag-position {
+        color: $myblack;
+        background-color: $mylightgrey;
+        width: 55%;
+        font-weight: 600;
+        margin: 5px auto;
+        border-radius: 10px;
+      }
     }
     .btn-group-user {
       position: fixed;
@@ -83,6 +138,20 @@
       margin: 0 auto;
       padding: 5px;
       margin-bottom: 15px;
+    }
+    .win-green-btn {
+      background-color: $mydarkgreen;
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      width: 30%;
+    }
+    .lose-red-btn {
+      background-color: rgb(187, 87, 87);
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      width: 30%;
     }
   }
 }
