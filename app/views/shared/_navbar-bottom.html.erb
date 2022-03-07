@@ -7,7 +7,7 @@
       </div>
     <% end %>
 
-  <%= link_to new_bet_path, class: "link-to-publish" do  %>
+  <%= link_to user_signed_in? ? new_bet_path : new_user_session_path , class: "link-to-publish" do  %>
     <div class="d-flex align-items-center flex-column publish-button">
       <button>
         <span class="text">

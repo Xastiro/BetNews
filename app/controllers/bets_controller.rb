@@ -15,7 +15,6 @@ class BetsController < ApplicationController
     # @bets = Bet.all.select { |bet| bet.photo.attached? } # Si des bets n'ont pas de photos, on ne prend que les bets avec photo attached
   end
 
-
   def show
     @bet = Bet.find(params[:id])
     @medias = @bet.medias
@@ -24,44 +23,47 @@ class BetsController < ApplicationController
   end
 
   def new
-    session[:bet_params] = {}
-    @bet = Bet.new(session[:bet_params])
-    @bet.current_step = session[:bet_step]
+    # session[:bet_params] ||= {}
+    # @bet = Bet.new(session[:bet_params])
+    @bet = Bet.new
+    # @bet.current_step = session[:bet_step]
     @bet.medias.build
   end
 
   def create
-    session[:bet_params].deep_merge!(bet_params) if params[:bet]
+    # session[:bet_params].deep_merge!(bet_params) if bet_params
+    # @bet = Bet.new(session[:bet_params])
+    
     @bet = Bet.new(bet_params)
     @bet.publisher = current_user
 
-    # if @bet.save
-    #   redirect_to bet_path(@bet)
-    # else
-    @bet.current_step = session[:bet_step]
 
-    if @bet.valid?
-      if params[:back_button]
-        @bet.previous_step
-      elsif @bet.last_step?
-        @bet.save if @bet.all_valid?
-      else
-        @bet.next_step
-      end
-      session[:bet_step] = @bet.current_step
-    end
+    # @bet.current_step = session[:bet_step]
 
-    if @bet.new_record?
-      render :new
-    else
-      session[:bet_step] = session[:bet_params] = nil
-      flash[:notice] = "Pari publié."
-      redirect_to bet_path(@bet)
-    end
-
-
-    # render :new
+    # if @bet.valid?
+    #   if params[:back_button]
+    #     @bet.previous_step
+    #   elsif @bet.last_step?
+    #     @bet.save if @bet.all_valid?
+    #   else
+    #     @bet.next_step
+    #   end
+    #   session[:bet_step] = @bet.current_step
     # end
+
+    # if @bet.new_record?
+    #   redirect_to new_bet_path
+    # else
+    #   session[:bet_step] = session[:bet_params] = nil
+    #   flash[:notice] = "Pari publié."
+    #   redirect_to bet_path(@bet)
+    # end
+
+    if @bet.save
+      redirect_to bet_path(@bet)
+    else
+    render :new
+    end
   end
 
   def confirmation
