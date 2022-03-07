@@ -34,6 +34,7 @@ class BetsController < ApplicationController
     # binding.pry
     if @bet.save
       redirect_to bet_path(@bet)
+      flash[:notice] = "Ton pari a bien été publié"
     else
       render :new
     end
@@ -43,19 +44,36 @@ class BetsController < ApplicationController
   end
 
   def published
-    @bets_published = Bet.where(publisher: current_user)
+    @bets_published = Bet.where(publisher: current_user).order("expiring_at desc")
   end
 
-  # started by Hugo to publish answer to my bet published
-  def edit
+  def closing
     @bet = Bet.find(params[:id])
+    @medias = @bet.medias
   end
 
-  # def update
-  #   @bet = Bet.find(params[:id])
-  #   @bet.result = @bet.find(params[answer:])
-  #   @bet.save
-  # end
+  def close
+    @bet = Bet.find(params[:id])
+    @result = params[:result]
+    @bet.result = @result
+    @bet.save
+
+    bettings = @bet.bettings
+
+    bettings.each do |betting|
+      if betting.answer == @result
+        betting.won = true
+      else
+        betting.won = false
+      end
+      betting.save
+
+      flash[:notice] = "Ta réponse a bien été publiée"
+
+    end
+
+    redirect_to bet_path(@bet)
+  end
 
   private
 

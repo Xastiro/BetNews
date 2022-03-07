@@ -3,9 +3,11 @@
   <div class="cards">
 
       <div class="card index-border-radius-style index-shadow my-3">
-        <div class="px-1 pt-1 mx-1">
+        <div class="px-1 pt-1 mx-1 d-flex justify-content-between">
           <p class="card-title d-inline float-start"><%= @bet.hashtag %></p>
-          <p class="return-to-index"><%= link_to "X", bets_path %></p>
+          <%= link_to bets_path do %>
+            <i class="far fa-times-circle" style="color:black"></i>
+          <%end%>
         </div>
         <div class="image-position">
           <%= cl_image_tag(@bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
@@ -21,24 +23,16 @@
           </p>
           <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5">
             <p class="index-card-question"><%= @bet.question %></p>
-            <div class="d-flex justify-content-around">
+            <div class="btn-publication">
             <% if !current_user.user_bets.include?(@bet) %>
-              <%= link_to yes_bet_bettings_path(@bet, answer: "yes"), method: :post do %>
-                <div class="btn index-button-cote index-button-oui index-shadow">
-                  <p>oui</p>
-                  <div>
-                    <p>cote</p>
-                    <p>1.9</p>
-                  </div>
+              <%= link_to close_bet_path(@bet, result: "yes"), method: :patch do %>
+                <div class="btn-publication-yes">
+                  <p>Publier OUI</p>
                 </div>
               <% end %>
-              <%= link_to no_bet_bettings_path(@bet, answer: "no"), method: :post do %>
-                <div class="btn index-button-cote index-button-non index-shadow">
-                  <p>non</p>
-                  <div>
-                    <p>cote</p>
-                    <p>2.1</p>
-                  </div>
+              <%= link_to close_bet_path(@bet, result: "no"), method: :patch do %>
+                <div class="btn-publication-no mt-3">
+                  <p>Publier NON</p>
                 </div>
               <% end %>
             <% else %>

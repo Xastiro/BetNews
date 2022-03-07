@@ -29,11 +29,60 @@
 
 }
 
+.publish-button {
+  button {
+    border: 4px solid white;
+    position: absolute;
+    top: -20px;
+    align-items: center;
+    background-image: linear-gradient(333deg, rgba(2,0,36,1) 0%, rgba(203,200,21,1) 70%);
+    border-radius: 50%;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: grid;
+    place-content: center;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    width: 5rem;
+    height: 5rem;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+  }
 
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
+  button:active,
+  button:hover {
+    outline: 0;
+  }
 
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
+  button span {
+    border: 4px solid white;
+    background-color: rgb(5, 6, 45);
+    border-radius: 50%;
+    width: 3.7rem;
+    height: 3.7rem;
+    transition: 300ms;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+  }
+
+  button:active {
+    transform: scale(0.8);
+  }
+}
+
+.link-to-publish {
+  p {
+    margin: 0;
+    font-size: 12px;
+    padding-top: 52px;
+  }
+}

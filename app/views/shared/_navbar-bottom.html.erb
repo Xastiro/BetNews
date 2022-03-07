@@ -3,21 +3,25 @@
     <%= link_to bets_path do  %>
       <div class="d-flex align-items-center flex-column">
         <%= '<i class="fas fa-home"></i>'.html_safe %>
-        <p>Paris</p>
+        <%# <p>paris</p> %>
       </div>
     <% end %>
 
-  <%= link_to new_bet_path do  %>
-    <div class="d-flex align-items-center flex-column">
-      <%= '<i class="fas fa-plus-circle"></i>'.html_safe %>
-      <p>Publier</p>
+  <%= link_to new_bet_path, class: "link-to-publish" do  %>
+    <div class="d-flex align-items-center flex-column publish-button">
+      <button>
+        <span class="text">
+          <i class="fas fa-plus"></i>
+        </span>
+      </button>
     </div>
+    <%# <p>Publier</p> %>
   <% end %>
 
   <%= link_to profile_bettings_path do  %>
     <div class="d-flex align-items-center flex-column">
       <%= '<i class="fas fa-user-circle"></i>'.html_safe %>
-      <p>Profil</p>
+      <%# <p>Profil</p> %>
     </div>
   <% end %>
   <%# </div> %>
