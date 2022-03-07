@@ -29,3 +29,10 @@
   color:            $yellow;
   border: 2px solid $yellow;
 }
+
+.swiper-button-prev:after {
+  content: none;
+}
+.swiper-button-next:after {
+  content: none;
+}
