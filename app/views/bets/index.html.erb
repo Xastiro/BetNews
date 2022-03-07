@@ -10,7 +10,7 @@
   <div class="cards">
     <% @bets.each do |bet| %>
 
-      <div class="card index-border-radius-style index-shadow my-3">
+      <div class="card index-border-radius-style index-shadow my-3" id="card-<%= bet.id %>">
         <div class="px-1 pt-1 mx-1">
           <p class="card-title d-inline float-start"><%= bet.hashtag %></p>
         </div>
@@ -25,7 +25,7 @@
         </div>
         <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5">
           <p class="index-card-question"><%= bet.question %></p>
-          <div class="d-flex justify-content-around">
+          <div class="d-flex justify-content-around" data-controller="vote" data-vote-target="container">
             <% if !user_signed_in? %>
               <%= link_to yes_bet_bettings_path(bet), method: :post do %>
                 <div class="btn index-button-cote index-button-oui index-shadow">
@@ -47,7 +47,7 @@
               <% end %>
             <% else %>
               <% if !current_user.user_bets.include?(bet) %>
-                <%= link_to yes_bet_bettings_path(bet), method: :post do %>
+                <%= link_to "#", "data-action": "click->vote#yes", "data-id": bet.id do %>
                   <div class="btn index-button-cote index-button-oui index-shadow">
                     <p>oui</p>
                     <div>
@@ -56,7 +56,7 @@
                     </div>
                   </div>
                 <% end %>
-                <%= link_to no_bet_bettings_path(bet), method: :post do %>
+                <%= link_to "#", "data-action": "click->vote#no", "data-id": bet.id do %>
                   <div class="btn index-button-cote index-button-non index-shadow">
                     <p>non</p>
                     <div>

@@ -2,7 +2,7 @@
 
   <div class="cards">
 
-      <div class="card index-border-radius-style index-shadow my-3">
+      <div class="card index-border-radius-style index-shadow my-3" id="card-<%= @bet.id %>">
         <div class="px-1 pt-1 mx-1 d-flex justify-content-between">
           <p class="card-title d-inline float-start"><%= @bet.hashtag %></p>
           <%= link_to bets_path do %>
@@ -16,30 +16,29 @@
         <div class="user-infos">
             <p > <%= cl_image_tag @bet.publisher.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <a href="https://user.com/en/"><%= @bet.publisher.username %></a> </p>
         </div>
+          <div class="container">
+            <p class="index-card-description"><%= @bet.description %></p>
+          </div>
           <p class="index-card-url">
             <% @medias.each do |media| %>
               <a href="<%= media.url %>"><%= media.url[0..40] %></a>
             <% end %>
           </p>
-          <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5">
+          <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5" data-controller="publishedconfirmed">
             <p class="index-card-question"><%= @bet.question %></p>
-            <div class="btn-publication">
-            <% if !current_user.user_bets.include?(@bet) %>
-              <%= link_to close_bet_path(@bet, result: "yes"), method: :patch do %>
-                <div class="btn-publication-yes">
-                  <p>Publier OUI</p>
-                </div>
+            <div class="btn-publication" data-publishedconfirmed-target="container">
+              <% if !current_user.user_bets.include?(@bet) %>
+                <%= link_to "#", "data-action": "click->publishedconfirmed#close", "data-id": @bet.id, "data-result": "yes" do %>
+                  <div class="btn-publication-yes">
+                    <p>Publier OUI</p>
+                  </div>
+                <% end %>
+                <%= link_to "#", "data-action": "click->publishedconfirmed#close", "data-id": @bet.id, "data-result": "no" do %>
+                  <div class="btn-publication-no mt-3">
+                    <p>Publier NON</p>
+                  </div>
+                <% end %>
               <% end %>
-              <%= link_to close_bet_path(@bet, result: "no"), method: :patch do %>
-                <div class="btn-publication-no mt-3">
-                  <p>Publier NON</p>
-                </div>
-              <% end %>
-            <% else %>
-              <div class="validated-bet-tag">
-                <i class="far fa-check-circle"></i> Ton pari a été validé
-              </div>
-            <% end %>
             </div>
           </div>
       </div>

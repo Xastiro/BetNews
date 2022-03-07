@@ -58,6 +58,13 @@ class BetsController < ApplicationController
     @bet.result = @result
     @bet.save
 
+    if @bet.save
+      respond_to do |format|
+        format.html { redirect_to bets_path(anchor: "card-#{@bet.id}") }
+        format.text { render(partial: "bets/publishedconfirmed", formats: [:html]) }
+      end
+    end
+
     bettings = @bet.bettings
 
     bettings.each do |betting|
@@ -67,12 +74,9 @@ class BetsController < ApplicationController
         betting.won = false
       end
       betting.save
-
-      flash[:notice] = "Ta réponse a bien été publiée"
-
     end
 
-    redirect_to bet_path(@bet)
+    # redirect_to bet_path(@bet)
   end
 
   private

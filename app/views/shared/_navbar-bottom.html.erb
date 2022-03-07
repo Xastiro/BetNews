@@ -1,17 +1,18 @@
 <div class="navbar navbar-expand-sm">
   <%# <div class="container-fluid"> %>
     <%= link_to bets_path do  %>
-      <div class="d-flex align-items-center flex-column">
-        <%= '<i class="fas fa-home"></i>'.html_safe %>
+      <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name != 'new' %>">
+
+        <i class="fas fa-fire-alt"></i>
         <%# <p>paris</p> %>
       </div>
     <% end %>
 
   <%= link_to new_bet_path, class: "link-to-publish" do  %>
-    <div class="d-flex align-items-center flex-column publish-button">
+    <div class="d-flex align-items-center flex-column publish-button <%= 'active' if controller_name == 'bets' && action_name == 'new' %>">
       <button>
         <span class="text">
-          <i class="fas fa-plus"></i>
+          <i class="fas fa-plus"></i></i>
         </span>
       </button>
     </div>
@@ -19,8 +20,8 @@
   <% end %>
 
   <%= link_to profile_bettings_path do  %>
-    <div class="d-flex align-items-center flex-column">
-      <%= '<i class="fas fa-user-circle"></i>'.html_safe %>
+    <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bettings' %>">
+      <i class="fas fa-user-circle"></i>
       <%# <p>Profil</p> %>
     </div>
   <% end %>
