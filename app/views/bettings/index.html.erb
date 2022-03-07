@@ -11,13 +11,16 @@
     <div class="cards">
       <% @bettings.each do |betting| %>
         <% if betting.bet.expiring_at < Time.now %>
+          <%# CARD %>
           <div class="image-card-link">
             <%= link_to bet_path(betting.bet) do %>
-              <div class="card index-border-radius-style index-shadow my-3 publication ">
-                <div class="image-position">
-                  <%= cl_image_tag(betting.bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
+              <div class="card index-border-radius-style index-shadow my-3">
+                <%# CARD TOP %>
+                <div class="card-top p-3">
+                  <div class="index-border-radius-style card-img-bg p-3 d-flex" style="background-image: url(<%= cl_image_path(betting.bet.photo.key, alt: "Image that illustrates the bet") %>);"></div>
                   <p class="clos-tag-position"> Pari clos le <%= betting.bet.expiring_at.strftime("%d/%m/%Y") %></p>
                 </div>
+                <%# CARD BOTTOM %>
                 <div class="card-grey">
                   <p class="card-subtitle index-card-question"><%= betting.bet.question %></p>
                   <div class="answer-show d-flex justify-content-around">
@@ -111,13 +114,16 @@
             <%end%>
           </div>
         <% else %>
+          <%# CARD %>
           <div class="image-card-link">
             <%= link_to bet_path(betting.bet) do %>
-              <div class="card index-border-radius-style index-shadow my-3 publication ">
-                <div class="image-position">
-                  <%= cl_image_tag(betting.bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
-                  <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= betting.bet.expiring_at %>"></p>
+              <div class="card index-border-radius-style index-shadow my-3">
+                <%# CARD TOP %>
+                <div class="card-top p-3">
+                  <div class="index-border-radius-style card-img-bg p-3 d-flex" style="background-image: url(<%= cl_image_path(betting.bet.photo.key, alt: "Image that illustrates the bet") %>);"></div>
+                  <p class="clos-tag-position"> Pari clos le <%= betting.bet.expiring_at.strftime("%d/%m/%Y") %></p>
                 </div>
+                <%# CARD BOTTOM %>
                 <div class="card-grey pb-3">
                   <p class="card-subtitle index-card-question"><%= betting.bet.question %></p>
                   <div class="answer-show d-flex justify-content-around">
