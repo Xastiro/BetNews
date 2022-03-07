@@ -320,7 +320,7 @@ file_tourdefrance = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/
 tourdefrance.photo.attach(io: file_tourdefrance, filename: 'nes.jpg', content_type: 'image/jpg')
 tourdefrance.save
 
-file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324698/betnews/qkjqzmlrtxmu2yzo9ohv.jpg')
+file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646325451/betnews/iryspvjz5ndpbee9pk8s.jpg')
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
 goldman.save
 
