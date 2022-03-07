@@ -86,3 +86,11 @@
     padding-top: 52px;
   }
 }
+
+.active {
+  .fas {
+    text-decoration: underline white;
+    // border-bottom: 6px solid white;
+    text-underline-offset: 5px;
+  }
+}
