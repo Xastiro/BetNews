@@ -1,37 +1,33 @@
-<div class="swiper">
-  <div class="swiper-wrapper">
-
-
-
-      <div class="new-bet">
-      <%# <h1>Lance ton pari !</h1> %>
-      <div class="publication-form d-flex align-items-center">
-
-        <%= simple_form_for [ @bet ] do |f| %>
-
-          <div class="swiper-slide">
+<%= simple_form_for [ @bet ] do |f| %>
+  <div class="new-bet">
+    <%# <h1>Lance ton pari !</h1> %>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container category-container d-flex flex-wrap justify-content-center mt-5">
             <%= render "category_step", :f => f %>
           </div>
-          <div class="swiper-slide">
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
             <%= render "question_step", :f => f %>
           </div>
-          <div class="swiper-slide">
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
             <%= render "information_step", :f => f %>
-            <p><%= f.submit "Suivant", class: "publish-form-button" %></p>
+            <%= f.submit "Valider", class: "validate-form-button" %>
           </div>
+        </div>
 
-          <%# <div class="publish-form-buttons d-flex justify-content-around"> %>
-            <%# <p><%= f.submit "Précedent", class: "publish-form-button", :name => "back_button" unless @bet.first_step? %>
-            <%# <p><%= f.submit "Suivant", class: "publish-form-button" %>
-          <%# </div> %>
-          <%# <%= f.submit "Valider", class: "invisible" unless @bet.last_step? %>
-        <% end %>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
+        <%# <div class="publish-form-buttons d-flex justify-content-around"> %>
+          <%# <p><%= f.submit "Précedent", class: "publish-form-button", :name => "back_button" unless @bet.first_step? %>
+          <%# <p><%= f.submit "Suivant", class: "publish-form-button" %>
+        <%# </div> %>
+        <%# <%= f.submit "Valider", class: "invisible" unless @bet.last_step? %>
       </div>
+      <div class="swiper-button-prev publish-form-button">Précédent</div>
+      <div class="swiper-button-next publish-form-button">Suivant</div>
     </div>
-
   </div>
-</div>
+<% end %>
