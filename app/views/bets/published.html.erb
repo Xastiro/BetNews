@@ -13,39 +13,34 @@
           <p class="card-title d-inline float-start"></p>
       </div> %>
       <% @bets_published.each do |bet| %>
-        <%= link_to bet_path(bet) do %>
-          <div class="card index-border-radius-style index-shadow my-3 publication" >
-            <div class="image-position">
-              <%= cl_image_tag(bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
-            </div>
-            <div class="card-grey">
-              <p class="card-subtitle index-card-question"><%= bet.question %></p>
-              <% if bet.result %>
-                  <div class="description-info">
-                    <p> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
-                  </div>
-                <p>Résultat publié (<%= bet.result %>) </p>
-              <% else %>
-                <% if bet.expiring_at < Date.current %>
-                  <div class="description-info">
-                    <p>Pari clôturé le <%= (bet.expiring_at).strftime("%d/%m/%y") %> - Date dépassée...</p>
-                  </div>
-                  <p class="index-learn-more-button yellow index-learn-more-hover"> <%= link_to "Publie vite le résultat !", closing_bet_path(bet) %> </p>
-                <% elsif bet.expiring_at == Date.current %>
-                  <div class="description-info">
-                    <p> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
-                  </div>
-                  <p class="index-learn-more-button yellow index-learn-more-hover"> <%= link_to "Publie le résultat aujourd'hui !", closing_bet_path(bet) %> </p>
+        <div class="image-card-link">
+          <%= link_to bet_path(bet) do %>
+            <div class="card index-border-radius-style index-shadow my-3 publication" >
+              <div class="image-position">
+                <%= cl_image_tag(bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
+                <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
+              </div>
+              <div class="card-grey">
+                <p class="card-subtitle index-card-question"><%= bet.question %></p>
+                <% if bet.result %>
+                  <% if bet.result == "yes" %>
+                    <p class="result"> Résultat : <span>OUI</span></p>
+                  <% else %>
+                    <p class="result"> Résultat : <span>NON</span></p>
+                  <% end %>
                 <% else %>
-                  <div class="description-info">
-                    <p> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
-                  </div>
+                  <% if bet.expiring_at < Date.current %>
+                    <p class="index-learn-more-button yellow index-learn-more-hover"> <%= link_to "Publie vite le résultat !", closing_bet_path(bet) %> </p>
+                  <% elsif bet.expiring_at == Date.current %>
+                    <p class="index-learn-more-button yellow index-learn-more-hover"> <%= link_to "Publie le résultat aujourd'hui !", closing_bet_path(bet) %> </p>
+                  <% else %>
                     <p class="yellow-black"> Résultat à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
+                  <% end %>
                 <% end %>
-              <% end %>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
