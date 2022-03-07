@@ -1,18 +1,33 @@
-<div class="new-bet">
-  <h1>Lance ton pari !</h1>
-  <div class="publication-form">
-    <%= simple_form_for [ @bet ] do |f| %>
-      <%= f.input :category, as: :radio_buttons, :collection => ["Culture", "Economie", "Politique", "Sport", "Planète", "Science", "Technologie", "Santé", "Divertissement"], :label => "Choisis ta catégorie" %>
-      <%= f.input :hashtag, :placeholder => "#foot #coupedumonde", :label => "Cible ton sujet à l'aide de #Hashtags" %>
-      <%= f.input :question, :placeholder => "La france va t-elle gagner ?", :label => "Pose ta question" %>
-      <%= f.input :expiring_at, :label => "Date de clôture du pari" %>
-      <%= f.input :photo, as: :file, :label => "Télécharge une photo" %>
-      <%= f.input :description, :placeholder => "La 22ème édition de la Coupe du monde de football 2022, organisée par la FIFA, se déroulera au Qatar du 21 novembre au 18 décembre 2022...", :label => "Parle nous du sujet, du contexte... " %>
-      <%= f.simple_fields_for :medias do |f| %>
-        <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", :label => "As-tu des articles à nous partager sur cet actualité  ?" %>
-        <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", label: false %>
-      <% end %>
-      <%= f.submit "Valider", class: "btn btn-primary" %>
-    <% end %>
+<%= simple_form_for [ @bet ] do |f| %>
+  <div class="new-bet">
+    <%# <h1>Lance ton pari !</h1> %>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container category-container d-flex flex-wrap justify-content-center mt-5">
+            <%= render "category_step", :f => f %>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <%= render "question_step", :f => f %>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <%= render "information_step", :f => f %>
+            <%= f.submit "Valider", class: "validate-form-button" %>
+          </div>
+        </div>
+
+        <%# <div class="publish-form-buttons d-flex justify-content-around"> %>
+          <%# <p><%= f.submit "Précedent", class: "publish-form-button", :name => "back_button" unless @bet.first_step? %>
+          <%# <p><%= f.submit "Suivant", class: "publish-form-button" %>
+        <%# </div> %>
+        <%# <%= f.submit "Valider", class: "invisible" unless @bet.last_step? %>
+      </div>
+      <div class="swiper-button-prev publish-form-button">Précédent</div>
+      <div class="swiper-button-next publish-form-button">Suivant</div>
+    </div>
   </div>
-</div>
+<% end %>
