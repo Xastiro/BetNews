@@ -16,4 +16,7 @@ import "controllers"
 import "bootstrap"
 
 import { initSwiper } from "../plugins/init_swiper"
-initSwiper()
+
+document.addEventListener("turbolinks:load", function() {
+  initSwiper()
+});
