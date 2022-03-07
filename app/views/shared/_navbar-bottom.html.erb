@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm">
   <%# <div class="container-fluid"> %>
     <%= link_to bets_path do  %>
-      <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name != 'new' %>">
+      <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name != 'new' && action_name != 'published' %>">
 
         <i class="fas fa-fire-alt"></i>
         <%# <p>paris</p> %>
@@ -20,7 +20,7 @@
   <% end %>
 
   <%= link_to profile_bettings_path do  %>
-    <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bettings' %>">
+    <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name == 'published' || controller_name == 'bettings' && action_name == 'index'%>">
       <i class="fas fa-user-circle"></i>
       <%# <p>Profil</p> %>
     </div>
