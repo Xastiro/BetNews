@@ -2,7 +2,7 @@
 
   <div class="cards">
 
-      <div class="card index-border-radius-style index-shadow my-3">
+      <div class="card index-border-radius-style index-shadow my-3" id="card-<%= @bet.id %>">
         <div class="px-1 pt-1 mx-1 d-flex justify-content-between">
           <p class="card-title d-inline float-start"><%= @bet.hashtag %></p>
           <%= link_to bets_path do %>
@@ -10,11 +10,7 @@
           <%end%>
         </div>
         <div class="image-position">
-        <% if @bet.photo.key? %>
           <%= cl_image_tag(@bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
-        <% else %>
-         <p> No pohto available </p>
-         <% end %>
           <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= @bet.expiring_at %>"></p>
         </div>
         <div class="user-infos">
@@ -28,33 +24,21 @@
               <a href="<%= media.url %>"><%= media.url[0..40] %></a>
             <% end %>
           </p>
-          <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5">
+          <div class="index-card-grey-background index-bottom-border-radius-style pb-3 mb-5" data-controller="publishedconfirmed">
             <p class="index-card-question"><%= @bet.question %></p>
-            <div class="d-flex justify-content-around">
-            <% if !current_user.user_bets.include?(@bet) %>
-              <%= link_to yes_bet_bettings_path(@bet), method: :post do %>
-                <div class="btn index-button-cote index-button-oui index-shadow">
-                  <p>oui</p>
-                  <div>
-                    <p>cote</p>
-                    <p>1.9</p>
+            <div class="btn-publication" data-publishedconfirmed-target="container">
+              <% if !current_user.user_bets.include?(@bet) %>
+                <%= link_to "#", "data-action": "click->publishedconfirmed#close", "data-id": @bet.id, "data-result": "yes" do %>
+                  <div class="btn-publication-yes">
+                    <p>Publier OUI</p>
                   </div>
-                </div>
-              <% end %>
-              <%= link_to no_bet_bettings_path(@bet), method: :post do %>
-                <div class="btn index-button-cote index-button-non index-shadow">
-                  <p>non</p>
-                  <div>
-                    <p>cote</p>
-                    <p>2.1</p>
+                <% end %>
+                <%= link_to "#", "data-action": "click->publishedconfirmed#close", "data-id": @bet.id, "data-result": "no" do %>
+                  <div class="btn-publication-no mt-3">
+                    <p>Publier NON</p>
                   </div>
-                </div>
+                <% end %>
               <% end %>
-            <% else %>
-              <div class="validated-bet-tag">
-                <i class="far fa-check-circle"></i> Ton pari a été validé
-              </div>
-            <% end %>
             </div>
           </div>
       </div>

@@ -1,46 +1,42 @@
-<div class="home-container">
-
-  <div class="d-flex justify-content-around pt-5">
-    <%= image_tag("logo.png", class: "logo-log-in") %>
-  </div>
-
-  <h1>Bienvenue sur BetNews</h1>
 
   <div id="carouselExampleIndicators" class="carousel slide bg-white" data-bs-interval="false" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
-        </div>
 
-        <div class="carousel-inner">
-          <div class="carousel-item p-5 active">
-            <h5> <strong>S'informer sur l' actualité </strong></h5>
-            <p class="mb-5">Découvre les sujets tendance et nos paris en cours. </p>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    </div>
 
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1611159063981-b8c8c4301869);">
+  <div class="container">
 
+<div class="carousel-inner">
+      <div class="banner">
+        <div class="carousel-item p-5 active">
+        <h5><strong>Parie sur le futur</strong></h5>
+        <br>
+        <p class="mb-5">Découvre les grandes questions du jour et partage ton avis avec notre communauté en pariant sur les événements à venir!</p>
+      </div>
+    <div class="carousel-item p-5">
+      <h5> <strong>Lance des paris </strong></h5>
+       <br>
+         <p class="mb-5">Devient propulseur de conversations autour d'un nouveau sujet et partage tes connaissances avec la communauté Betnews.</p>
           </div>
           <div class="carousel-item p-5">
-
-            <h5> <strong>Propose des paris </strong></h5>
-            <p class="mb-5">Devient  propulseur des conversations autour d’un sujet
-Envoi les résultats et à une conversation avec les participants
-</p>
-
-
-
-          </div>
-          <div class="carousel-item p-5">
-
-            <h5> <strong>Vote</strong> </h5>
-            <p class="mb-5">Participe aux  sujets d'aujourd'hui et partage ton avis avec notre communauté</p>
-
-
-
-          </div>
-        </div>
+           <h5><strong>Vote</strong></h5>
+          <br>
+          <p class="mb-5">Suis les sujets d'actualités et questionne toi sur les événements à venir.
+          <br>Creuse les sujets qui t'intéressent en découvrant les articles partagés par notre communauté.</p>
+      </div>
+      </div>
+    </div>
   </div>
+  </div>
+</div>
 
-  <p class="bets-available-button bets-available-hover bets-available-shadow"><%= link_to "Paris disponibles", bets_path %></p>
 
+
+  <div class="d-flex justify-content-around pt-5">
+    <p class="bets-available-button bets-available-hover bets-available-shadow"><%= link_to "Paris disponibles", bets_path %></p>
+   </div>
 </div>

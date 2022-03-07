@@ -12,7 +12,7 @@ class BettingsController < ApplicationController
     )
 
     if @betting.save!
-      flash[:notice] = "Votre pari a bien été pris en compte"
+      # flash[:notice] = "Votre pari a bien été pris en compte"
       redirect_to bets_path
     else
       flash[:alert] = "Votre pari n'a pas été pris en compte"
@@ -27,7 +27,12 @@ class BettingsController < ApplicationController
       bet: @bet,
       user: current_user
     )
-    save(@bet, @betting)
+    if @betting.save
+      respond_to do |format|
+        format.html { redirect_to bets_path(anchor: "card-#{@bet.id}") }
+        format.text { render(partial: "bettings/confirmed", formats: [:html]) }
+      end
+    end
   end
 
   def no
@@ -37,11 +42,16 @@ class BettingsController < ApplicationController
       bet: @bet,
       user: current_user
     )
-    save(@bet, @betting)
+    if @betting.save
+      respond_to do |format|
+        format.html { redirect_to bets_path(anchor: "card-#{@bet.id}") }
+        format.text { render(partial: "bettings/confirmed", formats: [:html]) }
+      end
+    end
   end
 
   def index
-    @bettings = current_user.bettings
+    @bettings = current_user.bettings.includes(:bet).order("bets.expiring_at desc")
   end
 
   private
@@ -56,8 +66,8 @@ class BettingsController < ApplicationController
 
   def save(bet, betting)
     if betting.save!
-      flash[:notice] = "Votre pari a bien été pris en compte"
-      redirect_to bets_path
+      # flash[:notice] = "Votre pari a bien été pris en compte"
+      redirect_to bets_path(anchor: "card-#{bet.id}")
     else
       flash[:alert] = "Votre pari n'a pas été pris en compte"
       redirect bet_path(bet)

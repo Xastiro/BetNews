@@ -10,26 +10,154 @@
 
     <div class="cards">
       <% @bettings.each do |betting| %>
-        <div class="card index-border-radius-style index-shadow my-3 publication ">
-          <div class="image-position">
-            <%= cl_image_tag(betting.bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
+        <% if betting.bet.expiring_at < Time.now %>
+          <div class="image-card-link">
+            <%= link_to bet_path(betting.bet) do %>
+              <div class="card index-border-radius-style index-shadow my-3 publication ">
+                <div class="image-position">
+                  <%= cl_image_tag(betting.bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
+                  <p class="clos-tag-position"> Pari clos le <%= betting.bet.expiring_at.strftime("%d/%m/%Y") %></p>
+                </div>
+                <div class="card-grey">
+                  <p class="card-subtitle index-card-question"><%= betting.bet.question %></p>
+                  <div class="answer-show d-flex justify-content-around">
+                    <% if betting.bet.result == "yes"%>
+                      <% if betting.answer== "yes" %>
+                        <div>
+                          <div>
+                            <div class="right-answer user-choice btn index-button-cote index-button-oui index-shadow">
+                              <p class="answer">oui</p>
+                              <div>
+                                <p>cote</p>
+                                <p>1.9</p>
+                              </div>
+                            </div>
+                            <div class="other-choice btn index-button-cote index-button-non index-shadow">
+                              <p class="answer">non</p>
+                              <div>
+                                <p>cote</p>
+                                <p>2.1</p>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="win-reminder"> Gagné !<i class="fas fa-award"></i></p>
+                        </div>
+                      <% else %>
+                        <div>
+                          <div>
+                            <div class="other-choice btn index-button-cote index-button-oui index-shadow">
+                              <p class="answer">oui</p>
+                              <div>
+                                <p>cote</p>
+                                <p>1.9</p>
+                              </div>
+                            </div>
+                            <div class="wrong-answer user-choice btn index-button-cote index-button-non index-shadow">
+                              <p class="answer">non</p>
+                              <div>
+                                <p>cote</p>
+                                <p>2.1</p>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="lose-reminder"> Perdu...</p>
+                        </div>
+                      <% end %>
+                    <% else %>
+                      <% if betting.answer== "yes" %>
+                        <div>
+                          <div>
+                            <div class="wrong-answer user-choice btn index-button-cote index-button-oui index-shadow">
+                              <p class="answer">oui</p>
+                              <div>
+                                <p>cote</p>
+                                <p>1.9</p>
+                              </div>
+                            </div>
+                            <div class="other-choice btn index-button-cote index-button-non index-shadow">
+                              <p class="answer">non</p>
+                              <div>
+                                <p>cote</p>
+                                <p>2.1</p>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="lose-reminder"> Perdu...</p>
+                        </div>
+                      <% else %>
+                        <div>
+                          <div>
+                          <div class="other-choice btn index-button-cote index-button-oui index-shadow">
+                            <p class="answer">oui</p>
+                            <div>
+                              <p>cote</p>
+                              <p>1.9</p>
+                            </div>
+                          </div>
+                          <div class="right-answer user-choice btn index-button-cote index-button-non index-shadow">
+                            <p class="answer">non</p>
+                            <div>
+                              <p>cote</p>
+                              <p>2.1</p>
+                            </div>
+                          </div>
+                          <p class="win-reminder">Gagné ! <i class="fas fa-award"></i></p>
+                        </div>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <%end%>
           </div>
-          <div class="pt-0">
-            <p class="index-learn-more-button index-learn-more-hover index-shadow small-btn"><%= link_to "Relire le pari", bet_path(betting.bet), class: "text-decoration-none" %></p>
+        <% else %>
+          <div class="image-card-link">
+            <%= link_to bet_path(betting.bet) do %>
+              <div class="card index-border-radius-style index-shadow my-3 publication ">
+                <div class="image-position">
+                  <%= cl_image_tag(betting.bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
+                  <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= betting.bet.expiring_at %>"></p>
+                </div>
+                <div class="card-grey pb-3">
+                  <p class="card-subtitle index-card-question"><%= betting.bet.question %></p>
+                  <div class="answer-show d-flex justify-content-around">
+                    <% if betting.answer== "yes" %>
+                      <div class="user-choice btn index-button-cote index-button-oui index-shadow">
+                        <p class="answer">oui</p>
+                        <div>
+                          <p>cote</p>
+                          <p>1.9</p>
+                        </div>
+                      </div>
+                      <div class="other-choice btn index-button-cote index-button-non index-shadow">
+                        <p class="answer">non</p>
+                        <div>
+                          <p>cote</p>
+                          <p>2.1</p>
+                        </div>
+                      </div>
+                    <% else %>
+                      <div class="other-choice btn index-button-cote index-button-oui index-shadow">
+                        <p class="answer">oui</p>
+                        <div>
+                          <p>cote</p>
+                          <p>1.9</p>
+                        </div>
+                      </div>
+                      <div class="user-choice btn index-button-cote index-button-non index-shadow">
+                        <p class="answer">non</p>
+                        <div>
+                          <p>cote</p>
+                          <p>2.1</p>
+                        </div>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <%end%>
           </div>
-          <div class="card-grey">
-            <p class="card-subtitle index-card-question"><%= betting.bet.question %></p>
-            <% if betting.bet.expiring_at < Time.now %>
-              <% if betting.bet.result == betting.answer%>
-                <p class="yellow-black"> Tu as gagné ! </p>
-              <% else %>
-                <p class="yellow-black"> Tu as perdu ! </p>
-              <% end %>
-            <% else %>
-              <p class="yellow-black"> Résultat le <%= (betting.bet.expiring_at).strftime("%d/%m/%Y") %></p>
-            <% end %>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>

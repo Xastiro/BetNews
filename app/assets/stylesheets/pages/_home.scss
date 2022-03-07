@@ -9,40 +9,67 @@
 }
 
 .carousel-indicators [data-bs-target] {
-  background-color: #FEFD02;
-  width: 35px;
-  height: 35px;
+  background-color: white;
+  width: 15px;
+  height: 15px;
   border-radius: 100%;
 }
 
 .bets-available-button {
   a {
-    color: white;
+    color: #FEFD02;
     text-decoration: none;
+    font-family: poppins;
+    font-weight: bold;
   }
-  width: 200px;
+  width: 35
+px;
   background-color: black;
   padding: 5px 15px 5px 15px;
   color: white;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
 }
 
 
 .carousel-item {
-  height: 350px;
+  height: 375px;
   h5 {
     font-family: poppins;
     font-weight: bold;
-    font-size: 18px;
-    text-align: center;
+    font-size: 20px;
+    text-align: left;
   }
   p {
     font-family: roboto;
     font-weight: normal;
-    font-size: 18px;
-    text-align: center;
-    color: #888888
+    font-size: 16px;
+    text-align: left;
+    color: white
     }
+}
+
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+.banner h1 {
+
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+.carousel-inner h1{
+  font-family: poppins;
+}
+
+.carousel-inner h5{
+  color: #FEFD02;
 }
