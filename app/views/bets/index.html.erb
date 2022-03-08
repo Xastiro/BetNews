@@ -52,7 +52,7 @@
                     data-popup-title-value="Combien veux tu miser?"
                     data-popup-ok-value=""
                     data-popup-main-text-value="">
-                  <button  class="btn index-button-cote index-button-oui index-shadow" data-vote-target='vote' data-popup-target='yes' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmityes confirmed<%= bet.id %>@window->vote#yes">
+                  <button  class="btn index-button-cote index-button-oui index-shadow" data-vote-target='voteyes' data-popup-target='yes' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmityes confirmedyes<%= bet.id %>@window->vote#yes">
                     <p>oui</p>
                     <div>
                       <p>cote</p>
@@ -65,7 +65,7 @@
                     data-popup-title-value="Combien veux tu miser?"
                     data-popup-ok-value=""
                     data-popup-main-text-value="">
-                  <button  class="btn index-button-cote index-button-non index-shadow" data-vote-target='vote' data-popup-target='no' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmitno confirmed<%= bet.id %>@window->vote#no">
+                  <button  class="btn index-button-cote index-button-non index-shadow" data-vote-target='voteno' data-popup-target='no' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmitno confirmedno<%= bet.id %>@window->vote#no">
                     <p>non</p>
                     <div>
                       <p>cote</p>

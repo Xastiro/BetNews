@@ -15,7 +15,7 @@ class Bet < ApplicationRecord
   validates :photo, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   validates :expiring_at, presence: true
-  validate :expiration_date_cannot_be_in_the_past
+  # validate :expiration_date_cannot_be_in_the_past
 
   scope :filter_by_category, ->(category) { where category: category }
 
