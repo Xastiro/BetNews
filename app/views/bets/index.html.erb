@@ -47,22 +47,35 @@
               <% end %>
             <% else %>
               <% if !current_user.user_bets.include?(bet) %>
+
                 <div data-controller="popup"
                     data-popup-title-value="Combien veux tu miser?"
                     data-popup-ok-value=""
                     data-popup-main-text-value="">
-                  <button class="alerttt btn index-button-cote index-button-oui index-shadow" data-vote-target='yes' data-popup-target='yes' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmit confirmed<%= bet.id %>@window->vote#yes">
+                  <button  class="btn index-button-cote index-button-oui index-shadow" data-vote-target='vote' data-popup-target='yes' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmityes confirmed<%= bet.id %>@window->vote#yes">
                     <p>oui</p>
                     <div>
                       <p>cote</p>
                       <p>1.9</p>
                     </div>
-                  </div>
                   </button>
                 </div>
 
-                <%= link_to "#", "data-action": "confirmed@window->vote#yes", "data-id": bet.id do %>
-                  <div class="btn index-button-cote index-button-oui index-shadow">
+                <div data-controller="popup"
+                    data-popup-title-value="Combien veux tu miser?"
+                    data-popup-ok-value=""
+                    data-popup-main-text-value="">
+                  <button  class="btn index-button-cote index-button-non index-shadow" data-vote-target='vote' data-popup-target='no' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmitno confirmed<%= bet.id %>@window->vote#no">
+                    <p>non</p>
+                    <div>
+                      <p>cote</p>
+                      <p>2.1</p>
+                    </div>
+                  </button>
+                </div>
+
+                <%# <%= link_to "#", "data-action": "confirmed@window->vote#yes", "data-id": bet.id do %>
+                  <%# <div class="btn index-button-cote index-button-oui index-shadow">
                     <p>oui</p>
                     <div>
                       <p>cote</p>
@@ -70,8 +83,8 @@
                     </div>
                   </div>
                 <% end %>
-                <%= link_to "#", "data-action": "click->vote#no", "data-id": bet.id do %>
-                  <div class="btn index-button-cote index-button-non index-shadow">
+                <%# <%= link_to "#", "data-action": "click->vote#no", "data-id": bet.id do %>
+                  <%# <div class="btn index-button-cote index-button-non index-shadow">
                     <p>non</p>
                     <div>
                       <p>cote</p>
@@ -79,6 +92,7 @@
                     </div>
                   </div>
                 <% end %>
+
               <% else %>
                 <div class="validated-bet-tag">
                   <i class="far fa-check-circle"></i> Ton pari a été validé
