@@ -14,84 +14,103 @@
       font-size: 12px;
       margin: 5px auto;
     }
-    .card-grey {
-      background-color: $mybackgroundlightgrey;
-      .card-subtitle {
-        font-size: 22px;
-        padding: 8px;
-      }
-      .result {
-        font-weight: 600;
-        font-size: 16px;
-        span {
-          background-color: $myblack;
-          color: $mywhite;
-          padding: 4px;
-        }
-      }
-      .description-info {
-        p {
-        color: $myblack;
-        font-weight: 600;
-        margin-bottom: 5px;
-        font-size: 15px;
-        }
-      }
-      .right-answer {
-        border: 5px solid rgb(80, 175, 80);
-      }
-
-      .wrong-answer {
-        border: 5px solid rgb(255, 96, 96);
-      }
-
-      .other-choice {
-        transform: scale(0.6);
-      }
-      .user-choice {
-        transform: scale(0.85);
-      }
-      .lose-reminder {
-        background-color: rgb(255, 96, 96);
-        color: $mywhite;
-        font-weight: 700;
-        font-size: larger;
-        position: absolute;
-        right: 10px;
-        top: 15px;
-        font-family: poppins;
-        width: 40%;
-        border-radius: 5px;
-        // margin: 8px auto;
-      }
-      .win-reminder {
-        background-color: rgb(80, 175, 80);
-        position: absolute;
-        right: 10px;
-        top: 15px;
-        color: $mywhite;
-        font-weight: 700;
-        font-size: larger;
-        font-family: poppins;
-        width: 40%;
-        border-radius: 5px;
-        // margin: 8px auto;
+    // .card-grey {
+    //   background-color: $mybackgroundlightgrey;
+    //   .card-subtitle {
+    //     font-size: 22px;
+    //     padding: 8px;
+    //   }
+  .result {
+    font-weight: 600;
+    font-size: 16px;
+    span {
+      background-color: $myblack;
+      color: $mywhite;
+      padding: 4px;
+    }
+  }
+    .description-info {
+      p {
+      color: $myblack;
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-size: 15px;
       }
     }
+    .right-answer {
+      // border: 5px solid rgb(80, 175, 80);
+      background-color: $green-win;
+
+      p {
+        color: white;
+      }
+    }
+
+    .wrong-answer {
+      // border: 5px solid rgb(255, 96, 96);
+      background-color: $red-lose;
+
+      p {
+        color: white;
+      }
+    }
+
+    .other-choice {
+      transform: scale(0.6);
+    }
+
+    .disable-btn {
+      background-color: darkgray;
+
+      p {
+        color: gray;
+      }
+    }
+
+    .lose-reminder {
+      background-color: $red-lose;
+      color: white;
+      font-weight: 700;
+      font-size: larger;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 90px;
+      font-family: poppins;
+      width: 40%;
+      border-radius: 5px;
+      margin: auto;
+    }
+    .win-reminder {
+      background-color: $green-win;
+      color: white;
+      font-weight: 700;
+      font-size: larger;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 90px;
+      font-family: poppins;
+      width: 40%;
+      border-radius: 5px;
+      margin: auto;
+    }
+
     .image-card-link {
       a {
       display: block;
       text-decoration: none;
       color: $myblack;
       }
+
       .clos-tag-position {
-        color: $myblack;
-        background-color: $mylightgrey;
+        color: darkgray;
+        background-color: white;
         width: 65%;
         font-weight: 600;
         margin: 5px auto;
         border-radius: 10px;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
       }
     }
     .btn-group-user {
@@ -103,6 +122,7 @@
       padding-bottom: 15px;
       display: flex;
       justify-content: space-evenly;
+
       .btn-active-bet {
         background-color: $mybackgroundlightgrey;
         color: $myblack;
@@ -150,18 +170,22 @@
       margin-bottom: 15px;
     }
     .win-green-btn {
-      background-color: $mydarkgreen;
+      background-color: $green-win;
       color: white;
       font-size: 20px;
       font-weight: 700;
       width: 30%;
     }
     .lose-red-btn {
-      background-color: rgb(187, 87, 87);
+      background-color: $red-lose;
       color: white;
       font-size: 20px;
       font-weight: 700;
       width: 30%;
     }
   }
+}
+
+.answer-published {
+  transform: scale(0.8);
 }
