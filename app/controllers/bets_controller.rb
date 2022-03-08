@@ -26,7 +26,6 @@ class BetsController < ApplicationController
   end
 
   def create
-
     @bet = Bet.new(bet_params)
     @bet.publisher = current_user
     if @bet.save

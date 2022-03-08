@@ -25,7 +25,8 @@ class BettingsController < ApplicationController
     @betting = Betting.new(
       answer: "yes",
       bet: @bet,
-      user: current_user
+      user: current_user,
+      wager: params[:wager]
     )
     if @betting.save
       respond_to do |format|
@@ -40,7 +41,8 @@ class BettingsController < ApplicationController
     @betting = Betting.new(
       answer: "no",
       bet: @bet,
-      user: current_user
+      user: current_user,
+      wager: params[:wager]
     )
     if @betting.save
       respond_to do |format|
