@@ -12,6 +12,7 @@ class BetsController < ApplicationController
     @bets = @bets.sort_by(&:expiring_at).select { |bet| bet.expiring_at > DateTime.now }
 
     @betting = Betting.new
+    # @bets = Bet.all.select { |bet| bet.photo.attached? } # Si des bets n'ont pas de photos, on ne prend que les bets avec photo attached
   end
 
   def show
@@ -26,6 +27,8 @@ class BetsController < ApplicationController
   end
 
   def create
+    # session[:bet_params].deep_merge!(bet_params) if bet_params
+    # @bet = Bet.new(session[:bet_params])
     @bet = Bet.new(bet_params)
     @bet.publisher = current_user
     if @bet.save

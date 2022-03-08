@@ -663,3 +663,9 @@ goncourtmedia = Media.create!(
 )
 
 puts 'Medias well generated'
+
+Betting.all.each do |betting|
+  betting.wager = rand(1..100)
+  betting.save
+end
+puts 'Giving random wager to Bettings'
