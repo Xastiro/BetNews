@@ -2,12 +2,13 @@
 
   <%= render 'shared/navbar-user' %>
 
+
   <div class="betlist">
+    <%= current_user.total_points %>
     <div class="btn-group-user" role="group">
       <%= link_to "Mes paris publiés",  published_profile_bets_path, class: "btn-active-bet" %>
       <%= link_to "Mes paris répondus", profile_bettings_path,       class: "btn-bet" %>
     </div>
-
     <div class="cards">
       <%# <div class="px-1 pt-1 mx-1">
           <p class="card-title d-inline float-start"></p>
@@ -47,7 +48,6 @@
                 </div>
               </div>
             <% else %>
-
               <div class="card index-border-radius-style index-shadow my-3" >
                 <div class="card-top p-3">
                   <div class="index-border-radius-style card-img-bg card-sm p-3 d-flex" style="background-image: url(<%= cl_image_path(bet.photo.key, alt: "Image that illustrates the bet") %>);">
