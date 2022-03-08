@@ -2,11 +2,11 @@ import { Controller } from "stimulus"
 import { csrfToken } from "@rails/ujs"
 
 export default class extends Controller {
-  static targets = [ "container", "yes" ]
+  static targets = [ "container", "vote" ]
 
   yes(event) {
     event.preventDefault()
-    const id = this.yesTarget.dataset.id
+    const id = this.voteTarget.dataset.id
 
     fetch(`/bets/${id}/bettings/yes`, {
       method: "POST",
