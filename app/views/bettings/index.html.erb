@@ -12,7 +12,7 @@
       <% @bettings.each do |betting| %>
         <% if betting.bet.expiring_at < Time.now %>
           <%# CARD BET EXPIRED %>
-          <div class="image-card-link">
+          <div id= <%= betting.id %> class="image-card-link">
             <%= link_to bet_path(betting.bet) do %>
               <div class="card index-border-radius-style index-shadow my-3">
                 <%# CARD TOP %>
@@ -26,7 +26,7 @@
                   <p class="index-card-question"><%= betting.bet.question %></p>
                   <div>
                     <% if betting.bet.result == "yes"%>
-                      <% if betting.answer== "yes" %>
+                      <% if betting.answer == "yes" %>
                         <div>
                           <div class="d-flex justify-content-between">
                             <div class="right-answer user-choice btn index-button-cote index-button-oui index-shadow">
@@ -68,7 +68,7 @@
                         </div>
                       <% end %>
                     <% else %>
-                      <% if betting.answer== "yes" %>
+                      <% if betting.answer == "yes" %>
                         <div>
                           <div class="d-flex justify-content-between">
                             <div class="wrong-answer user-choice btn index-button-cote index-button-oui index-shadow">
@@ -130,7 +130,7 @@
                 <div class="index-card-grey-background index-bottom-border-radius-style p-3">
                   <p class="index-card-question"><%= betting.bet.question %></p>
                   <div class="answer-show d-flex justify-content-between">
-                    <% if betting.answer== "yes" %>
+                    <% if betting.answer == "yes" %>
                       <div class="user-choice btn index-button-cote index-button-oui index-shadow">
                         <p class="answer">oui</p>
                         <div>
