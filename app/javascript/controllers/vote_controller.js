@@ -2,15 +2,18 @@ import { Controller } from "stimulus"
 import { csrfToken } from "@rails/ujs"
 
 export default class extends Controller {
-  static targets = [ "container" ]
+  static targets = [ "container", "voteyes", "voteno" ]
 
   yes(event) {
     event.preventDefault()
-    const id = event.currentTarget.dataset.id
+    const id = this.voteyesTarget.dataset.id
+    const wager = { wager: document.getElementsByTagName("output")[0].textContent }
 
     fetch(`/bets/${id}/bettings/yes`, {
       method: "POST",
-      headers: { "Accept": "text/plain", "X-CSRF-Token": csrfToken() },
+      headers: { "Accept": "text/plain", "X-CSRF-Token": csrfToken(),
+                 'Content-Type': 'application/json' },
+      body: JSON.stringify(wager)
     })
       .then(response => response.text())
       .then((data) => {
@@ -20,11 +23,14 @@ export default class extends Controller {
 
   no(event) {
     event.preventDefault()
-    const id = event.currentTarget.dataset.id
+    const id = this.votenoTarget.dataset.id
+    const wager = { wager: document.getElementsByTagName("output")[0].textContent }
 
     fetch(`/bets/${id}/bettings/no`, {
       method: "POST",
-      headers: { "Accept": "text/plain", "X-CSRF-Token": csrfToken() },
+      headers: { "Accept": "text/plain", "X-CSRF-Token": csrfToken(),
+      'Content-Type': 'application/json' },
+      body: JSON.stringify(wager)
     })
       .then(response => response.text())
       .then((data) => {

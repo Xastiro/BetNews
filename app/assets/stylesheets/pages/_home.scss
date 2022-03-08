@@ -73,3 +73,15 @@ px;
 .carousel-inner h5{
   color: #FEFD02;
 }
+
+.connexion-button {
+  a {
+    display: block;
+    text-decoration: underline;
+    color: $myblack;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+
+  }
+}

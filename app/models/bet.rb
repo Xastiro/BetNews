@@ -15,7 +15,7 @@ class Bet < ApplicationRecord
   validates :photo, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   validates :expiring_at, presence: true
-  validate :expiration_date_cannot_be_in_the_past
+  # validate :expiration_date_cannot_be_in_the_past
 
   scope :filter_by_category, ->(category) { where category: category }
 
@@ -23,6 +23,20 @@ class Bet < ApplicationRecord
     if expiring_at.present? && expiring_at < Date.today
       errors.add(:expiring_at, "can't be in the past")
     end
+  end
+
+  def yes_odds
+    total_wager = self.bettings.sum { |betting| betting[:wager] }
+    total_wager_yes = self.bettings.sum { |betting| betting[:answer] == "yes" ? betting[:wager] : 0 }
+
+    total_wager_yes.zero? ? 2.0 : (total_wager / total_wager_yes)
+  end
+
+  def no_odds
+    total_wager = self.bettings.sum { |betting| betting[:wager] }
+    total_wager_no = self.bettings.sum { |betting| betting[:answer] == "no" ? betting[:wager] : 0 }
+
+    total_wager_no.zero? ? 2.0 : (total_wager / total_wager_no)
   end
 
   # def current_step

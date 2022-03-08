@@ -1,7 +1,6 @@
 .navbar-top {
   position: fixed;
   top: 0;
-  justify-content: space-between;
   height: $navbar-top-height;
   width: 100%;
   background-color: $mywhite;
@@ -17,5 +16,19 @@
   }
   .fas {
     color: black;
+  }
+  .logo-betnews {
+    position: relative;
+  }
+
+  .parameter-icon {
+    position: absolute;
+    right: 20px;
+    .nav-item {
+      list-style-type: none;
+    }
+    .dropdown-item {
+      z-index: 5;
+    }
   }
 }

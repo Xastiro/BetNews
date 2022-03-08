@@ -4,7 +4,11 @@
 
     <%= link_to bets_path do  %>
       <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name != 'new' && action_name != 'published' %>">
-        <i class="fas fa-dice fa-sm"></i>
+
+
+        <i class="fas fa-dice"></i>
+        <%# <p>paris</p> %>
+
       </div>
     <% end %>
 

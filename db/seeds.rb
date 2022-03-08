@@ -1,5 +1,6 @@
 require "open-uri"
 require "date"
+require "faker"
 
 puts 'Cleaning db'
 
@@ -10,33 +11,33 @@ User.destroy_all
 
 puts 'Creating Users Bets Bettings and Medias'
 
-hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo')
-sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille')
-christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44')
-matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro')
-john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe')
-lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma')
-gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Antoine', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle')
-mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89')
-julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne')
-malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos')
-juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23')
-marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce')
-louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2')
-karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI')
-charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25')
-leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A')
-arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98')
-nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE')
-armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90')
-luc = User.create!(email: 'luc@email.com', last_name: 'Faux', first_name: 'Luc', password: 'azerty', username: 'LucFX')
+hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo', wallet: 1000)
+sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille', wallet: 1000)
+christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44', wallet: 1000)
+matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro', wallet: 1000)
+john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe', wallet: 1000)
+lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma', wallet: 1000)
+gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Malerto', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle', wallet: 1000)
+mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89', wallet: 1000)
+julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne', wallet: 1000)
+malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos', wallet: 1000)
+juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23', wallet: 1000)
+marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce', wallet: 1000)
+louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2', wallet: 1000)
+karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI', wallet: 1000)
+charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25', wallet: 1000)
+leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A', wallet: 1000)
+arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98', wallet: 1000)
+nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE', wallet: 1000)
+armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90', wallet: 1000)
+luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc', password: 'azerty', username: 'LucFX', wallet: 1000)
 
 puts 'Users well generated'
 
 chomage = Bet.new(
-  hashtag: "#chomage #zoneeuro",
+  hashtag: "#chomage #zoneEuro",
   description: "En décembre 2021, le taux de chômage corrigé des variations saisonnières de la zone euro était de 7,0%, en baisse par rapport au taux de 7,1% enregistré en novembre 2021 et au taux de 8,2% de décembre 2020. Le taux de chômage de l'UE était de 6,4% en décembre 2021, en baisse par rapport au taux de 6,5% de novembre 2021 et au taux de 7,5% enregistré en décembre 2020. Ces chiffres sont publiés par Eurostat, l’office statistique de l’Union européenne",
-  expiring_at: Date.new(2022,03,07),
+  expiring_at: Date.new(2022,02,01),
   question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en janvier 2022?",
   category: "Economie",
   publisher: hugo,
@@ -44,7 +45,7 @@ chomage = Bet.new(
 )
 
 cesar = Bet.new(
-  hashtag: "#cinema #cesar #niney",
+  hashtag: "#cinéma #César #Niney",
   description: "Sont nommés pour le César du meilleur acteur: Damien Bonnard dans Les Intranquilles, Adam Driver dans Annette, Gilles Lellouche dans BAC Nord, Vincent Macaigne dans Médecin de nuit, Benoît Magimel dans De son vivant, Pio Marmaï dans La Fracture, Pierre Niney dans Boîte noire",
   expiring_at: Date.new(2022,02,25),
   question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire?",
@@ -54,7 +55,7 @@ cesar = Bet.new(
 )
 
 goldman = Bet.new(
-  hashtag: "#musique #goldman",
+  hashtag: "#musique #Goldman",
   description: "Et si le chanteur aux quelques 30 millions d'albums vendus faisait son grand retour dans les studios ? C'est en tout cas ce qu'espèrent très fort les fans de Jean-Jacques Goldman qui attendent depuis près de 20 ans un nouveau titre de leur idole. Et leurs espoirs ont été réchauffés par une petite phrase, non pas du chanteur mais de l'un de ses proches. Erick Benzi, l’arrangeur historique de Jean-Jacques Goldman s'est confié lors d'une interview avec nos confrères du Figaro. Il a mentionné un éventuel prochain album de Jean-Jacques Goldman en disant : C’est drôle, dans les notes de pochette de Chansons pour les pieds, son dernier disque, il avait inscrit : Erick, tu es libre pour le prochain ?.",
   expiring_at: Date.new(2022,02,25),
   question: "JJ Goldman va t-il sortir un nouvel album?",
@@ -63,7 +64,7 @@ goldman = Bet.new(
 )
 
 goncourt = Bet.new(
-  hashtag: "#livre #goncourt",
+  hashtag: "#livre #Goncourt",
   description: "Qui succédera à Hervé Le Tellier, dont l’Anomalie a franchi la barre symbolique du million de tirages après avoir été auréolé d’un des plus prestigieux prix littéraire français ? L’Académie Goncourt a dévoilé ce mardi sa première sélection. Seize romans ont été retenus. Parmi eux : le Voyage dans l’Est (Flammarion), de Christine Angot, dans lequel elle décrit comment l’inceste détruit, Enfant de salaud (Grasset), de l’ancien journaliste à Libération Sorj Chalandon, et la Porte du voyage sans retour (Seuil), de David Diop, couronné il y a quelques mois par l’International Booker Prize pour son précédent ouvrage, Frère d’âme, également lauréat du Goncourt des lycéens en 2018. Le très réussi roman de Mohammed Mbougar Sarr, la Plus secrète mémoire des hommes (Philippe Rey) est également de la partie.",
   expiring_at: Date.new(2022,11,03),
   question: "David Diop recevra t-il le prix Goncourt 2022 ?",
@@ -72,7 +73,7 @@ goncourt = Bet.new(
 )
 
 kohlanta = Bet.new(
-  hashtag: "#kohlanta #tvshow",
+  hashtag: "#Koh-Lanta #tvshow",
   description: "Cette nouvelle saison de Koh-Lanta est totalement inédite. C’est du jamais vu : il n’y aura pas un, mais 2 totems cette année ! Celui que vous connaissez, le totem d’immunité, qui protège les gagnants… et le Totem maudit ! Perdre une épreuve, c’est en hériter, et subir l’une de ses nombreuses malédictions. Son ombre plane sur cette saison, du premier au dernier jour de l’aventure. C’est une certitude, le Totem maudit va bousculer les destins des 24 nouveaux aventuriers qui ont décidé de se mesurer les uns aux autres. Dans des conditions dantesques, au pied des spectaculaires falaises de l’archipel de Palawan aux Philippines, ces 24 apprentis Robinsons vont découvrir la vie à la dure, la faim, la fatigue et les stratégies. Avec courage et détermination, ces 12 femmes et ces 12 hommes vont tout faire pour réaliser leur rêve, et gagner Koh-Lanta. Mais la route longue, et semée d’embûches, au premier rang desquelles se trouve, cette année, le Totem maudit.",
   expiring_at: Date.new(2022,03,05),
   question: "Alexandra va t-elle se faire éliminer de koh lanta mardi prochain?",
@@ -156,7 +157,7 @@ chasse = Bet.new(
 cac40 = Bet.new(
   hashtag: "#CAC40 #bourse",
   description: "Le CAC40, l'indice qui regroupe les 40 plus grosses sociétés françaises cotées, a perdu 5,73% en 5 jours à cause de la guerre en Ukraine. Entre espoir de voir la guerre prendre fin et craintes de voir le conflit durer, les jours à venir sont bien incertains pour les marchés financiers.",
-  expiring_at: Date.new(2022,03,11),
+  expiring_at: Date.new(2022,03,8),
   question: "Le CAC40 clôturera t-il au dessus de 6500 points le 11 mars 2022 ?",
   category: "Economie",
   publisher: marin
@@ -238,104 +239,106 @@ tourdefrance = Bet.new(
 
 file_macron = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324610/betnews/Presidentielle-pourquoi-la-guerre-en-Ukraine-peut-profiter-a-Emmanuel-Macron_qe3l6u.jpg')
 macron.photo.attach(io: file_macron, filename: 'nes.jpg', content_type: 'image/jpg')
-macron.save
+macron.save!
 
 file_zemmour = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141681/betnews/aktgskzvjni0yt2dnwpu.jpg')
 zemmour.photo.attach(io: file_zemmour, filename: 'nes.jpg', content_type: 'image/jpg')
-zemmour.save
+zemmour.save!
 
 file_ukraine = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141745/betnews/olxqzaqg8ty14pqwuilq.jpg')
 ukraine.photo.attach(io: file_ukraine, filename: 'nes.jpg', content_type: 'image/jpg')
-ukraine.save
+ukraine.save!
 
 file_petrole = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141920/betnews/svtxu7o3johzesnmsphb.jpg')
 petrole.photo.attach(io: file_petrole, filename: 'nes.jpg', content_type: 'image/jpg')
-petrole.save
+petrole.save!
 
 file_chomage = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141506/betnews/d84b4cee75f0b160c14c7257e8c5548a9f907c993ea6e7485792d98b2d9dafad_jipdtk.jpg')
 chomage.photo.attach(io: file_chomage, filename: 'nes.jpg', content_type: 'image/jpg')
-chomage.save
+chomage.save!
 
 file_goncourt = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646391156/betnews/TT65MBZSVBDEXKM7LJ4GAJZ3OE_iyvrmw.jpg')
 goncourt.photo.attach(io: file_goncourt, filename: 'nes.jpg', content_type: 'image/jpg')
-goncourt.save
+goncourt.save!
 
 file_cesar = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142009/betnews/hxc1rxqigfrqnmfl8nib.jpg')
 cesar.photo.attach(io: file_cesar, filename: 'nes.jpg', content_type: 'image/jpg')
-cesar.save
+cesar.save!
 
 file_foot = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142089/betnews/images_vqub15.jpg')
 foot.photo.attach(io: file_foot, filename: 'nes.jpg', content_type: 'image/jpg')
-foot.save
+foot.save!
 
 file_kohlanta = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142215/betnews/iyooa89kaqshrbxhxu4b.jpg')
 kohlanta.photo.attach(io: file_kohlanta, filename: 'nes.jpg', content_type: 'image/jpg')
-kohlanta.save
+kohlanta.save!
 
 file_thevoice = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142182/betnews/charles-kaylan-1_bureau-233_lou-breton_itv_tf1_em3-9f4687-40dc0b-0_1x_p2uouf.jpg')
 thevoice.photo.attach(io: file_thevoice, filename: 'nes.jpg', content_type: 'image/jpg')
-thevoice.save
+thevoice.save!
 
 file_covid = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142294/betnews/images_etm5np.jpg')
 covid.photo.attach(io: file_covid, filename: 'nes.jpg', content_type: 'image/jpg')
-covid.save
+covid.save!
 
-file_chasse = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142326/betnews/hh2magy2leqbea8xj8ne.jpg')
+file_chasse = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646735295/betnews/y6dmktjsdfgqbkhtaeoq.jpg')
 chasse.photo.attach(io: file_chasse, filename: 'nes.jpg', content_type: 'image/jpg')
-chasse.save
+chasse.save!
 
 file_cac40 = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216096/betnews/cot22_giuvcp.jpg')
 cac40.photo.attach(io: file_cac40, filename: 'nes.jpg', content_type: 'image/jpg')
-cac40.save
+cac40.save!
 
 file_rugby = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216198/betnews/1200-L-xv-de-france-la-france-fait-un-bon-dans-le-classement-world-rugby-aprs-la-victoire-face-aux-all-blacks_mdvros.jpg')
 rugby.photo.attach(io: file_rugby, filename: 'nes.jpg', content_type: 'image/jpg')
-rugby.save
+rugby.save!
 
 file_rassemblementNational = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216261/betnews/cover-r4x3w1000-6016b3658bf27-1c2014acb8ed3a5c16e10f7a10beabac6b64fb05-jpg_axohnp.jpg')
 rassemblementNational.photo.attach(io: file_rassemblementNational, filename: 'nes.jpg', content_type: 'image/jpg')
-rassemblementNational.save
+rassemblementNational.save!
 
 file_quiveutêtremonassocié = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216326/betnews/qvema_rvfvzp.jpg')
 quiveutêtremonassocié.photo.attach(io: file_quiveutêtremonassocié, filename: 'nes.jpg', content_type: 'image/jpg')
-quiveutêtremonassocié.save
+quiveutêtremonassocié.save!
 
 file_tennis = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216499/betnews/NFK42D6B6FGWPCHJQYQPXJ3JZI_qx0s6b.jpg')
 tennis.photo.attach(io: file_tennis, filename: 'nes.jpg', content_type: 'image/jpg')
-tennis.save
+tennis.save!
 
 file_train = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216418/betnews/train-italie_ctktwx.jpg')
 train.photo.attach(io: file_train, filename: 'nes.jpg', content_type: 'image/jpg')
-train.save
+train.save!
 
 file_parité = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216630/betnews/5O6OH3HUNVBXVJXNFNZWJDLLNM_l8efdc.jpg')
 parité.photo.attach(io: file_parité, filename: 'nes.jpg', content_type: 'image/jpg')
-parité.save
+parité.save!
 
 file_truthsocial = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646216562/betnews/Donald-Trump-a-lance-son-propre-reseau-social-Truth-Social-640x481_myl4cb.jpg')
 truthsocial.photo.attach(io: file_truthsocial, filename: 'nes.jpg', content_type: 'image/jpg')
-truthsocial.save
+truthsocial.save!
 
 file_tourdefrance = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646324698/betnews/qkjqzmlrtxmu2yzo9ohv.jpg')
 tourdefrance.photo.attach(io: file_tourdefrance, filename: 'nes.jpg', content_type: 'image/jpg')
-tourdefrance.save
+tourdefrance.save!
 
 file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646325451/betnews/iryspvjz5ndpbee9pk8s.jpg')
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
-goldman.save
+goldman.save!
 
 puts 'Bets well generated'
 
 Betting.create!(
   answer: "no",
   user: luc,
-  bet: chomage
+  bet: chomage,
+  won: true
 )
 
 Betting.create!(
   answer: "yes",
   user: armand,
-  bet: cesar
+  bet: cesar,
+  won: false
 )
 
 Betting.create!(
@@ -365,13 +368,15 @@ Betting.create!(
 Betting.create!(
   answer: "yes",
   user: hugo,
-  bet: cesar
+  bet: cesar,
+  won: false
 )
 
 Betting.create!(
   answer: "no",
   user: hugo,
-  bet: chomage
+  bet: chomage,
+  won: true
 )
 
 Betting.create!(
@@ -465,6 +470,19 @@ Betting.create!(
   bet: tourdefrance
 )
 
+puts '10 faked users and bettings created'
+
+10.times do
+  user_faker = User.create!(email: Faker::Internet.unique.email(domain: 'example'), last_name: Faker::Name.last_name, first_name: Faker::Name.first_name, password: 'azerty', username: Faker::Internet.username, wallet: 1000)
+  Bet.all.each do |bet|
+    Betting.create!(
+      answer: rand > 0.5 ? "yes" : "no",
+      user: user_faker,
+      bet: bet,
+      wager: rand(1..100)
+    )
+  end
+end
 # Users photos
 
 file_hugo = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142557/betnews/Users/photo-1615109398623-88346a601842_rpviwa.jpg')
@@ -527,135 +545,141 @@ armand.photo.attach(io: file_armand, filename: 'nes.jpg', content_type: 'image/j
 file_luc= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215810/betnews/Users/photo-1645830166230-187caf791b90_rmwg3v.jpg')
 luc.photo.attach(io: file_luc, filename: 'nes.jpg', content_type: 'image/jpg')
 
-chomagemedia = Media.create(
+chomagemedia = Media.create!(
   source: "Le Figaro",
   url: "https://www.lefigaro.fr/conjoncture/le-chomage-de-la-zone-euro-bat-un-nouveau-record-a-la-baisse-a-6-8-en-janvier-20220303",
   bet: chomage,
 )
 
-cesarmedia = Media.create(
+cesarmedia = Media.create!(
   source: "L'Internaute",
   url: "https://www.linternaute.com/cinema/evenement/1259663-cesar-2022-palmares-et-temps-forts-de-la-47e-ceremonie/",
   bet: cesar,
 )
 
-kohlantamedia = Media.create(
+kohlantamedia = Media.create!(
   source: "Huffingtonpos",
   url: "https://www.huffingtonpost.fr/entry/franck-quitte-koh-lanta-et-sattire-les-foudres-de-son-equipe_fr_621f289ae4b0783a8f089531",
   bet: kohlanta,
 )
 
-macronmedia = Media.create(
+macronmedia = Media.create!(
   source: "20 minutes",
   url: "https://www.20minutes.fr/elections/sondage-election/3244915-20220302-sondages-presidentielle-2022-emmanuel-macron-forte-hausse-valerie-pecresse-chute-libre",
   bet: macron,
 )
 
-footmedia = Media.create(
+footmedia = Media.create!(
   source: "Culture PSG",
   url: "https://www.culturepsg.com/news/club/le-psg-champion-pour-la-10e-fois-contre-l-om-un-scenario-possible/41116",
   bet: foot,
 )
 
-ukrainemedia = Media.create(
+ukrainemedia = Media.create!(
   source: "Le Figaro",
   url: "https://www.lefigaro.fr/international/l-ukraine-peut-elle-adherer-sans-delai-a-l-union-europeenne-comme-le-demande-zelensky-20220228",
   bet: ukraine,
 )
 
-petrolemedia = Media.create(
+petrolemedia = Media.create!(
   source: "Le Monde",
   url: "https://www.lemonde.fr/economie/article/2022/03/03/les-cours-du-petrole-retrouvent-des-sommets-inquietants_6115953_3234.html",
   bet: petrole,
 )
 
-zemmourmedia = Media.create(
+zemmourmedia = Media.create!(
   source: "Le Point",
   url: "https://www.lepoint.fr/presidentielle/et-si-zemmour-melenchon-le-pen-ne-pouvaient-pas-se-presenter-08-02-2022-2463858_3121.php",
   bet: zemmour,
 )
 
-thevoicemedia = Media.create(
+thevoicemedia = Media.create!(
   source: "TF1",
   url: "https://www.tf1.fr/tf1/the-voice/videos/the-voice-2022-charles-kaylan-shadow-chante-bruises-de-lewis-capaldi-auditions-a-laveugle-28919378.html",
   bet: thevoice,
 )
 
-covidmedia = Media.create(
+covidmedia = Media.create!(
   source: "Ouest France",
   url: "https://www.ouest-france.fr/sante/virus/coronavirus/covid-19-port-du-masque-quels-sont-les-lieux-ou-il-n-est-plus-obligatoire-29b44b78-97f6-11ec-a02d-e4daad81e3f4",
   bet: covid,
 )
 
-chassemedia = Media.create(
+chassemedia = Media.create!(
   source: "Francetvinfo",
   url: "https://www.francetvinfo.fr/elections/presidentielle/candidats/interdire-la-chasse-la-limiter-la-defendre-que-proposent-les-candidats-a-l-election-presidentielle_4973484.html",
   bet: chasse,
 )
 
-cac40media = Media.create(
+cac40media = Media.create!(
   source: "Bourse Direct",
   url: "https://www.boursedirect.fr/fr/actualites/categorie/marche-francais/preouverture-paris-la-russie-attaque-l-ukraine-le-cac40-va-plonger-boursier-86bbbcbd1e0415c3c69afd2d6502850636b8a2f5",
   bet: cac40,
 )
 
-rugbymedia = Media.create(
+rugbymedia = Media.create!(
   source: "L'équipe",
   url: "https://www.lequipe.fr/Rugby/Actualites/Apres-sa-victoire-en-ecosse-la-france-passe-au-troisieme-rang-mondial/1319699",
   bet: rugby,
 )
 
-rassemblementNationalmedia = Media.create(
+rassemblementNationalmedia = Media.create!(
   source: "France culture",
   url: "https://www.franceculture.fr/emissions/le-billet-politique/eric-zemmour-l-enfant-terrible-de-marine-le-pen",
   bet: rassemblementNational,
 )
 
-quiveutêtremonassociémedia = Media.create(
+quiveutêtremonassociémedia = Media.create!(
   source: "C News",
   url: "https://www.cnews.fr/divertissement/2022-02-03/qui-veut-etre-mon-associe-quel-investisseur-depense-le-plus-dargent-dans",
   bet: quiveutêtremonassocié,
 )
 
-trainmedia = Media.create(
+trainmedia = Media.create!(
   source: "Le Point",
   url: "https://www.lepoint.fr/economie/les-debuts-difficiles-de-la-concurrence-ferroviaire-en-france-16-02-2022-2465170_28.php",
   bet: train,
 )
 
-tennismedia = Media.create(
+tennismedia = Media.create!(
   source: "Le Point",
   url: "https://www.lepoint.fr/tennis/tennis-djokovic-pret-a-rater-roland-garros-pour-eviter-le-vaccin-15-02-2022-2464950_580.php",
   bet: tennis,
 )
-goldmanmedia = Media.create(
+goldmanmedia = Media.create!(
   source: "Cosmopolitan",
   url: "https://www.cosmopolitan.fr/jean-jacques-goldman-retour-chanson,2054963.asp",
   bet: goldman,
 )
 
-truthsocialmedia = Media.create(
+truthsocialmedia = Media.create!(
   source: "Le Parisien",
   url: "https://www.leparisien.fr/international/le-lancement-de-truth-social-le-reseau-social-de-donald-trump-est-prevu-pour-le-21-fevrier-07-01-2022-SX3Z2RSURJEFPGWNAGQVXEAEGM.php",
   bet: truthsocial,
 )
 
-paritémedia = Media.create(
+paritémedia = Media.create!(
   source: "Le Parisien",
   url: "https://www.leparisien.fr/sentinelles/presidentielle-la-france-est-elle-vraiment-prete-a-elire-une-femme-presidente-05-10-2021-P3Z2GKYBOREKRMHSUCL6NLLP2A.php",
   bet: parité,
 )
 
-tourdefrancemedia = Media.create(
+tourdefrancemedia = Media.create!(
   source: "RMC Sport",
   url: "https://rmcsport.bfmtv.com/cyclisme/tour-de-france/cyclisme-alaphilippe-ne-pense-pas-avoir-l-equipe-pour-gagner-le-tour-de-france_AV-202202090418.html",
   bet: tourdefrance,
 )
 
-goncourtmedia = Media.create(
+goncourtmedia = Media.create!(
   source: "Libération",
   url: "https://www.liberation.fr/culture/livres/sorj-chalandon-agnes-desarthe-christine-angot-decouvrez-la-premiere-selection-du-goncourt-2022-20210907_YTKINPFFPVHFHNITYENMMVIHIU/",
   bet: goncourt,
 )
 
 puts 'Medias well generated'
+
+Betting.all.each do |betting|
+  betting.wager = rand(1..100)
+  betting.save
+end
+puts 'Giving random wager to Bettings'

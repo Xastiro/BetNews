@@ -11,32 +11,36 @@
     <div class="cards">
       <% @bettings.each do |betting| %>
         <% if betting.bet.expiring_at < Time.now %>
-          <div class="image-card-link">
+          <%# CARD BET EXPIRED %>
+          <div id= <%= betting.id %> class="image-card-link">
             <%= link_to bet_path(betting.bet) do %>
-              <div class="card index-border-radius-style index-shadow my-3 publication ">
-                <div class="image-position">
-                  <%= cl_image_tag(betting.bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
-                  <p class="clos-tag-position"> Pari clos le <%= betting.bet.expiring_at.strftime("%d/%m/%Y") %></p>
+              <div class="card index-border-radius-style index-shadow my-3">
+                <%# CARD TOP %>
+                <div class="card-top p-3">
+                  <div class="index-border-radius-style card-img-bg card-sm p-3 d-flex" style="background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url(<%= cl_image_path(betting.bet.photo.key, alt: "Image that illustrates the bet") %>);">
+                  </div>
                 </div>
-                <div class="card-grey">
-                  <p class="card-subtitle index-card-question"><%= betting.bet.question %></p>
-                  <div class="answer-show d-flex justify-content-around">
+                <%# CARD BOTTOM %>
+                <div class="index-card-grey-background index-bottom-border-radius-style p-3">
+                  <p class="clos-tag-position"> Pari clos le <%= betting.bet.expiring_at.strftime("%d/%m/%Y") %></p>
+                  <p class="index-card-question"><%= betting.bet.question %></p>
+                  <div>
                     <% if betting.bet.result == "yes"%>
-                      <% if betting.answer== "yes" %>
+                      <% if betting.answer == "yes" %>
                         <div>
-                          <div>
+                          <div class="d-flex justify-content-between">
                             <div class="right-answer user-choice btn index-button-cote index-button-oui index-shadow">
                               <p class="answer">oui</p>
                               <div>
                                 <p>cote</p>
-                                <p>1.9</p>
+                                <p><%= betting.bet.yes_odds.round(1) %></p>
                               </div>
                             </div>
-                            <div class="other-choice btn index-button-cote index-button-non index-shadow">
+                            <div class="other-choice disable-btn btn index-button-cote index-button-non index-shadow">
                               <p class="answer">non</p>
                               <div>
                                 <p>cote</p>
-                                <p>2.1</p>
+                                <p><%= betting.bet.no_odds.round(1) %></p>
                               </div>
                             </div>
                           </div>
@@ -44,19 +48,19 @@
                         </div>
                       <% else %>
                         <div>
-                          <div>
-                            <div class="other-choice btn index-button-cote index-button-oui index-shadow">
+                          <div class="d-flex justify-content-between">
+                            <div class="other-choice disable-btn btn index-button-cote index-button-oui index-shadow">
                               <p class="answer">oui</p>
                               <div>
                                 <p>cote</p>
-                                <p>1.9</p>
+                                <p><%= betting.bet.yes_odds.round(1) %></p>
                               </div>
                             </div>
                             <div class="wrong-answer user-choice btn index-button-cote index-button-non index-shadow">
                               <p class="answer">non</p>
                               <div>
                                 <p>cote</p>
-                                <p>2.1</p>
+                                <p><%= betting.bet.no_odds.round(1) %></p>
                               </div>
                             </div>
                           </div>
@@ -64,21 +68,21 @@
                         </div>
                       <% end %>
                     <% else %>
-                      <% if betting.answer== "yes" %>
+                      <% if betting.answer == "yes" %>
                         <div>
-                          <div>
+                          <div class="d-flex justify-content-between">
                             <div class="wrong-answer user-choice btn index-button-cote index-button-oui index-shadow">
                               <p class="answer">oui</p>
                               <div>
                                 <p>cote</p>
-                                <p>1.9</p>
+                                <p><%= betting.bet.yes_odds.round(1) %></p>
                               </div>
                             </div>
-                            <div class="other-choice btn index-button-cote index-button-non index-shadow">
+                            <div class="other-choice disable-btn btn index-button-cote index-button-non index-shadow">
                               <p class="answer">non</p>
                               <div>
                                 <p>cote</p>
-                                <p>2.1</p>
+                                <p><%= betting.bet.no_odds.round(1) %></p>
                               </div>
                             </div>
                           </div>
@@ -86,19 +90,20 @@
                         </div>
                       <% else %>
                         <div>
-                          <div>
-                          <div class="other-choice btn index-button-cote index-button-oui index-shadow">
-                            <p class="answer">oui</p>
-                            <div>
-                              <p>cote</p>
-                              <p>1.9</p>
+                          <div class="d-flex justify-content-between">
+                            <div class="other-choice disable-btn btn index-button-cote index-button-oui index-shadow">
+                              <p class="answer">oui</p>
+                              <div>
+                                <p>cote</p>
+                                <p><%= betting.bet.yes_odds.round(1) %></p>
+                              </div>
                             </div>
-                          </div>
-                          <div class="right-answer user-choice btn index-button-cote index-button-non index-shadow">
-                            <p class="answer">non</p>
-                            <div>
-                              <p>cote</p>
-                              <p>2.1</p>
+                            <div class="right-answer user-choice btn index-button-cote index-button-non index-shadow">
+                              <p class="answer">non</p>
+                              <div>
+                                <p>cote</p>
+                                <p><%= betting.bet.no_odds.round(1) %></p>
+                              </div>
                             </div>
                           </div>
                           <p class="win-reminder">Gagné ! <i class="fas fa-award"></i></p>
@@ -111,29 +116,33 @@
             <%end%>
           </div>
         <% else %>
+          <%# CARD BET RUNNING %>
           <div class="image-card-link">
             <%= link_to bet_path(betting.bet) do %>
-              <div class="card index-border-radius-style index-shadow my-3 publication ">
-                <div class="image-position">
-                  <%= cl_image_tag(betting.bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
-                  <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= betting.bet.expiring_at %>"></p>
+              <div class="card index-border-radius-style index-shadow my-3">
+                <%# CARD TOP %>
+                <div class="card-top p-3">
+                  <div class="index-border-radius-style card-img-bg  card-sm p-3 d-flex" style="background-image: url(<%= cl_image_path(betting.bet.photo.key, alt: "Image that illustrates the bet") %>);">
+                    <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= betting.bet.expiring_at %>"></p>
+                  </div>
                 </div>
-                <div class="card-grey pb-3">
-                  <p class="card-subtitle index-card-question"><%= betting.bet.question %></p>
-                  <div class="answer-show d-flex justify-content-around">
-                    <% if betting.answer== "yes" %>
+                <%# CARD BOTTOM %>
+                <div class="index-card-grey-background index-bottom-border-radius-style p-3">
+                  <p class="index-card-question"><%= betting.bet.question %></p>
+                  <div class="answer-show d-flex justify-content-between">
+                    <% if betting.answer == "yes" %>
                       <div class="user-choice btn index-button-cote index-button-oui index-shadow">
                         <p class="answer">oui</p>
                         <div>
                           <p>cote</p>
-                          <p>1.9</p>
+                          <p><%= betting.bet.yes_odds.round(1) %></p>
                         </div>
                       </div>
                       <div class="other-choice btn index-button-cote index-button-non index-shadow">
                         <p class="answer">non</p>
                         <div>
                           <p>cote</p>
-                          <p>2.1</p>
+                          <p><%= betting.bet.no_odds.round(1) %></p>
                         </div>
                       </div>
                     <% else %>
@@ -141,14 +150,14 @@
                         <p class="answer">oui</p>
                         <div>
                           <p>cote</p>
-                          <p>1.9</p>
+                          <p><%= betting.bet.yes_odds.round(1) %></p>
                         </div>
                       </div>
                       <div class="user-choice btn index-button-cote index-button-non index-shadow">
                         <p class="answer">non</p>
                         <div>
                           <p>cote</p>
-                          <p>2.1</p>
+                          <p><%= betting.bet.no_odds.round(1) %></p>
                         </div>
                       </div>
                     <% end %>

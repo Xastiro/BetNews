@@ -1,15 +1,39 @@
 <div class="navbar-top d-flex justify-content-around">
-  <%= link_to destroy_user_session_path, style: "visibility: hidden" do %>
-    <i class="fas fa-grip-lines"></i>
-  <% end %>
-  <%= link_to root_path do %>
-    <%= image_tag "logo.png", width: "70" %>
-  <% end %>
-  <%= link_to "#", style: "#{'visibility: hidden' unless current_page?(profile_bettings_path) || current_page?(published_profile_bets_path)}" do %>
-    <i class="fas fa-cog pt-2"></i>
-  <% end %>
-  <%= link_to destroy_user_session_path, style: "#{'visibility: hidden' unless current_page?(profile_bettings_path) || current_page?(published_profile_bets_path)}", method: :delete do %>
-    <i class="fas fa-grip-lines pt-2"></i>
-  <% end %>
+  <%# <%= link_to destroy_user_session_path, style: "visibility: hidden" do %>
+    <%# <i class="fas fa-grip-lines"></i> %>
+  <%# <% end %>
+  <div class="logo-bet-news">
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", width: "70" %>
+    <% end %>
+  </div>
+  <%# <div class="parameter-icon nav-item dropdown  ">
+    <%# <%= link_to destroy_user_session_path, style: "#{'visibility: visible' unless current_page?(root_path) }", method: :delete do %>
+      <%# <i class="fas fa-cog pt-2"></i> %>
+    <%# <% end %>
+    <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Se connecter</a>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <%# <p>Se déconnecter</p>
+      <%end%>
 
+  <div class="parameter-icon">
+    <%= link_to edit_profile_path, style: "#{'visibility: hidden' if current_page?(edit_profile_path) || current_page?(new_bet_path) }" do  %>
+      <i class="fas fa-cog pt-2"></i>
+    <% end %>
+    <%# <ul> %>
+      <%# <li class="nav-item dropdown "> %>
+        <%# <i class="fas fa-cog pt-2" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i> %>
+          <%# <% if user_signed_in? %>
+            <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Mon compte", "#", class: "dropdown-item" %>
+              <%# <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%# </div>
+          <% else %>
+            <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
+            <%# </div> %>
+        <%# <% end %>
+    <%# </ul> %>
+  </div>
 </div>
