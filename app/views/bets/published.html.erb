@@ -2,7 +2,9 @@
 
   <%= render 'shared/navbar-user' %>
 
+
   <div class="betlist">
+    <%= current_user.total_points %>
     <div class="btn-group-user" role="group">
       <%= link_to "Mes paris publiés",  published_profile_bets_path, class: "btn-active-bet" %>
       <%= link_to "Mes paris répondus", profile_bettings_path,       class: "btn-bet" %>
@@ -17,13 +19,12 @@
             <div class="image-position">
               <%= cl_image_tag(bet.photo.key, class: "card-img-top index-border-radius-style", alt: "Image that illustrates the bet") %>
             </div>
-            <%= current_user.total_points %>
             <div class="card-grey">
               <p class="card-subtitle index-card-question"><%= bet.question %></p>
               <% if bet.result %>
-                  <div class="description-info">
-                    <p> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
-                  </div>
+                <div class="description-info">
+                  <p> Clôture du pari le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
+                </div>
                 <p>Résultat publié (<%= bet.result %>) </p>
               <% else %>
                 <% if bet.expiring_at < Date.current %>
@@ -45,10 +46,10 @@
                     <p class="yellow-black"> Résultat à publier le <%= (bet.expiring_at).strftime("%d/%m/%Y") %></p>
                   <% end %>
                 <% end %>
-              </div>
+              <% end %>
             </div>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
