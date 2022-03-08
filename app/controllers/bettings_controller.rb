@@ -50,7 +50,7 @@ class BettingsController < ApplicationController
         format.html { redirect_to bets_path(anchor: "card-#{@bet.id}") }
         format.text { render(partial: "bettings/confirmed", formats: [:html]) }
       end
-      current_user.wallet -= wager.to_f
+      current_user.wallet -= params[:wager].to_f
     end
   end
 
