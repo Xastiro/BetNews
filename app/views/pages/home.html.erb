@@ -1,4 +1,10 @@
 
+
+  <div class="container">
+    <div class="d-flex justify-content-around pt-5">
+      <%= image_tag("logo.png", class: "logo-log-in") %>
+    </div>
+
   <div id="carouselExampleIndicators" class="carousel slide bg-white" data-bs-interval="false" data-bs-ride="carousel">
 
     <div class="carousel-indicators">
@@ -7,14 +13,14 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="" aria-current="true"></button>
     </div>
 
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1611159063981-b8c8c4301869);">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1611159063981-b8c8c4301869);">
   <div class="container">
 
 <div class="carousel-inner">
       <div class="banner">
         <div class="carousel-item p-5 active">
-        <h5><strong>Parie sur le futur</strong></h5>
-        <br>
+          <h5><strong>Parie sur le futur</strong></h5>
+          <br>
         <p class="mb-5">Découvre les grandes questions du jour et partage ton avis avec notre communauté en pariant sur les événements à venir!</p>
       </div>
     <div class="carousel-item p-5">
@@ -33,8 +39,6 @@
   </div>
   </div>
 </div>
-
-
 
   <div class="d-flex justify-content-around pt-5">
     <p class="bets-available-button bets-available-hover bets-available-shadow"><%= link_to "Paris disponibles", bets_path %></p>
