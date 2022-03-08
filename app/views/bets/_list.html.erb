@@ -1,0 +1,103 @@
+<% if bets.any? %>
+  <% @bets.each do |bet| %>
+    <%# CARD %>
+    <div class="card index-border-radius-style index-shadow my-3" id="card-<%= bet.id %>">
+      <%# CARD TOP %>
+      <div class="card-top p-3">
+        <p class="card-title mb-0"><%= bet.hashtag %></p>
+        <div class="index-border-radius-style card-img-bg p-3 d-flex" style="background-image: url(<%= cl_image_path(bet.photo.key, alt: "Image that illustrates the bet") %>);">
+          <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
+        </div>
+        <div class="pt-3">
+          <%# <%= link_to bet_path(bet), class: "text-decoration-none index-learn-more-hover" do %>
+          <p class="index-learn-more-button index-learn-more-hover index-shadow"><%= link_to "En savoir plus", bet_path(bet), class: "text-decoration-none" %></p>
+          <%# <% end %>
+        </div>
+      </div>
+      <%# CARD BOTTOM %>
+      <div class="index-card-grey-background index-bottom-border-radius-style p-3">
+        <p class="index-card-question"><%= bet.question %></p>
+        <div class="d-flex justify-content-between" data-controller="vote" data-vote-target="container">
+          <% if !user_signed_in? %>
+            <%= link_to yes_bet_bettings_path(bet), method: :post do %>
+              <div class="btn index-button-cote index-button-oui index-shadow">
+                <p>oui</p>
+                <div>
+                  <p>cote</p>
+                  <p><%= bet.yes_odds.round(1) %></p>
+                </div>
+              </div>
+            <% end %>
+            <%= link_to no_bet_bettings_path(bet), method: :post do %>
+              <div class="btn index-button-cote index-button-non index-shadow">
+                <p>non</p>
+                <div>
+                  <p>cote</p>
+                  <p><%= bet.no_odds.round(1) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% else %>
+            <% if !current_user.user_bets.include?(bet) %>
+
+              <div data-controller="popup"
+                  data-popup-title-value="Combien veux tu miser?"
+                  data-popup-ok-value=""
+                  data-popup-main-text-value="">
+                <button  class="btn index-button-cote index-button-oui index-shadow" data-vote-target='voteyes' data-popup-target='yes' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmityes confirmedyes<%= bet.id %>@window->vote#yes">
+                  <p>oui</p>
+                  <div>
+                    <p>cote</p>
+                    <p><%= bet.yes_odds.round(1) %></p>
+                  </div>
+                </button>
+              </div>
+
+              <div data-controller="popup"
+                  data-popup-title-value="Combien veux tu miser?"
+                  data-popup-ok-value=""
+                  data-popup-main-text-value="">
+                <button  class="btn index-button-cote index-button-non index-shadow" data-vote-target='voteno' data-popup-target='no' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmitno confirmedno<%= bet.id %>@window->vote#no">
+                  <p>non</p>
+                  <div>
+                    <p>cote</p>
+                    <p><%= bet.no_odds.round(1) %></p>
+                  </div>
+                </button>
+              </div>
+
+              <%# <%= link_to "#", "data-action": "confirmed@window->vote#yes", "data-id": bet.id do %>
+                <%# <div class="btn index-button-cote index-button-oui index-shadow">
+                  <p>oui</p>
+                  <div>
+                    <p>cote</p>
+                    <p>1.9</p>
+                  </div>
+                </div>
+              <% end %>
+              <%# <%= link_to "#", "data-action": "click->vote#no", "data-id": bet.id do %>
+                <%# <div class="btn index-button-cote index-button-non index-shadow">
+                  <p>non</p>
+                  <div>
+                    <p>cote</p>
+                    <p>2.1</p>
+                  </div>
+                </div>
+              <% end %>
+
+            <% else %>
+              <div class="validate-bet-wrapper d-flex justify-content-center">
+                <div class="validated-bet-tag d-flex justify-content-around align-items-center">
+                  <i class="far fa-check-circle"></i>
+                  <p  class="m-0">Ton pari a été validé</p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <p>Aucun pari dans cette catégorie</p>
+<% end %>
