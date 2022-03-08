@@ -19,25 +19,15 @@
   width: 100%;
 }
 
-
-
-.container-category {
-  background-color: $mywhite;
-  height: 55px;
-  z-index: 1;
-  position: fixed;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  top: $navbar-top-height;
-  overflow: scroll;
+.index-category-scroll {
   scrollbar-width: none; /* hide scroll bar for Firefox */
-  .index-category-scroll {
-    z-index: 0;
-  }
-}
-
-.all-bets {
-  padding-top: 100px;
+  padding: 10px;
+  position:sticky;
+  top: $navbar-top-height;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  background-color: white;
+  z-index: 1;
 }
 
 .index-category-scroll::-webkit-scrollbar {
@@ -69,6 +59,10 @@
     background-color:#FEFD02;
     color: black;
   }
+}
+
+.all-bets {
+  padding-top: 40px;
 }
 
 .index-border-radius-style {
