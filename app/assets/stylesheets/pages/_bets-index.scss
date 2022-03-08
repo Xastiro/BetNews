@@ -19,10 +19,25 @@
   width: 100%;
 }
 
-.index-category-scroll {
+
+
+.container-category {
+  background-color: $mywhite;
+  height: 55px;
+  z-index: 1;
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  top: $navbar-top-height;
   overflow: scroll;
   scrollbar-width: none; /* hide scroll bar for Firefox */
-  padding-top: $navbar-top-padding;
+  .index-category-scroll {
+    z-index: 0;
+  }
+}
+
+.all-bets {
+  padding-top: 100px;
 }
 
 .index-category-scroll::-webkit-scrollbar {
@@ -83,6 +98,7 @@
   width: fit-content;
   height: fit-content;
   margin-bottom: 0;
+  font-family: roboto;
 }
 
 .text-decoration-none {
@@ -149,7 +165,7 @@
   }
 
   div p:nth-child(1) {
-    font-family: inter;
+    font-family: poppins;
     font-weight: 400;
     font-size: 13px;
     color: black;
@@ -188,7 +204,7 @@
   }
 
   div p:nth-child(1) {
-    font-family: inter;
+    font-family: poppins;
     font-weight: 400;
     font-size: 13px;
     color: white;
