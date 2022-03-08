@@ -24,5 +24,11 @@
   .parameter-icon {
     position: absolute;
     right: 20px;
+    .nav-item {
+      list-style-type: none;
+    }
+    .dropdown-item {
+      z-index: 5;
+    }
   }
 }
