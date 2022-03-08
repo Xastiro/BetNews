@@ -14,12 +14,7 @@
       font-size: 12px;
       margin: 5px auto;
     }
-    // .card-grey {
-    //   background-color: $mybackgroundlightgrey;
-    //   .card-subtitle {
-    //     font-size: 22px;
-    //     padding: 8px;
-    //   }
+
   .result {
     font-weight: 600;
     font-size: 16px;
@@ -29,16 +24,8 @@
       padding: 4px;
     }
   }
-    .description-info {
-      p {
-      color: $myblack;
-      font-weight: 600;
-      margin-bottom: 5px;
-      font-size: 15px;
-      }
-    }
+
     .right-answer {
-      // border: 5px solid rgb(80, 175, 80);
       background-color: $green-win;
 
       p {
@@ -47,7 +34,6 @@
     }
 
     .wrong-answer {
-      // border: 5px solid rgb(255, 96, 96);
       background-color: $red-lose;
 
       p {
@@ -137,15 +123,7 @@
         font-weight: 600;
       }
     }
-    .black-info {
-      background-color: $mygrey;
-      color: $myblack;
-      font-weight: 700;
-      width: 80%;
-      border-radius: 10px;
-      margin: 0 auto;
-      margin-bottom: 15px;
-    }
+
     .yellow {
       background-color: $myyellow;
       width: 80%;

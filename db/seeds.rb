@@ -280,7 +280,7 @@ file_covid = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v164614
 covid.photo.attach(io: file_covid, filename: 'nes.jpg', content_type: 'image/jpg')
 covid.save
 
-file_chasse = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142326/betnews/hh2magy2leqbea8xj8ne.jpg')
+file_chasse = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646735295/betnews/y6dmktjsdfgqbkhtaeoq.jpg')
 chasse.photo.attach(io: file_chasse, filename: 'nes.jpg', content_type: 'image/jpg')
 chasse.save
 

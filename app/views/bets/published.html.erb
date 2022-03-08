@@ -4,7 +4,6 @@
 
 
   <div class="betlist">
-    <%= current_user.total_points %>
     <div class="btn-group-user" role="group">
       <%= link_to "Mes paris publiés",  published_profile_bets_path, class: "btn-active-bet" %>
       <%= link_to "Mes paris répondus", profile_bettings_path,       class: "btn-bet" %>
@@ -29,7 +28,7 @@
                   <p class="index-card-question"><%= bet.question %></p>
 
                   <% if bet.result == "yes" %>
-                    <div class="answer-published btn index-button-cote index-button-oui index-shadow">
+                    <div class="answer-published btn index-button-cote index-button-non index-shadow">
                       <p>oui</p>
                       <div>
                         <p>cote</p>
