@@ -1,6 +1,13 @@
 <div class="background-navbar">
   <div class="navbar-user d-flex align-items-center flex-column">
-    <%= cl_image_tag current_user.photo.key, class: "avatar" %>
+    <% if current_user.total_points == 0 %>
+      <p><%= current_user.total_points %> Fukoin 🪙 </p>
+    <% elsif current_user.total_points == 1 %>
+      <p><%= current_user.total_points %> Fukoin 🪙 </p>
+    <% elsif current_user.total_points > 1 %>
+      <p><%= current_user.total_points %> Fukoins 🪙 </p>
+    <% end %>
+    <%= cl_image_tag current_user.photo.key, class: "avatar mt-2" %>
     <%# <p><%= @current_user.username</p> %>
   </div>
 </div>

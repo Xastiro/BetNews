@@ -1,21 +1,25 @@
 .background-navbar {
-  height: 160px;
+  height: 180px;
   background-color: $mybackgroundlightgrey;
   position: fixed;
   top: 50px;
   width: 100%;
   z-index: 1;
   padding-top: 15px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 
   .navbar-user {
+    p {
+      color: white;
+    }
     display: inline-block;
     margin-bottom: 15px;
     background-color: $myblack;
     color: $myblack;
     font-weight: 600;
     width: 90%;
-    height: 80px;
+    height: 100px;
+    padding: 10px;
     border-radius: 10px;
     margin: 0 auto;
     z-index: 1;
@@ -26,7 +30,7 @@
       height: 100px;
       border-radius: 50%;
       border: 5px solid $mywhite;
-      top: 35px;
+      top: 55px;
       object-fit: cover;
     }
   }
