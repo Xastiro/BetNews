@@ -20,9 +20,14 @@
 }
 
 .index-category-scroll {
-  overflow: scroll;
   scrollbar-width: none; /* hide scroll bar for Firefox */
-  padding-top: $navbar-top-padding;
+  padding: 10px;
+  position:sticky;
+  top: $navbar-top-height;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  background-color: white;
+  z-index: 1;
 }
 
 .index-category-scroll::-webkit-scrollbar {
@@ -56,6 +61,10 @@
   }
 }
 
+.all-bets {
+  padding-top: 40px;
+}
+
 .index-border-radius-style {
   border-radius: 10px;
   background-color: $mywhite;
@@ -83,6 +92,7 @@
   width: fit-content;
   height: fit-content;
   margin-bottom: 0;
+  font-family: roboto;
 }
 
 .text-decoration-none {
@@ -149,7 +159,7 @@
   }
 
   div p:nth-child(1) {
-    font-family: inter;
+    font-family: poppins;
     font-weight: 400;
     font-size: 13px;
     color: black;
@@ -188,7 +198,7 @@
   }
 
   div p:nth-child(1) {
-    font-family: inter;
+    font-family: poppins;
     font-weight: 400;
     font-size: 13px;
     color: white;
