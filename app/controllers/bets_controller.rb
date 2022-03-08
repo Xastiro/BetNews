@@ -74,6 +74,11 @@ class BetsController < ApplicationController
     bettings.each do |betting|
       if betting.answer == @result
         betting.won = true
+        if @result == "yes"
+          betting.winning_odds = betting.bet.yes_odds
+        elsif @result == "no"
+          betting.winning_odds = betting.bet.no_odds
+        end
       else
         betting.won = false
       end
