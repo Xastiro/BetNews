@@ -1,3 +1,23 @@
+.card-top {
+  padding: 10px;
+}
+
+.card-title {
+  font-weight: 600;
+  color: $myblack;
+}
+
+.card-img-bg {
+  height: 250px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.validate-bet-wrapper {
+  width: 100%;
+}
 
 .index-category-scroll {
   overflow: scroll;
@@ -19,11 +39,10 @@
   width: fit-content;
   border-radius: 50px;
   background-color: black;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 15px;
   color: white;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 10px;
 }
 
 .index-category-scroll {
@@ -54,16 +73,16 @@
 .image-position {
   position: relative;
 }
+
 .tag-position {
   border-radius: 50px;
-  float: left;
-  position: absolute;
-  right: 15px;
-  bottom: -2px;
   z-index: 0;
   background-color: #FEFD02;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 15px;
   color: black;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 0;
 }
 
 .text-decoration-none {
@@ -80,14 +99,13 @@
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,1);
 }
 .index-learn-more-button {
-  width: fit-content;
+  width: 180px;
   border-radius: 50px;
   background-color: black;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 15px;
   color: white;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .index-card-grey-background {
@@ -97,8 +115,9 @@
 .index-card-question{
   font-family: roboto;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
+  line-height: normal;
 }
 
 .index-button-cote{
@@ -188,9 +207,11 @@
 .validated-bet-tag {
   background-color: #61C28B;
   border-radius: 50px;
+  text-align: center;
   color: white;
-  padding: 2px 11px 2px 11px;
+  padding: 5px 15px;
   font-family: poppins;
   font-weight: bold;
   font-size: 18px;
+  width: 280px;
 }
