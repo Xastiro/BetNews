@@ -485,7 +485,7 @@ puts '10 faked users and bettings created'
 end
 # Users photos
 
-file_hugo = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142557/betnews/Users/photo-1615109398623-88346a601842_rpviwa.jpg')
+file_hugo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646758103/photoHF.jpg')
 hugo.photo.attach(io: file_hugo, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file_matthias = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142605/betnews/Users/photo-1567515004624-219c11d31f2e_d49nuq.jpg')
