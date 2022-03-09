@@ -1,13 +1,16 @@
 <div class="background-navbar">
   <div class="navbar-user d-flex align-items-center flex-column">
-    <% if current_user.wallet == 0 %>
-      <p><%= current_user.wallet.round %> BetKoin 🪙 </p>
-    <% elsif current_user.wallet.round == 1 %>
-      <p><%= current_user.wallet.round %> BetKoin 🪙 </p>
-    <% elsif current_user.wallet.round > 1 %>
-      <p><%= current_user.wallet.round %> BetKoins 🪙 </p>
+    <% if current_page?(badge_user_path(current_user)) %>
+      <p><%= current_user.first_name %></p>
+    <% else %>
+      <% if current_user.wallet == 0 %>
+        <p><%= current_user.wallet.round %> BetKoin 🪙 </p>
+      <% elsif current_user.wallet.round == 1 %>
+        <p><%= current_user.wallet.round %> BetKoin 🪙 </p>
+      <% elsif current_user.wallet.round > 1 %>
+        <p><%= current_user.wallet.round %> BetKoins 🪙 </p>
+      <% end %>
     <% end %>
     <%= cl_image_tag current_user.photo.key, class: "avatar mt-2" %>
-    <%# <p><%= @current_user.username</p> %>
   </div>
 </div>

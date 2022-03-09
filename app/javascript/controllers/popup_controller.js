@@ -12,6 +12,10 @@ export default class extends Controller {
     wallet: Number,
   }
 
+  connect() {
+    console.log("coucou");
+  }
+
   confirmSubmityes() {
     const id = this.yesTarget.dataset.id
 

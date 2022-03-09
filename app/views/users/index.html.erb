@@ -8,11 +8,18 @@
   </div>
   <div class="wallet-circle">
     <p> <%= current_user.wallet.round(0)%> <%= image_tag("BetKoin.png", size: "17x17")%> </p>
-
   </div>
 </div>
 
+
+
 <div class="container-ranking mx-2 my-2">
+
+    <div class="btn-group-user" role="group">
+      <%= link_to "Classement",  users_path, class: "btn-active-bet" %>
+      <%= link_to "Badges", badge_user_path(current_user), class: "btn-bet" %>
+    </div>
+
   <div class="users-list mt-4">
     <% @users.each_with_index do |user, index| %>
       <div class="ranking-user-info">

@@ -10,6 +10,11 @@ class UsersController < ApplicationController
     @current_user_index = @users.find_index(current_user)
   end
 
+  def badge
+    @user = User.find(params[:id])
+
+  end
+
   private
 
 end

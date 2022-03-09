@@ -26,6 +26,7 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+    
     <%= render 'shared/navbar-bottom' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || current_page?(root_path) %>
     <%= render 'shared/navbar-bottom' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || current_page?(root_path) %>
   </body>

@@ -42,8 +42,93 @@
   }
 }
 
+.light-grey-bckgrnd{
+  background-color: $mybackgroundlightgrey;
+}
+
 .container-ranking {
-  padding-top: 200px;
+
+  .btn-group-user {
+    top: 220px;
+    width: 100%;
+    z-index: 1;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .btn-active-bet {
+      width: 160px;
+      border-radius: 28px;
+      background-color: #888888;
+      color: white;
+      font-family: poppins;
+      font-weight: bold;
+      font-size: 17px;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    .btn-bet {
+      width: 160px;
+      border-radius: 28px;
+      background-color: #E5E5E5;
+      color: black;
+      font-family: poppins;
+      font-weight: bold;
+      font-size: 17px;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  .badges {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 13px;
+    width: 266px;
+    margin: 20px auto;
+    padding-bottom: 100px;
+
+
+
+    .badge {
+      grid-template-columns: 1fr;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      font-size: 40px;
+      display:flex;
+      align-items:center;
+      justify-content:space-around;
+      box-sizing:border-box;
+
+      // display: flex;
+      // align-items: center;
+      // vertical-align: middle;
+    }
+    .active {
+      background-color: black;
+      // margin: auto;
+
+      i {
+        color: #FFD700;
+      }
+    }
+    .inactive {
+      background-color: #C4C4C4;
+      // margin: auto;
+
+      i {
+        color: #888888;
+      }
+    }
+  }
+
+
+  padding-top: 210px;
   .ranking-user-info {
     display: flex;
     align-items: center;

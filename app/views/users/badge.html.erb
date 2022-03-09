@@ -1,0 +1,46 @@
+<%= render 'shared/navbar-user' %>
+
+
+
+
+
+<div class="light-grey-bckgrnd">
+  <div class="container-ranking mx-2 my-5">
+
+    <div class="btn-group-user" role="group">
+      <%= link_to "Classement",  users_path, class: "btn-bet" %>
+      <%= link_to "Badges", badge_user_path(@user), class: "btn-active-bet" %>
+    </div>
+
+    <div class="badges">
+
+      <div data-controller="badge"
+                  data-badge-title-value="Combien veux tu miser?"
+                  data-badge-ok-value=""
+                  data-badge-main-text-value=""
+                  class="badge inactive"
+                  data-action="click->badge#badgeinfo">
+        <i class="fas fa-money-bill-alt"></i>
+      </div>
+
+      <div class="badge inactive">
+        <i class="fas fa-dollar-sign"></i>
+      </div>
+
+      <div class="badge inactive">
+        <i class="fas fa-envelope"></i>
+      </div>
+
+      <div class="badge inactive">
+        <i class="fab fa-btc"></i>
+      </div>
+
+      <div class="badge inactive">
+        <i class="fab fa-creative-commons-zero"></i>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
