@@ -32,8 +32,8 @@
 
 <div></div>
 
-  <%= link_to profile_bettings_path do  %>
-    <div class="d-flex align-items-center flex-column" >
+  <%= link_to users_path do  %>
+    <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'users' && action_name == 'index' %>" >
       <i class="fas fa-trophy fa-sm"></i>
       <%# <p>Classement</p> %>
     </div>
