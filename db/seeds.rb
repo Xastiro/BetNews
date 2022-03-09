@@ -235,14 +235,14 @@ tourdefrance = Bet.new(
   publisher: luc
 )
 
-meteo = Bet.new(
-  hashtag: "#MarsPluvieux #EnvieDeSoleil",
-  description: "Alors que le soleil n'a pas été vu à Nantes depuis plusieurs semaines, nombreux sont ceux à se demander quand est-ce qu'il sera de retour...",
-  expiring_at: Date.new(2022,03,9),
-  question: "Pleuvra t-il à Nantes entre 17h et 18h30 mercredi 9 mars 2022 ?",
-  category: "Planète",
-  publisher: sarah
-)
+# meteo = Bet.new(
+#   hashtag: "#MarsPluvieux #EnvieDeSoleil",
+#   description: "Alors que le soleil n'a pas été vu à Nantes depuis plusieurs semaines, nombreux sont ceux à se demander quand est-ce qu'il sera de retour...",
+#   expiring_at: Date.new(2022,03,9),
+#   question: "Pleuvra t-il à Nantes entre 17h et 18h30 mercredi 9 mars 2022 ?",
+#   category: "Planète",
+#   publisher: sarah
+# )
 
 # Bets photos
 
@@ -334,9 +334,9 @@ file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
 goldman.save!
 
-file_meteo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646838401/meteo.png')
-meteo.photo.attach(io: file_meteo, filename: 'nes.jpg', content_type: 'image/jpg')
-meteo.save!
+# file_meteo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646838401/meteo.png')
+# meteo.photo.attach(io: file_meteo, filename: 'nes.jpg', content_type: 'image/jpg')
+# meteo.save!
 
 puts 'Bets well generated'
 
