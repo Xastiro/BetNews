@@ -1,6 +1,8 @@
-<h2 class="mb-5">Plus d'informations</h2>
-<%= f.input :description, :placeholder => "La 22ème édition de la Coupe du monde de football 2022, organisée par la FIFA, se déroulera au Qatar du 21 novembre au 18 décembre 2022...", :label => "Parle nous du sujet, du contexte... ", input_html: { class: "question-form-field" } %>
-<%= f.simple_fields_for :medias do |f| %>
-  <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", :label => "As-tu des articles à nous partager sur cet actualité  ?", input_html: { class: "question-form-field" } %>
-  <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", label: false, input_html: { class: "question-form-field" } %>
-<% end %>
+<div class="container-form px-5 py-5">
+  <%# <h2 class="mb-5">Plus d'informations</h2> %>
+  <%= f.input :description, :placeholder => "La 22ème édition de la Coupe du monde de football 2022, organisée par la FIFA, se déroulera au Qatar du 21 novembre au 18 décembre 2022...", :label => "Parle nous du sujet, du contexte... ", input_html: { class: "question-form-field" } %>
+  <%= f.simple_fields_for :medias do |f| %>
+    <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", :label => "As-tu des articles à nous partager sur cet actualité  ?", input_html: { class: "question-form-field" } %>
+    <%= f.input :url, :placeholder => "https://www.fifa.com/fr/tournaments/mens/worldcup/qatar2022/news/de-nouveaux-verdicts-en-approche", label: false, input_html: { class: "question-form-field" } %>
+  <% end %>
+</div>
