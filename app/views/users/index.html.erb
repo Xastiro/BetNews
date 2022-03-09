@@ -1,0 +1,32 @@
+<div class="current-user-result">
+  <div class="index-circle">
+    <% if @current_user_index == 0 %>
+      <p><%= "#{@current_user_index + 1}" %><span>er</span> </p>
+    <% else %>
+      <p><%= "#{@current_user_index + 1}" %><span>ème</span></p>
+    <% end %>
+  </div>
+  <div class="wallet-circle">
+    <p> <%= current_user.wallet.round(0)%> <%= image_tag("BetKoin.png", size: "17x17")%> </p>
+
+  </div>
+</div>
+
+<div class="container-ranking mx-2 my-2">
+  <div class="users-list mt-4">
+    <% @users.each_with_index do |user, index| %>
+      <div class="ranking-user-info">
+        <div class="rank">
+          <p> <%= "#{index + 1}" %> </p>
+        </div>
+        <div class=<%= user == current_user ? "ranking-yellow-container" : "ranking-black-container" %>>
+          <%= cl_image_tag user.photo.key, class: "avatar" %>
+          <%# <div class="name-wallet"> %>
+          <p class="name"><%= user.username %></p>
+          <p class="wallet"><%= user.wallet.round(0) %></p>
+          <%# </div> %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -18,5 +18,5 @@ import "bootstrap"
 import { initSwiper } from "../plugins/init_swiper"
 
 document.addEventListener("turbolinks:load", function() {
-  initSwiper()
+  initSwiper();
 });

@@ -38,7 +38,9 @@ class BetsController < ApplicationController
     @bet.publisher = current_user
     if @bet.save
       redirect_to bet_path(@bet)
-      flash[:notice] = "Ton pari a bien été publié"
+      flash[:notice] = "Ton pari a bien été publié. Ton compte a été crédité de 100 de BetKoins"
+      @bet.publisher.wallet += 100
+      @bet.publisher.save
     else
     render :new
     end
