@@ -12,8 +12,8 @@
       </div>
     <% end %>
 
-<%= link_to profile_bettings_path do  %>
-    <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name == 'published' || controller_name == 'bettings' && action_name == 'index'%>">
+<%= link_to workinprogress_path do  %>
+    <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'pages' && action_name == 'workinprogress' %>">
       <i class="fas fa-users fa-sm"></i>
       <%# <p>friends</p> %>
     </div>
@@ -34,8 +34,8 @@
 <div></div>
 
 
- <%= link_to profile_bettings_path do  %>
-    <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name == 'published' || controller_name == 'bettings' && action_name == 'index'%>">
+  <%= link_to profile_bettings_path do  %>
+    <div class="d-flex align-items-center flex-column" >
       <i class="fas fa-trophy fa-sm"></i>
       <%# <p>Classement</p> %>
     </div>
@@ -49,6 +49,4 @@
       <%# <p>Profil</p> %>
     </div>
   <% end %>
-  <%# </div> %>
 </div>
-<%# navbar-light navbar-lewagon %>
