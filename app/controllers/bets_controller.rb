@@ -79,6 +79,8 @@ class BetsController < ApplicationController
         elsif @result == "no"
           betting.winning_odds = betting.bet.no_odds
         end
+        betting.user.wallet += betting[:wager].to_f * betting.winning_odds.to_f
+        betting.user.save
       else
         betting.won = false
       end
