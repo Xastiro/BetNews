@@ -26,14 +26,14 @@ class Bet < ApplicationRecord
   end
 
   def yes_odds
-    total_wager = self.bettings.sum { |betting| betting[:wager] }
+    total_wager = self.bettings.sum { |betting| betting[:wager] unless betting[:wager].nil? }
     total_wager_yes = self.bettings.sum { |betting| betting[:answer] == "yes" ? betting[:wager] : 0 }
 
     total_wager_yes.zero? ? 2.0 : (total_wager / total_wager_yes)
   end
 
   def no_odds
-    total_wager = self.bettings.sum { |betting| betting[:wager] }
+    total_wager = self.bettings.sum { |betting| betting[:wager] unless betting[:wager].nil? }
     total_wager_no = self.bettings.sum { |betting| betting[:answer] == "no" ? betting[:wager] : 0 }
 
     total_wager_no.zero? ? 2.0 : (total_wager / total_wager_no)
