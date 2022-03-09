@@ -1,4 +1,7 @@
 <%# <%= f.input :category, as: :radio_buttons, :collection => Bet::CATEGORIES.drop(1).map { |category| image_tag("#{category}.png", class: "smiley-category-publish") + "#{category}"} , :label => "Choisis ta catégorie", class: ""  %>
 
-<h2 class="center-category-title mb-5">Choisis ta catégorie</h2>
-<%= f.collection_radio_buttons :category, Bet::CATEGORIES.drop(1).map { |category| ["#{category}", image_tag("#{category}.png", class: "smiley-category-publish") + "#{category}"]} , :first, :last, :label => "Choisis ta catégorie" %>
+<h2><strong>Lance ton pari ! </strong></h2>
+<div class="container-category">
+  <p class="center-category-title mb-4">Choisis ta catégorie :</p>
+  <%= f.collection_radio_buttons :category, Bet::CATEGORIES.drop(1).map { |category| ["#{category}", image_tag("#{category}.png", class: "smiley-category-publish") + "#{category}"]} , :first, :last, :label => "Choisis ta catégorie" %>
+</div>
