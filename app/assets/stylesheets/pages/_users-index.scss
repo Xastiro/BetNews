@@ -1,0 +1,136 @@
+.current-user-result {
+  // margin-top: $navbar-top-height;
+  display: flex;
+  justify-content: space-around;
+  background-color: $myblack;
+  height: 145px;
+  align-items: center;
+  position: fixed;
+  top: $navbar-top-height;
+  width: 100%;
+  p {
+    margin: 0 auto;
+    font-family: poppins;
+    font-weight: bold;
+    img {
+      margin-bottom: 2px;
+    }
+    span {
+      font-size: 17px;
+    }
+  }
+  .index-circle {
+    display: flex;
+    align-items: center;
+
+    background-color: $mywhite;
+    color: $myblack;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 37px;
+  }
+  .wallet-circle {
+    color: $myyellow;
+    border: 8px solid $myyellow;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+  }
+}
+
+.container-ranking {
+  padding-top: 200px;
+  .ranking-user-info {
+    display: flex;
+    align-items: center;
+    color: $myblack;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    .rank {
+      width: 10%;
+      p {
+        text-align: center;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-family: poppins;
+      }
+    }
+
+    .ranking-yellow-container {
+      background-color: $myyellow;
+      align-items: center;
+      color: $myblack;
+      display: flex;
+      // justify-content: space-around;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-radius: 22px;
+      width: 300px;
+      height: 69px;
+      font-family: poppins;
+      font-size: 15px;
+      font-weight: bold;
+      .name {
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+      .wallet {
+        color: $myblack;
+        // align-items: right;
+        margin-left: auto;
+        margin-right: 18px;
+        margin-bottom: 0px;
+      }
+      .avatar {
+      width: 53px;
+      height: 53px;
+      border-radius: 50%;
+      top: 55px;
+      object-fit: cover;
+      margin-right: 18px;
+      margin-left: 18px;
+      }
+    }
+
+
+    .ranking-black-container {
+      background-color: $myblack;
+      align-items: center;
+      color: $mywhite;
+      display: flex;
+      // justify-content: space-around;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-radius: 22px;
+      width: 300px;
+      height: 69px;
+      font-family: poppins;
+      font-size: 15px;
+      font-weight: bold;
+      .name {
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+      .wallet {
+        color: $myyellow;
+        // align-items: right;
+        margin-left: auto;
+        margin-right: 18px;
+        margin-bottom: 0px;
+      }
+      .avatar {
+      width: 53px;
+      height: 53px;
+      border-radius: 50%;
+      top: 55px;
+      object-fit: cover;
+      margin-right: 18px;
+      margin-left: 18px;
+      }
+    }
+  }
+}
