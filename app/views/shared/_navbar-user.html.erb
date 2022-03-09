@@ -1,11 +1,11 @@
 <div class="background-navbar">
   <div class="navbar-user d-flex align-items-center flex-column">
     <% if current_user.wallet == 0 %>
-      <p><%= current_user.wallet.round(1) %> BetKoin 🪙 </p>
+      <p><%= current_user.wallet.round(0) %> BetKoin 🪙 </p>
     <% elsif current_user.wallet == 1 %>
-      <p><%= current_user.wallet.round(1) %> Betkoin 🪙 </p>
+      <p><%= current_user.wallet.round(0) %> Betkoin 🪙 </p>
     <% elsif current_user.wallet > 1 %>
-      <p><%= current_user.wallet.round(1) %> BetKoins 🪙 </p>
+      <p><%= current_user.wallet.round(0) %> BetKoins 🪙 </p>
     <% end %>
     <%= cl_image_tag current_user.photo.key, class: "avatar mt-2" %>
     <%# <p><%= @current_user.username</p> %>
