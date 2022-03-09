@@ -12,7 +12,7 @@
       </div>
     <% end %>
 
-<%= link_to profile_bettings_path do  %>
+<%= link_to do  %>
     <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name == 'published' || controller_name == 'bettings' && action_name == 'index'%>">
       <i class="fas fa-users fa-sm"></i>
       <%# <p>friends</p> %>
@@ -34,7 +34,7 @@
 <div></div>
 
 
- <%= link_to profile_bettings_path do  %>
+ <%= link_to do  %>
     <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name == 'published' || controller_name == 'bettings' && action_name == 'index'%>">
       <i class="fas fa-trophy fa-sm"></i>
       <%# <p>Classement</p> %>
