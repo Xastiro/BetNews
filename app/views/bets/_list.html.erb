@@ -39,7 +39,7 @@
             <% end %>
           <% else %>
             <% if !current_user.user_bets.include?(bet) %>
-          
+
               <div data-controller="popup"
                   data-popup-title-value="Combien veux tu miser?"
                   data-popup-ok-value=""
@@ -100,5 +100,6 @@
     </div>
   <% end %>
 <% else %>
+  <br>
   <p>Aucun pari dans cette catégorie</p>
 <% end %>

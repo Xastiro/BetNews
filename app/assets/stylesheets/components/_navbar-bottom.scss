@@ -7,11 +7,10 @@
   bottom: 0;
   width: 100%;
 
-  .a {
-    color: white;
+  a {
+    color: grey;
     display: block;
     text-decoration: none;
-    text-underline-offset: none;
   }
 
   p {
@@ -93,10 +92,9 @@
 
 .active {
   .fas {
-    text-decoration: underline white;
-    // border-bottom: 6px solid white;
-    padding-top: 2;
-    text-underline-offset: 5px;
+    // text-decoration: underline red;
+    // text-underline-offset: 5px;
+    color: white
   }
 }
 
