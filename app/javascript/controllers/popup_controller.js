@@ -9,6 +9,7 @@ export default class extends Controller {
     ok: String,
     confirmButton: String,
     icon: String,
+    wallet: Number,
   }
 
   confirmSubmityes() {
@@ -32,12 +33,16 @@ export default class extends Controller {
       },
       inputValue: 10
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        const event = new CustomEvent(`confirmedyes${id}`)
-        window.dispatchEvent(event)
-      } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
+      if (result.value > this.walletValue) {
+        Swal.fire("Tu n'as plus assez de BetKoins our parier", `Solde actuel ${Math.round(this.walletValue)}`, 'info')
+      } else {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          const event = new CustomEvent(`confirmedyes${id}`)
+          window.dispatchEvent(event)
+        } else if (result.isDenied) {
+          Swal.fire('Changes are not saved', '', 'info')
+        }
       }
     })
   }
@@ -63,12 +68,16 @@ export default class extends Controller {
       },
       inputValue: 10
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        const event = new CustomEvent(`confirmedno${id}`)
-        window.dispatchEvent(event)
-      } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
+      if (result.value > this.walletValue) {
+        Swal.fire("Tu n'as plus assez de BetKoins our parier", `Solde actuel ${Math.round(this.walletValue)}`, 'info')
+      } else {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          const event = new CustomEvent(`confirmedno${id}`)
+          window.dispatchEvent(event)
+        } else if (result.isDenied) {
+          Swal.fire('Changes are not saved', '', 'info')
+        }
       }
     })
   }
