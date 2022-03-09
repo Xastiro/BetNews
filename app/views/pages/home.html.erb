@@ -47,8 +47,10 @@
     <p class="bets-available-button bets-available-hover bets-available-shadow"><%= link_to "Paris disponibles", bets_path %></p>
   </div>
   <div class="connexion-button">
-    <%= link_to new_user_session_path do %>
-      <p> Se connecter </p>
+    <% if !user_signed_in? %>
+      <%= link_to new_user_session_path do %>
+        <p> Se connecter </p>
+      <% end %>
     <% end %>
   </div>
 </div>
