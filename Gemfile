@@ -73,3 +73,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'faker'
+
+gem 'devise-i18n'

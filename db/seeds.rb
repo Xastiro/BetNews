@@ -164,8 +164,8 @@ cac40 = Bet.new(
 )
 
 rugby = Bet.new(
-  hashtag: "#6nations #15deFrance",
-  description: "Le IV de France de Fabien Galthié réalise de très bonnes performances en ce tournois des 6 nations. Après avoir battu les All Black en novembre, le groupe emmené par Antoine Dupont, a gagné se matchs du tournois des 6 nations.",
+  hashtag: "#6nations #XVdeFrance",
+  description: "Le XV de France de Fabien Galthié réalise de très bonnes performances en ce tournois des 6 nations. Après avoir battu les All Black en novembre, le groupe emmené par Antoine Dupont, a gagné se matchs du tournois des 6 nations.",
   expiring_at: Date.new(2022,03,19),
   question: "Le 19/03 le XV de France remportera le tournois des 6 nations ?",
   category: "Sport",
