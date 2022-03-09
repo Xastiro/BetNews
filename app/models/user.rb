@@ -16,8 +16,11 @@ class User < ApplicationRecord
   validates :username, presence: true
 
   def total_points
-    score = Betting.where(user_id: self.id, won: true)
-    score.count
+    won_bettings = Betting.where(user_id: self.id, won: true)
+    winnings_amount = won_bettings.sum { |betting| betting[:wager] * betting.winning_odds }
+
+    
+    winning_odds
   end
 
   # validates :phone_number, format: { with: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ }

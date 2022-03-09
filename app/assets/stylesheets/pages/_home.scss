@@ -35,7 +35,7 @@ px;
 
 
 .carousel-item {
-  height: 375px;
+  height: 350px;
   h5 {
     font-family: poppins;
     font-weight: bold;
@@ -55,7 +55,7 @@ px;
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 .banner h1 {
@@ -72,4 +72,16 @@ px;
 
 .carousel-inner h5{
   color: #FEFD02;
+}
+
+.connexion-button {
+  a {
+    display: block;
+    text-decoration: underline;
+    color: $myblack;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+
+  }
 }
