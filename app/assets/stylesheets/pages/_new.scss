@@ -134,3 +134,16 @@
   }
 }
 
+.container-form {
+  ::placeholder {
+    color: $mylightgrey;
+  }
+}
+
+.container-category {
+  align-items: center;
+  text-align: center;
+  .center-category {
+    width: 80%;
+  }
+}

@@ -29,6 +29,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users, only: [:index]
+
   # get '/profile/bettings/ongoing', to: 'bettings#ongoing'
   # get '/profile/bettings/finished', to: 'bettings#finished'
   # get '/profile/bettings/published', to: 'bets#published'

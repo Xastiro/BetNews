@@ -11,26 +11,26 @@ User.destroy_all
 
 puts 'Creating Users Bets Bettings and Medias'
 
-hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo', wallet: 1000)
-sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille', wallet: 1000)
-christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44', wallet: 1000)
-matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro', wallet: 1000)
-john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe', wallet: 1000)
-lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma', wallet: 1000)
-gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Malerto', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle', wallet: 1000)
-mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89', wallet: 1000)
-julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne', wallet: 1000)
-malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos', wallet: 1000)
-juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23', wallet: 1000)
-marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce', wallet: 1000)
-louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2', wallet: 1000)
-karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI', wallet: 1000)
-charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25', wallet: 1000)
-leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A', wallet: 1000)
-arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98', wallet: 1000)
-nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE', wallet: 1000)
-armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90', wallet: 1000)
-luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc', password: 'azerty', username: 'LucFX', wallet: 1000)
+hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo', wallet: 3600)
+sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille', wallet: 3500)
+christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44', wallet: 4000)
+matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro', wallet: 3900)
+john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe', wallet: 2300)
+lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma', wallet: 2000)
+gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Malerto', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle', wallet: 2600)
+mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89', wallet: 2900)
+julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne', wallet: 2400)
+malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos', wallet: 2300)
+juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23', wallet: 2100)
+marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce', wallet: 2000)
+louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2', wallet: 2900)
+karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI', wallet: 2850)
+charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25', wallet: 2600)
+leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A', wallet: 2000)
+arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98', wallet: 2300)
+nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE', wallet: 2700)
+armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90', wallet: 2600)
+luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc', password: 'azerty', username: 'LucFX', wallet: 2500)
 
 puts 'Users well generated'
 
@@ -473,7 +473,9 @@ Betting.create!(
 puts '10 faked users and bettings created'
 
 10.times do
-  user_faker = User.create!(email: Faker::Internet.unique.email(domain: 'example'), last_name: Faker::Name.last_name, first_name: Faker::Name.first_name, password: 'azerty', username: Faker::Internet.username, wallet: 1000)
+  user_faker = User.create!(email: Faker::Internet.unique.email(domain: 'example'), last_name: Faker::Name.last_name, first_name: Faker::Name.first_name, password: 'azerty', username: Faker::Internet.username, wallet: rand(800..999))
+  file_user_faker = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646820671/betnews/Users/lraxiq0dowyibrxooemp.png')
+  user_faker.photo.attach(io: file_user_faker, filename: 'nes.png', content_type: 'image/png')
   Bet.all.each do |bet|
     Betting.create!(
       answer: rand > 0.5 ? "yes" : "no",

@@ -43,7 +43,8 @@
               <div data-controller="popup"
                   data-popup-title-value="Combien veux tu miser?"
                   data-popup-ok-value=""
-                  data-popup-main-text-value="">
+                  data-popup-main-text-value=""
+                  data-popup-wallet-value=<%= current_user.wallet %>>
                 <button  class="btn index-button-cote index-button-oui index-shadow" data-vote-target='voteyes' data-popup-target='yes' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmityes confirmedyes<%= bet.id %>@window->vote#yes">
                   <p>oui</p>
                   <div>
@@ -56,7 +57,8 @@
               <div data-controller="popup"
                   data-popup-title-value="Combien veux tu miser?"
                   data-popup-ok-value=""
-                  data-popup-main-text-value="">
+                  data-popup-main-text-value=""
+                  data-popup-wallet-value=<%= current_user.wallet %>>
                 <button  class="btn index-button-cote index-button-non index-shadow" data-vote-target='voteno' data-popup-target='no' data-id='<%= bet.id %>' data-action="click->popup#confirmSubmitno confirmedno<%= bet.id %>@window->vote#no">
                   <p>non</p>
                   <div>
