@@ -43,9 +43,12 @@
     </div>
   </div>
 
+<div>
+<%= link_to bets_path, class: "text-decoration-none" do %>
   <div class="d-flex justify-content-around pt-4">
-    <p class="bets-available-button bets-available-hover bets-available-shadow"><%= link_to "Paris disponibles", bets_path %></p>
+    <p class="bets-available-button bets-available-hover bets-available-shadow">Paris disponibles</p>
   </div>
+<% end %>
   <div class="connexion-button">
     <% if !user_signed_in? %>
       <%= link_to new_user_session_path do %>
