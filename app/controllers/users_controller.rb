@@ -12,9 +12,13 @@ class UsersController < ApplicationController
 
   def badge
     @user = User.find(params[:id])
-
   end
 
+  # def next_user(index)
+  #   @users.find_index(index - 1)
+  # end
+
   private
+
 
 end
