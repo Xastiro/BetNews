@@ -41,7 +41,7 @@ chomage = Bet.new(
   question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en janvier 2022 ?",
   category: "Economie",
   publisher: hugo,
-  result: "no"
+  result: "no",
 )
 
 cesar = Bet.new(
@@ -344,14 +344,16 @@ Betting.create!(
   answer: "no",
   user: luc,
   bet: chomage,
-  won: true
+  won: true,
+  winning_odds: 1.2
 )
 
 Betting.create!(
   answer: "yes",
   user: armand,
   bet: cesar,
-  won: false
+  won: false,
+  winning_odds: 2.3
 )
 
 Betting.create!(
@@ -382,14 +384,16 @@ Betting.create!(
   answer: "yes",
   user: hugo,
   bet: cesar,
-  won: false
+  won: false,
+  winning_odds: 2.1
 )
 
 Betting.create!(
   answer: "no",
   user: hugo,
   bet: chomage,
-  won: true
+  won: true,
+  winning_odds: 2.3,
 )
 
 Betting.create!(
