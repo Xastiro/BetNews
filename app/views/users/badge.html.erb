@@ -1,11 +1,8 @@
 <%= render 'shared/navbar-user' %>
 
 
-
-
-
 <div class="light-grey-bckgrnd">
-  <div class="container-ranking mx-2 my-5">
+  <div class="container-ranking mx-2 mt-4 mb-5">
 
     <div class="btn-group-user" role="group">
       <%= link_to "Classement",  users_path, class: "btn-bet" %>
@@ -15,11 +12,12 @@
     <div class="badges">
 
       <div data-controller="badge"
-                  data-badge-title-value="Combien veux tu miser?"
-                  data-badge-ok-value=""
-                  data-badge-main-text-value=""
-                  class="badge inactive"
-                  data-action="click->badge#badgeinfo">
+           data-badge-icon-value="<i class='fas fa-money-bill-alt'></i>"
+           data-badge-title-value="Riche"
+           data-badge-main-text-value="Tu as au moins 2000 BetKoins!"
+           data-badge-footer-value="Actuellement tu as <%= current_user.wallet.round %> BetKoins"
+           class="badge <%= current_user.wallet.round > 2000 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
         <i class="fas fa-money-bill-alt"></i>
       </div>
 
