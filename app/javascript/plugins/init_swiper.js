@@ -6,7 +6,6 @@ const initSwiper = () => {
     direction: 'horizontal',
     modules: [Navigation],
 
-
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',

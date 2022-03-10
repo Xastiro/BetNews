@@ -34,13 +34,13 @@ export default class extends Controller {
     // console.log(this.dateValue);
     // Output the result in an element with id="countdown"
       if (days > 0) {
-        this.element.innerHTML = "⏳ " + days + " j";
+        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + days + " j";
       } else if (hours > 0) {
-        this.element.innerHTML = "⏳ " + hours + " h";
+        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + hours + " h";
       } else if (minutes > 0) {
-        this.element.innerHTML = "⏳ " + minutes + " m";
+        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + minutes + " m";
       } else if (seconds > 0) {
-        this.element.innerHTML = "⏳ " + seconds + " s";
+        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + seconds + " s";
       } else {
         // clearInterval(x);
         this.element.innerHTML = "Pari clos";

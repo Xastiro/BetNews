@@ -15,18 +15,3 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/new";
-
-.swal2-range {
-  input[type="range"] {
-    background-color: black;
-  }
-
-  output::after {
-    margin-left: 5px;
-    // content: asset-url("BetKoin.png");
-    content: "🪙";
-    display: inline-block;
-    // width: 16px;
-    // height: 16px;
-  }
-}

@@ -17,7 +17,6 @@ export default class extends Controller {
   }
 
   confirmSubmityes() {
-    console.log(this.titleValue)
     const id = this.yesTarget.dataset.id
 
     Swal.fire({
@@ -27,8 +26,8 @@ export default class extends Controller {
       iconHtml: this.iconImg,
       showCancelButton: true,
       allowOutsideClick: false,
-      confirmButtonColor: '#FEFD02',
-      cancelButtonColor: '#000000',
+      confirmButtonColor: '#007aff',
+      cancelButtonColor: ' #007aff',
       cancelButtonText: 'Annuler',
       confirmButtonText: 'Confirmer',
       input: "range",
@@ -61,10 +60,11 @@ export default class extends Controller {
       title: this.titleValue,
       text: this.mainTextValue,
       // icon: 'question',
+      iconHtml: this.iconImg,
       showCancelButton: true,
       allowOutsideClick: false,
-      confirmButtonColor: '#FEFD02',
-      cancelButtonColor: '#000000',
+      confirmButtonColor: '#007aff',
+      cancelButtonColor: ' #007aff',
       cancelButtonText: 'Annuler',
       confirmButtonText: 'Confirmer',
       input: "range",

@@ -17,7 +17,7 @@
       <%# CARD BOTTOM %>
       <div class="index-card-grey-background index-bottom-border-radius-style p-3">
         <p class="index-card-question"><%= bet.question %></p>
-        <div class="d-flex justify-content-between" data-controller="vote" data-vote-target="container">
+        <div class="d-flex justify-content-around" data-controller="vote" data-vote-target="container">
           <% if !user_signed_in? %>
             <%= link_to yes_bet_bettings_path(bet), method: :post do %>
               <div class="btn index-button-cote index-button-oui index-shadow">
@@ -56,7 +56,8 @@
               </div>
 
               <div data-controller="popup"
-                  data-popup-title-value="Combien veux tu miser?"
+                  data-popup-title-value="Combien mises-tu de BetKoins ?"
+                  data-popup-icon-path-value="<%= h(image_path('BetKoin.png', size: '17x17')) %>"
                   data-popup-ok-value=""
                   data-popup-main-text-value=""
                   data-popup-wallet-value=<%= current_user.wallet %>>
