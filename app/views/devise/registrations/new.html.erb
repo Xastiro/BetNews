@@ -12,6 +12,14 @@
       <%= f.error_notification %>
 
       <div class="input">
+        <%= f.label 'Username', class: "input-label" %>
+        <%= f.input :username,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "username", class: "input-field" } %>
+      </div>
+
+      <div class="input">
         <%= f.label 'Email', class: "input-label" %>
         <%= f.input :email,
                     required: true,
@@ -37,8 +45,9 @@
         <div class="log-in-button mb-3">
           <%= f.button :submit, "Créer un compte" %>
         </div>
-        <%= link_to "Se connecter", new_session_path(resource_name), class: "sign-in-button" %><br/>
       </div>
+      <br/>
+      <%= link_to "Se connecter", new_session_path(resource_name), class: "discret-link" %>
 
     <% end %>
 

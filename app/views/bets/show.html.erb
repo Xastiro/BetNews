@@ -15,7 +15,8 @@
           <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= @bet.expiring_at %>"></p>
         </div>
         <div class="user-infos pt-3">
-          <p > <%= cl_image_tag @bet.publisher.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <a href="https://user.com/en/"><%= @bet.publisher.username %></a> </p>
+          <p><%= @bet.publisher.photo.key.nil? ?  (link_to image_tag("profilpicture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false)) : (cl_image_tag @bet.publisher.photo.key, class: "avatar mt-2") %> <%= @bet.publisher.username %></p>
+          <%# <p> <%= cl_image_tag @bet.publisher.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false <a href="https://user.com/en/"><%= @bet.publisher.username</a> </p> %>
         </div>
         <div>
           <p class="index-card-description"><%= @bet.description %></p>

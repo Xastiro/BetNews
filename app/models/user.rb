@@ -11,9 +11,16 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :username, presence: true
+  before_save :default_values
+
+  def default_values
+    self.wallet ||= 1000
+  end
+
+
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
+  # validates :username, presence: true
 
 
 
