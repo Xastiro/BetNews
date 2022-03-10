@@ -12,7 +12,9 @@ class UsersController < ApplicationController
 
   def badge
     @user = User.find(params[:id])
-
+    @users = User.all
+    @users = @users.sort_by(&:wallet).reverse!
+    @current_user_index = @users.find_index(current_user)
   end
 
   private

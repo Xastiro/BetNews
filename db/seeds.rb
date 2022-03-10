@@ -57,7 +57,7 @@ cesar = Bet.new(
 goldman = Bet.new(
   hashtag: "#musique #Goldman",
   description: "Et si le chanteur aux quelques 30 millions d'albums vendus faisait son grand retour dans les studios ? C'est en tout cas ce qu'espèrent très fort les fans de Jean-Jacques Goldman qui attendent depuis près de 20 ans un nouveau titre de leur idole. Et leurs espoirs ont été réchauffés par une petite phrase, non pas du chanteur mais de l'un de ses proches. Erick Benzi, l’arrangeur historique de Jean-Jacques Goldman s'est confié lors d'une interview avec nos confrères du Figaro. Il a mentionné un éventuel prochain album de Jean-Jacques Goldman en disant : C’est drôle, dans les notes de pochette de Chansons pour les pieds, son dernier disque, il avait inscrit : Erick, tu es libre pour le prochain ?.",
-  expiring_at: Date.new(2022,02,25),
+  expiring_at: Date.new(2022,04,25),
   question: "JJ Goldman va t-il sortir un nouvel album ?",
   category: "Culture",
   publisher: sarah,
@@ -75,7 +75,7 @@ goncourt = Bet.new(
 kohlanta = Bet.new(
   hashtag: "#Koh-Lanta #tvshow",
   description: "Cette nouvelle saison de Koh-Lanta est totalement inédite. C’est du jamais vu : il n’y aura pas un, mais 2 totems cette année ! Celui que vous connaissez, le totem d’immunité, qui protège les gagnants… et le Totem maudit ! Perdre une épreuve, c’est en hériter, et subir l’une de ses nombreuses malédictions. Son ombre plane sur cette saison, du premier au dernier jour de l’aventure. C’est une certitude, le Totem maudit va bousculer les destins des 24 nouveaux aventuriers qui ont décidé de se mesurer les uns aux autres. Dans des conditions dantesques, au pied des spectaculaires falaises de l’archipel de Palawan aux Philippines, ces 24 apprentis Robinsons vont découvrir la vie à la dure, la faim, la fatigue et les stratégies. Avec courage et détermination, ces 12 femmes et ces 12 hommes vont tout faire pour réaliser leur rêve, et gagner Koh-Lanta. Mais la route longue, et semée d’embûches, au premier rang desquelles se trouve, cette année, le Totem maudit.",
-  expiring_at: Date.new(2022,03,02),
+  expiring_at: Date.new(2022,03,15),
   question: "Alexandra va t-elle se faire éliminer de Koh-Lanta mardi prochain ?",
   category: "Divertissement",
   publisher: hugo
@@ -90,6 +90,15 @@ macron = Bet.new(
   publisher: matthias
 )
 
+coraux = Bet.new(
+  hashtag: "#coraux",
+  description: "Pour la toute première fois, des scientifiques ont découvert que des coraux censés avoir été tués par le stress thermique ont repoussé. Cette découverte constitue une lueur d’espoir pour les récifs menacés par le changement climatique dans le monde, alors que ce phénomène ne cesse d’empirer. Et c’est par le fruit du hasard que cette découverte a été faite. La découverte a été réalisée par Diego Kersting et Cristina Linares, des chercheurs de la Freie Universität à Berlin et de l’université de Barcelone. Ils ont dévoilé les premières preuves vivantes de cette stratégie de renaissance des coraux – connue sous le nom de « rajeunissement » – en menant des recherches sur une espèce de corail qu’on trouve dans la mer Méditerranée. Le fruit de leurs études a été publié dans la revue Science Advances.",
+  expiring_at: Date.new(2022,06,15),
+  question: "Les coraux survivront-ils au réchauffement climatique ?",
+  category: "Planète",
+  publisher: christiane
+)
+
 foot = Bet.new(
   hashtag: "#PSG #OM",
   description: "Le match PSG-Marseille de Ligue 1 est programmé pour le Dimanche 17 Avril 2022. Au lundi 28 février 2022, l'équipe de Paris Saint-Germain se classe 1e de la Ligue 1, avec un total de 59 points. Elle totalise 18 victoires, 5 matchs nuls et 1 défaites. PSG a marqué 52 buts et en a encaissés 19, ce qui lui donne un goal average de 33. De son côté, l'équipe de Olympique de Marseille se classe 2e de la Ligue 1, avec un total de 46 points. Elle compte 13 victoires, 7 matchs nuls et 4 défaites. Marseille a inscrit 38 buts et en a encaissés 21. Elle présente un goal average de 17.",
@@ -97,6 +106,15 @@ foot = Bet.new(
   question: "Le PSG va t-il gagner face à l'OM le 17/04 ?",
   category: "Sport",
   publisher: timothee
+)
+
+psg = Bet.new(
+  hashtag: "#PSG #championsleague",
+  description: "Après l’immense déception de ce mercredi soir, le Paris SG va avoir du mal à garder le cap dans les prochains jours, tant le coeur n’y est plus. Le titre de champion de France, quasiment déjà en poche, ne fait plus forcément vibrer à Paris, d’autant que la concurrence est quasiment inexistante. Le PSG va surtout devoir s’attacher à tirer dans le même sens, et éviter les polémiques qui laissent à penser que cette saison 2021-2022 est à ranger au rayon des pires fiascos de ces dernières années. Après la terrible élimination face au Real Madrid, le sort de Mauricio Pochettino semble scellé. Son avenir devrait s’écrire loin de la capitale française.",
+  expiring_at: Date.new(2022,03,11),
+  question: "Mauricio Pochettino aura annoncé son départ avant la fin de la semaine ?",
+  category: "Sport",
+  publisher: christiane
 )
 
 ukraine = Bet.new(
@@ -124,7 +142,8 @@ zemmour = Bet.new(
   question: "Eric Zemmour aura t-il ses 500 parrainages ?",
   expiring_at: Date.new(2022,03,04),
   category: "Politique",
-  publisher: hugo
+  publisher: hugo,
+  result: "yes",
 )
 
 thevoice = Bet.new(
@@ -157,8 +176,8 @@ chasse = Bet.new(
 cac40 = Bet.new(
   hashtag: "#CAC40 #bourse",
   description: "Le CAC40, l'indice qui regroupe les 40 plus grosses sociétés françaises cotées, a perdu 5,73% en 5 jours à cause de la guerre en Ukraine. Entre espoir de voir la guerre prendre fin et craintes de voir le conflit durer, les jours à venir sont bien incertains pour les marchés financiers.",
-  expiring_at: DateTime.new(2022, 3, 13, 17, 22, 0),
-  question: "Le CAC40 clôturera t-il au dessus de 6500 points le 11 mars 2022 ?",
+  expiring_at: DateTime.new(2022, 3, 12, 17, 22, 0),
+  question: "Le CAC40 clôturera t-il au dessus de 6500 points le 12 mars 2022 ?",
   category: "Economie",
   publisher: marin
 )
@@ -250,6 +269,10 @@ file_macron = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v16463
 macron.photo.attach(io: file_macron, filename: 'nes.jpg', content_type: 'image/jpg')
 macron.save!
 
+file_psg = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646930609/betnews/th_ujbg35.jpg')
+psg.photo.attach(io: file_psg, filename: 'nes.jpg', content_type: 'image/jpg')
+psg.save!
+
 file_zemmour = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646141681/betnews/aktgskzvjni0yt2dnwpu.jpg')
 zemmour.photo.attach(io: file_zemmour, filename: 'nes.jpg', content_type: 'image/jpg')
 zemmour.save!
@@ -334,6 +357,11 @@ file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
 goldman.save!
 
+file_coraux= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646921404/betnews/coraux-mous-89285862_ofzk8n.jpg')
+coraux.photo.attach(io: file_coraux, filename: 'nes.jpg', content_type: 'image/jpg')
+coraux.save!
+
+
 # file_meteo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646838401/meteo.png')
 # meteo.photo.attach(io: file_meteo, filename: 'nes.jpg', content_type: 'image/jpg')
 # meteo.save!
@@ -411,7 +439,8 @@ Betting.create!(
 Betting.create!(
   answer: "yes",
   user: camille,
-  bet: zemmour
+  bet: zemmour,
+  winning_odds: 5,
 )
 
 Betting.create!(
@@ -693,6 +722,18 @@ goncourtmedia = Media.create!(
   source: "Libération",
   url: "https://www.liberation.fr/culture/livres/sorj-chalandon-agnes-desarthe-christine-angot-decouvrez-la-premiere-selection-du-goncourt-2022-20210907_YTKINPFFPVHFHNITYENMMVIHIU/",
   bet: goncourt,
+)
+
+corauxmedia = Media.create!(
+  source: "ScienceAdvance",
+  url: "https://www.science.org/doi/10.1126/sciadv.aax2950",
+  bet: coraux,
+)
+
+psgmedia = Media.create!(
+  source: "footmercato",
+  url: "https://www.footmercato.net/a3876445750049709899-psg-le-sort-de-mauricio-pochettino-est-scelle",
+  bet: psg,
 )
 
 puts 'Medias well generated'

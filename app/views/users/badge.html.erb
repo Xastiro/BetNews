@@ -1,8 +1,19 @@
-<%= render 'shared/navbar-user' %>
+<div class="current-user-result">
+  <div class="index-circle">
+    <% if @current_user_index == 0 %>
+      <p><%= "#{@current_user_index + 1}" %><span>er</span> </p>
+    <% else %>
+      <p><%= "#{@current_user_index + 1}" %><span>ème</span></p>
+    <% end %>
+  </div>
+  <div class="wallet-circle">
+    <p> <%= current_user.wallet.round(0)%> <%= image_tag("BetKoin.png", size: "17x17")%> </p>
+  </div>
+</div>
 
 
-<div class="light-grey-bckgrnd">
-  <div class="container-ranking mx-2 mt-4">
+<div class="">
+  <div class="container-ranking mx-2">
 
     <div class="btn-group-user" role="group">
       <%= link_to "Classement",  users_path, class: "btn-bet" %>
