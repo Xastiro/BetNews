@@ -36,11 +36,11 @@ export default class extends Controller {
       if (days > 0) {
         this.element.innerHTML = "tetsssss : " + days + " j";
       // } else if (hours > 0) {
-      //   this.element.innerHTML = "Clôture : " + hours + " h";
+      //   this.element.innerHTML = "⏳ " + hours + " h";
       // } else if (minutes > 0) {
-      //   this.element.innerHTML = "Clôture : " + minutes + " m";
+      //   this.element.innerHTML = "⏳ " + minutes + " m";
       // } else if (seconds > 0) {
-      //   this.element.innerHTML = "Clôture : " + seconds + " s";
+      //   this.element.innerHTML = "⏳ " + seconds + " s";
       } else {
         // clearInterval(x);
         this.element.innerHTML = "Pari clos";

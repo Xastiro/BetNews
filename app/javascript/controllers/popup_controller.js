@@ -8,21 +8,28 @@ export default class extends Controller {
     mainText: String,
     ok: String,
     confirmButton: String,
-    icon: String,
+    iconPath: String,
     wallet: Number,
   }
 
+  get iconImg() {
+    return `<img src="${this.iconPathValue}" width=96 height=96>`
+  }
+
   confirmSubmityes() {
+    console.log(this.titleValue)
     const id = this.yesTarget.dataset.id
 
     Swal.fire({
       title: this.titleValue,
       text: this.mainTextValue,
-      icon: 'question',
+      // icon: 'question',
+      iconHtml: this.iconImg,
       showCancelButton: true,
       allowOutsideClick: false,
       confirmButtonColor: '#FEFD02',
       cancelButtonColor: '#000000',
+      cancelButtonText: 'Annuler',
       confirmButtonText: 'Confirmer',
       input: "range",
       inputLabel: '',
@@ -53,11 +60,12 @@ export default class extends Controller {
     Swal.fire({
       title: this.titleValue,
       text: this.mainTextValue,
-      icon: 'question',
+      // icon: 'question',
       showCancelButton: true,
       allowOutsideClick: false,
       confirmButtonColor: '#FEFD02',
       cancelButtonColor: '#000000',
+      cancelButtonText: 'Annuler',
       confirmButtonText: 'Confirmer',
       input: "range",
       inputLabel: '',
