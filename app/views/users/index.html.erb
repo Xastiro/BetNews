@@ -13,14 +13,14 @@
 
 
 
-<div class="container-ranking mx-2 my-2">
+<div class="container-ranking mx-2 mb-5">
 
     <div class="btn-group-user" role="group">
       <%= link_to "Classement",  users_path, class: "btn-active-bet" %>
       <%= link_to "Badges", badge_user_path(current_user), class: "btn-bet" %>
     </div>
 
-  <div class="users-list mt-4">
+  <div class="users-list mt-4 pb-5">
     <% @users.each_with_index do |user, index| %>
       <div class="ranking-user-info">
         <div class="rank">
