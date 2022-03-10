@@ -29,7 +29,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users, only: [:index]
+  resources :users, only: [:index] do
+    member do
+      get :badge
+    end
+  end
 
   # get '/profile/bettings/ongoing', to: 'bettings#ongoing'
   # get '/profile/bettings/finished', to: 'bettings#finished'
