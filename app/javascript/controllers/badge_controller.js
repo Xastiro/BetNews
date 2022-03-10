@@ -21,7 +21,7 @@ export default class extends Controller {
       title: this.titleValue,
       text: this.mainTextValue,
       footer: this.footerValue,
-      confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
+      confirmButtonText: '<i class="fas fa-backward"></i> Retour',
       confirmButtonAriaLabel: 'Thumbs up, great!',
       confirmButtonColor: '#000000',
     })
