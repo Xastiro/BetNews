@@ -7,7 +7,8 @@
     <% elsif current_user.wallet.round > 1 %>
       <p><%= image_tag("BetKoin.png", size: "17x17")%><%= current_user.wallet.round %> BetKoins </p>
     <% end %>
-    <%= cl_image_tag current_user.photo.key, class: "avatar mt-2" %>
+    <%= current_user.photo.key.nil? ? (link_to image_tag("profilpicture.png")) : (cl_image_tag current_user.photo.key) %>
+    <%# <%= cl_image_tag current_user.photo.key, class: "avatar mt-2" %>
     <%# <p><%= @current_user.username</p> %>
   </div>
 </div>

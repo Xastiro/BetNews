@@ -20,7 +20,7 @@
           <p> <%= "#{index + 1}" %> </p>
         </div>
         <div class=<%= user == current_user ? "ranking-yellow-container" : "ranking-black-container" %>>
-          <%= cl_image_tag user.photo.key, class: "avatar" %>
+          <%= user.photo.key.nil? ?  (link_to image_tag("profilpicture.png", class: "avatar mt-2")) : (cl_image_tag user.photo.key, class: "avatar mt-2") %>
           <%# <div class="name-wallet"> %>
           <p class="name"><%= user.username %></p>
           <p class="wallet"><%= user.wallet.round(0) %></p>
