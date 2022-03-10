@@ -1,0 +1,17 @@
+{
+  "background_color": "white",
+  "description": "BetNews est l'app pour parier gratuitement sur l'actualité. Chaque pari est donné avec des éléments d'information pour parier de manière éclairée. Informe-toi de manière ludique en pariant sur BetNews.",
+  "display": "fullscreen",
+  "name": "BetNews",
+  "icons": [
+    <% files = Dir.entries(Rails.root.join("app/assets/images/icons/")).select {|f| !File.directory? f} %>
+    <% files.each_with_index do |file, index| %>
+      <% match = file.match(/.+-(?<size>\d{2,3}x\d{2,3}).png/) %>
+      {
+        "src": "<%= image_path "icons/#{file}" %>",
+        "sizes": "<%= match && match[:size] %>",
+        "type": "image/png"
+      }<%= "," unless (files.size - 1) == index %>
+    <% end %>
+  ]
+}
