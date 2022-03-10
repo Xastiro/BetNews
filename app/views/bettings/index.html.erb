@@ -125,7 +125,7 @@
                 <%# CARD TOP %>
                 <div class="card-top p-3">
                   <div class="index-border-radius-style card-img-bg  card-sm p-3 d-flex" style="background-image: url(<%= cl_image_path(betting.bet.photo.key, alt: "Image that illustrates the bet") %>);">
-                    <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= betting.bet.expiring_at %>"></p>
+                    <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= betting.bet.expiring_at.to_time.iso8601 %>"></p>
                   </div>
                 </div>
                 <%# CARD BOTTOM %>

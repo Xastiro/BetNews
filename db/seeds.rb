@@ -176,7 +176,7 @@ chasse = Bet.new(
 cac40 = Bet.new(
   hashtag: "#CAC40 #bourse",
   description: "Le CAC40, l'indice qui regroupe les 40 plus grosses sociétés françaises cotées, a perdu 5,73% en 5 jours à cause de la guerre en Ukraine. Entre espoir de voir la guerre prendre fin et craintes de voir le conflit durer, les jours à venir sont bien incertains pour les marchés financiers.",
-  expiring_at: Date.new(2022,03,12),
+  expiring_at: DateTime.new(2022, 3, 12, 17, 22, 0),
   question: "Le CAC40 clôturera t-il au dessus de 6500 points le 12 mars 2022 ?",
   category: "Economie",
   publisher: marin

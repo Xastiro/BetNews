@@ -50,7 +50,7 @@
               <div class="card index-border-radius-style index-shadow my-3" >
                 <div class="card-top p-3">
                   <div class="index-border-radius-style card-img-bg card-sm p-3 d-flex" style="background-image: url(<%= cl_image_path(bet.photo.key, alt: "Image that illustrates the bet") %>);">
-                    <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
+                    <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at.to_time.iso8601 %>"></p>
                   </div>
                 </div>
                 <div class="index-card-grey-background index-bottom-border-radius-style p-3">
