@@ -2,7 +2,7 @@ require "open-uri"
 require "date"
 require "faker"
 
-puts 'Cleaning db'
+puts 'Cannaning db'
 
 Media.destroy_all
 Betting.destroy_all
@@ -11,26 +11,26 @@ User.destroy_all
 
 puts 'Creating Users Bets Bettings and Medias'
 
-hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo', wallet: 3682)
-sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille', wallet: 3521)
-christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44', wallet: 4328)
-matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro', wallet: 3911)
-john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe', wallet: 2376)
-lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma', wallet: 2192)
-gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Malerto', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle', wallet: 2670)
-mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89', wallet: 2901)
-julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne', wallet: 2432)
-malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos', wallet: 2351)
-juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23', wallet: 2198)
-marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce', wallet: 2003)
-louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2', wallet: 2991)
-karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI', wallet: 2858)
-charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25', wallet: 2604)
-leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A', wallet: 2093)
-arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98', wallet: 2310)
-nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE', wallet: 2771)
-armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90', wallet: 2660)
-luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc', password: 'azerty', username: 'LucFX', wallet: 2504)
+hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo', wallet: 3612)
+sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille', wallet: 3523)
+christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44', wallet: 4007)
+matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro', wallet: 3972)
+timothee = User.create!(email: 'timothee@email.com', last_name: 'Smith', first_name: 'timothee', password: 'azerty', username: 'Tim', wallet: 2345)
+anna = User.create!(email: 'anna@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma', wallet: 2987)
+florent = User.create!(email: 'florent@email.com', last_name: 'Malerto', first_name: 'florent', password: 'azerty', username: 'Salopette', wallet: 2656)
+nicolas = User.create!(email: 'nicolas@email.com', last_name: 'Correz', first_name: 'nicolas', password: 'azerty', username: 'NicoBlingBling', wallet: 2904)
+fabien = User.create!(email: 'fabien@email.com', last_name: 'Lalou', first_name: 'fabien', password: 'azerty', username: 'FabFab', wallet: 2428)
+simon = User.create!(email: 'simon@email.com', last_name: 'Rilain', first_name: 'simon', password: 'azerty', username: 'simondos', wallet: 2394)
+francoisD = User.create!(email: 'francoisD@email.com', last_name: 'Fitchi', first_name: 'francoisD', password: 'azerty', username: 'Fran34', wallet: 2134)
+marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce', wallet: 2066)
+camille = User.create!(email: 'camille@email.com', last_name: 'Denier', first_name: 'camille', password: 'azerty', username: 'Cam34', wallet: 2961)
+herve = User.create!(email: 'herve@email.com', last_name: 'Ditzberger', first_name: 'herve', password: 'azerty', username: 'Velo44', wallet: 2850)
+charlie = User.create!(email: 'charlie@email.com', last_name: 'Drai', first_name: 'charlie', password: 'azerty', username: 'ChachaElNido', wallet: 2677)
+francois = User.create!(email: 'francois@email.com', last_name: 'Leroy', first_name: 'francois', password: 'azerty', username: 'F C', wallet: 2028)
+valentin = User.create!(email: 'valentin@email.com', last_name: 'Querty', first_name: 'valentin', password: 'azerty', username: 'valentinKing98', wallet: 2350)
+nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE', wallet: 2794)
+pierre = User.create!(email: 'pierre@email.com', last_name: 'Creps', first_name: 'pierre', password: 'azerty', username: 'pierre90', wallet: 2602)
+luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc', password: 'azerty', username: 'LucFX', wallet: 2534)
 
 puts 'Users well generated'
 
@@ -50,7 +50,7 @@ cesar = Bet.new(
   expiring_at: Date.new(2022,02,25),
   question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire ?",
   category: "Culture",
-  publisher: gaelle,
+  publisher: florent,
   result: "no"
 )
 
@@ -90,13 +90,22 @@ macron = Bet.new(
   publisher: matthias
 )
 
+# coraux = Bet.new(
+#   hashtag: "#coraux",
+#   description: "Pour la toute première fois, des scientifiques ont découvert que des coraux censés avoir été tués par le stress thermique ont repoussé. Cette découverte constitue une lueur d’espoir pour les récifs menacés par le changement climatique dans le monde, alors que ce phénomène ne cesse d’empirer. Et c’est par le fruit du hasard que cette découverte a été faite. La découverte a été réalisée par Diego Kersting et Cristina Linares, des chercheurs de la Freie Universität à Berlin et de l’université de Barcelone. Ils ont dévoilé les premières preuves vivantes de cette stratégie de renaissance des coraux – connue sous le nom de « rajeunissement » – en menant des recherches sur une espèce de corail qu’on trouve dans la mer Méditerranée. Le fruit de leurs études a été publié dans la revue Science Advances.",
+#   expiring_at: Date.new(2022,15,06),
+#   question: "Les coraux survivront-ils au réchauffement climatique ?",
+#   category: "Planète",
+#   publisher: Christiane
+# )
+
 foot = Bet.new(
   hashtag: "#PSG #OM",
   description: "Le match PSG-Marseille de Ligue 1 est programmé pour le Dimanche 17 Avril 2022. Au lundi 28 février 2022, l'équipe de Paris Saint-Germain se classe 1e de la Ligue 1, avec un total de 59 points. Elle totalise 18 victoires, 5 matchs nuls et 1 défaites. PSG a marqué 52 buts et en a encaissés 19, ce qui lui donne un goal average de 33. De son côté, l'équipe de Olympique de Marseille se classe 2e de la Ligue 1, avec un total de 46 points. Elle compte 13 victoires, 7 matchs nuls et 4 défaites. Marseille a inscrit 38 buts et en a encaissés 21. Elle présente un goal average de 17.",
   expiring_at: Date.new(2022,04,17),
   question: "Le PSG va t-il gagner face à l'OM le 17/04 ?",
   category: "Sport",
-  publisher: john
+  publisher: timothee
 )
 
 ukraine = Bet.new(
@@ -106,7 +115,7 @@ ukraine = Bet.new(
   expiring_at: Date.new(2022,12,31),
   question: "L'Ukraine va t-elle intégrer l'Union Européenne ?",
   category: "Politique",
-  publisher: lea
+  publisher: anna
 )
 
 petrole = Bet.new(
@@ -115,7 +124,7 @@ petrole = Bet.new(
   expiring_at: Date.new(2022,04,30),
   question: " Le prix du baril va t-il dépasser les 120 dollars ?",
   category: "Economie",
-  publisher: gaelle
+  publisher: florent
 )
 
 zemmour = Bet.new(
@@ -133,7 +142,7 @@ thevoice = Bet.new(
   expiring_at: Date.new(2022,05,15),
   question: "Charles va t-il gagner The Voice 2022 ?",
   category: "Divertissement",
-  publisher: julien
+  publisher: fabien
 )
 
 covid = Bet.new(
@@ -142,16 +151,16 @@ covid = Bet.new(
   expiring_at: Date.new(2022,04,15),
   question: "Le masque sera t-il toujours obligatoire en France en avril 2022 ?",
   category: "Santé",
-  publisher: malo
+  publisher: simon
 )
 
 chasse = Bet.new(
   hashtag: "#chasse #France",
-  description: "La chasse à courre, aussi appelée vénerie, consiste à traquer un animal (un cerf, sanglier, chevreuil, renard ou lièvre) jusqu’à épuisement à l’aide d’une meute de chiens et de cavaliers à cheval. 84% des Français sont opposés à cette pratique (sondage Ifop 2017) et la chasse à courre est déjà interdite dans plusieurs pays, dont la Grande-Bretagne et l’Allemagne. Très tôt dans la campagne, Yannick Jadot a fait de cette question l’un des marqueurs de sa candidature. Le candidat écologiste propose que les accidents de chasse soient davantage réprimés et que le permis de chasse soit renouvelé tous les cinq ans. Il veut aussi mettre fin à l’agrainage et à la chasse à enclos. Sur cette question, la candidate socialiste Anne Hidalgo ne s’est pas directement prononcée, mais sa porte-parole, Carole Delga, se disait fin octobre sur France Bleu ,pas d’accord ​avec cette proposition du candidat écologiste. Jean-Luc Mélenchon rejoint Yannick Jadot sur l’interdiction de la chasse le week-end et lors des vacances scolaires. C’est là que le risque serait le plus grand​, a-t-il déclaré dimanche dernier sur France 3 . Le leader de La France Insoumise propose également de cesser de vendre des armes qui sont aussi puissantes​. Dans son programme, il promet enfin d’interdire les pratiques cruelles telles que le déterrage et la chasse à courre. À droite, tous les candidats s’accordent plus ou moins pour défendre cette pratique. Il faut arrêter la chasse aux chasseurs​, a lancé Valérie Pécresse la semaine dernière lors du grand oral du Mouvement de la ruralité (anciennement ' Chasse, pêche, nature et traditions '​). On n’entrave pas la pêche et la chasse qui sont des libertés issues de la Révolution​, a insisté la candidate LR. Également présent, Eric Zemmour a plaidé pour un grand ministère de l’agriculture de la protection de l’environnement et de la ruralité qui regroupera agriculture, environnement, biodiversité ainsi que la chasse, la pêche et la forêt​.",
+  description: "La chasse à courre, aussi appelée vénerie, consiste à traquer un animal (un cerf, sanglier, chevreuil, renard ou lièvre) jusqu’à épuisement à l’aide d’une meute de chiens et de cavaliers à cheval. 84% des Français sont opposés à cette pratique (sondage Ifop 2017) et la chasse à courre est déjà interdite dans plusieurs pays, dont la Grande-Bretagne et l’Allemagne. Très tôt dans la campagne, Yannick Jadot a fait de cette question l’un des marqueurs de sa candidature. Le candidat écologiste propose que les accidents de chasse soient davantage réprimés et que le permis de chasse soit renouvelé tous les cinq ans. Il veut aussi mettre fin à l’agrainage et à la chasse à enclos. Sur cette question, la candidate socialiste Anne Hidalgo ne s’est pas directement prononcée, mais sa porte-parole, Carole Delga, se disait fin octobre sur France Bleu ,pas d’accord ​avec cette proposition du candidat écologiste. Jean-Luc Mélenchon rejoint Yannick Jadot sur l’interdiction de la chasse le week-end et lors des vacances scolaires. C’est là que le risque serait le plus grand​, a-t-il déclaré dimanche dernier sur France 3 . Le annader de La France Insoumise propose également de cesser de vendre des armes qui sont aussi puissantes​. Dans son programme, il promet enfin d’interdire les pratiques cruelles telles que le déterrage et la chasse à courre. À droite, tous les candidats s’accordent plus ou moins pour défendre cette pratique. Il faut arrêter la chasse aux chasseurs​, a lancé Valérie Pécresse la semaine dernière lors du grand oral du Mouvement de la ruralité (anciennement ' Chasse, pêche, nature et traditions '​). On n’entrave pas la pêche et la chasse qui sont des libertés issues de la Révolution​, a insisté la candidate LR. Également présent, Eric Zemmour a plaidé pour un grand ministère de l’agriculture de la protection de l’environnement et de la ruralité qui regroupera agriculture, environnement, biodiversité ainsi que la chasse, la pêche et la forêt​.",
   expiring_at: Date.new(2022,12,31),
   question: "La chasse à courre sera t-elle interdite en France en 2022 ?",
   category: "Planète",
-  publisher: juliette
+  publisher: francoisD
 )
 
 cac40 = Bet.new(
@@ -169,7 +178,7 @@ rugby = Bet.new(
   expiring_at: Date.new(2022,03,20),
   question: "Le 19/03 le XV de France remportera le Tournois des 6 nations ?",
   category: "Sport",
-  publisher: louis
+  publisher: camille
 )
 
 rassemblementNational = Bet.new(
@@ -178,7 +187,7 @@ rassemblementNational = Bet.new(
   expiring_at: Date.new(2022,04,10),
   question: "Marine Le Pen aura t-elle annoncé son ralliement à Eric Zemmour avant la présidentielle ? ",
   category: "Politique",
-  publisher: karl
+  publisher: herve
 )
 
 quiveutêtremonassocié = Bet.new(
@@ -187,7 +196,7 @@ quiveutêtremonassocié = Bet.new(
   expiring_at: Date.new(2022,03,31),
   question: "Elone Musk aura t-il rejoint les investisseurs de Qui veut être mon associé avant avril 2022 ?",
   category: "Divertissement",
-  publisher: charlotte
+  publisher: charlie
 )
 
 train = Bet.new(
@@ -196,7 +205,7 @@ train = Bet.new(
   expiring_at: Date.new(2022,05,31),
   question: "D'ici fin mai 2022, une entreprise ferroviaire, autre que la SNCF, opérera sur la ligne Paris Nantes ?",
   category: "Economie",
-  publisher: leo
+  publisher: francois
 )
 
 tennis = Bet.new(
@@ -205,7 +214,7 @@ tennis = Bet.new(
   expiring_at: Date.new(2022,05,10),
   question: "Novak Djokovic participera t-il à Roland-Garros 2022 ?",
   category: "Sport",
-  publisher: arthur
+  publisher: valentin
 )
 
 truthsocial = Bet.new(
@@ -334,6 +343,11 @@ file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
 goldman.save!
 
+# file_coraux= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646921404/betnews/coraux-mous-89285862_ofzk8n.jpg')
+# coraux.photo.attach(io: file_coraux, filename: 'nes.jpg', content_type: 'image/jpg')
+# coraux.save!
+
+
 # file_meteo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646838401/meteo.png')
 # meteo.photo.attach(io: file_meteo, filename: 'nes.jpg', content_type: 'image/jpg')
 # meteo.save!
@@ -350,7 +364,7 @@ Betting.create!(
 
 Betting.create!(
   answer: "yes",
-  user: armand,
+  user: pierre,
   bet: cesar,
   won: false,
   winning_odds: 2.3
@@ -364,19 +378,19 @@ Betting.create!(
 
 Betting.create!(
   answer: "yes",
-  user: arthur,
+  user: valentin,
   bet: macron
 )
 
 Betting.create!(
   answer: "non",
-  user: leo,
+  user: francois,
   bet: foot
 )
 
 Betting.create!(
   answer: "yes",
-  user: charlotte,
+  user: charlie,
   bet: ukraine
 )
 
@@ -404,13 +418,13 @@ Betting.create!(
 
 Betting.create!(
   answer: "no",
-  user: karl,
+  user: herve,
   bet: petrole
 )
 
 Betting.create!(
   answer: "yes",
-  user: louis,
+  user: camille,
   bet: zemmour
 )
 
@@ -422,43 +436,43 @@ Betting.create!(
 
 Betting.create!(
   answer: "yes",
-  user: juliette,
+  user: francoisD,
   bet: covid
 )
 
 Betting.create!(
   answer: "no",
-  user: malo,
+  user: simon,
   bet: chasse
 )
 
 Betting.create!(
   answer: "yes",
-  user: julien,
+  user: fabien,
   bet: cac40
 )
 
 Betting.create!(
   answer: "no",
-  user: mathis,
+  user: nicolas,
   bet: rugby
 )
 
 Betting.create!(
   answer: "yes",
-  user: gaelle,
+  user: florent,
   bet: rassemblementNational
 )
 
 Betting.create!(
   answer: "no",
-  user: lea,
+  user: anna,
   bet: quiveutêtremonassocié
 )
 
 Betting.create!(
   answer: "yes",
-  user: john,
+  user: timothee,
   bet: train
 )
 
@@ -507,59 +521,59 @@ end
 file_hugo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646758103/photoHF.jpg')
 hugo.photo.attach(io: file_hugo, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_matthias = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142605/betnews/Users/photo-1567515004624-219c11d31f2e_d49nuq.jpg')
+file_matthias = URI.open('https://ca.slack-edge.com/T02NE0241-U02TYH6T5QQ-9731a803d490-512')
 matthias.photo.attach(io: file_matthias, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_christiane = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142655/betnews/Users/photo-1524250502761-1ac6f2e30d43_q4fdh7.jpg')
+file_christiane = URI.open('https://avatars.githubusercontent.com/u/97440067?v=4')
 christiane.photo.attach(io: file_christiane, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_sarah = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142803/betnews/Users/photo-1589156191108-c762ff4b96ab_rn3brr.jpg')
+file_sarah = URI.open('https://ca.slack-edge.com/T02NE0241-U02SSQ75C31-0b2807ad5b29-512')
 sarah.photo.attach(io: file_sarah, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_john = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142543/betnews/Users/photo-1488161628813-04466f872be2_ldbmby.jpg')
-john.photo.attach(io: file_john, filename: 'nes.jpg', content_type: 'image/jpg')
+file_timothee = URI.open('https://avatars.githubusercontent.com/u/97245071?v=4')
+timothee.photo.attach(io: file_timothee, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_mathis = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142585/betnews/Users/photo-1463453091185-61582044d556_t6dyqv.jpg')
-mathis.photo.attach(io: file_mathis, filename: 'nes.jpg', content_type: 'image/jpg')
+file_nicolas = URI.open('https://ca.slack-edge.com/T02NE0241-U0B1MSCM9-10d072caa634-512')
+nicolas.photo.attach(io: file_nicolas, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_lea = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142720/betnews/Users/photo-1534751516642-a1af1ef26a56_lxkqfd.jpg')
-lea.photo.attach(io: file_lea, filename: 'nes.jpg', content_type: 'image/jpg')
+file_anna = URI.open('https://avatars.githubusercontent.com/u/64787796?v=4')
+anna.photo.attach(io: file_anna, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_gaelle = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646142752/betnews/Users/photo-1514315384763-ba401779410f_ixxvk5.jpg')
-gaelle.photo.attach(io: file_gaelle, filename: 'nes.jpg', content_type: 'image/jpg')
+file_florent = URI.open('https://ca.slack-edge.com/T02NE0241-USGLVA518-5d0333e792ea-512')
+florent.photo.attach(io: file_florent, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_julien = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646214666/betnews/Users/photo-1568602471122-7832951cc4c5_k3dfct.jpg')
-julien.photo.attach(io: file_julien, filename: 'nes.jpg', content_type: 'image/jpg')
+file_fabien = URI.open('https://avatars.githubusercontent.com/u/94528766?v=4')
+fabien.photo.attach(io: file_fabien, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_malo = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646214701/betnews/Users/photo-1480429370139-e0132c086e2a_gv6ity.jpg')
-malo.photo.attach(io: file_malo, filename: 'nes.jpg', content_type: 'image/jpg')
+file_simon = URI.open('https://avatars.githubusercontent.com/u/94913036?v=4')
+simon.photo.attach(io: file_simon, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_juliette = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646214882/betnews/Users/photo-1592621385612-4d7129426394_gdno7q.jpg')
-juliette.photo.attach(io: file_juliette, filename: 'nes.jpg', content_type: 'image/jpg')
+file_francoisD = URI.open('https://ca.slack-edge.com/T02NE0241-U01K0S8R0AE-6229504558cd-512')
+francoisD.photo.attach(io: file_francoisD, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file_marin = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646214829/betnews/Users/photo-1564564321837-a57b7070ac4f_yzy736.jpg')
 marin.photo.attach(io: file_marin, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_louis= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215427/betnews/Users/photo-1646123424579-7c8add9d4459_liv2wu.jpg')
-louis.photo.attach(io: file_louis, filename: 'nes.jpg', content_type: 'image/jpg')
+file_camille= URI.open('https://avatars.githubusercontent.com/u/91615158?v=4')
+camille.photo.attach(io: file_camille, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_karl= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215330/betnews/Users/photo-1645864996489-5d2b622bf38b_bxilbz.jpg')
-karl.photo.attach(io: file_karl, filename: 'nes.jpg', content_type: 'image/jpg')
+file_herve= URI.open('https://avatars.githubusercontent.com/u/94376805?v=4')
+herve.photo.attach(io: file_herve, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_charlotte= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215002/betnews/Users/photo-1542740348-39501cd6e2b4_hrkfeo.jpg')
-charlotte.photo.attach(io: file_charlotte, filename: 'nes.jpg', content_type: 'image/jpg')
+file_charlie= URI.open('https://ca.slack-edge.com/T02NE0241-U01AV9LA8SU-ae37ef9a621f-512')
+charlie.photo.attach(io: file_charlie, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_leo= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215580/betnews/Users/photo-1646032538296-09b327e928b3_lgb4ij.jpg')
-leo.photo.attach(io: file_leo, filename: 'nes.jpg', content_type: 'image/jpg')
+file_francois= URI.open('https://avatars.githubusercontent.com/u/97095952?v=4')
+francois.photo.attach(io: file_francois, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_arthur= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215638/betnews/Users/photo-1645965418472-9d7383235224_onti64.jpg')
-arthur.photo.attach(io: file_arthur, filename: 'nes.jpg', content_type: 'image/jpg')
+file_valentin= URI.open('https://avatars.githubusercontent.com/u/96526089?v=4')
+valentin.photo.attach(io: file_valentin, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file_nina= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215692/betnews/Users/photo-1644982647711-9129d2ed7ceb_namk45.jpg')
 nina.photo.attach(io: file_nina, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_armand= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215754/betnews/Users/photo-1645956162895-d7a1a06b697f_gqyh0d.jpg')
-armand.photo.attach(io: file_armand, filename: 'nes.jpg', content_type: 'image/jpg')
+file_pierre= URI.open('https://ca.slack-edge.com/T02NE0241-U0BJX5CP8-0993e358bde8-512')
+pierre.photo.attach(io: file_pierre, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file_luc= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646215810/betnews/Users/photo-1645830166230-187caf791b90_rmwg3v.jpg')
 luc.photo.attach(io: file_luc, filename: 'nes.jpg', content_type: 'image/jpg')
@@ -694,6 +708,12 @@ goncourtmedia = Media.create!(
   url: "https://www.liberation.fr/culture/livres/sorj-chalandon-agnes-desarthe-christine-angot-decouvrez-la-premiere-selection-du-goncourt-2022-20210907_YTKINPFFPVHFHNITYENMMVIHIU/",
   bet: goncourt,
 )
+
+# corauxmedia = Media.create!(
+#   source: "ScienceAdvance",
+#   url: "https://www.science.org/doi/10.1126/sciadv.aax2950",
+#   bet: coraux,
+# )
 
 puts 'Medias well generated'
 

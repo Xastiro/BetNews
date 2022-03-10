@@ -25,30 +25,30 @@ export default class extends Controller {
       // icon: 'question',
       iconHtml: this.iconImg,
       showCancelButton: true,
-      allowOutsideClick: false,
-      confirmButtonColor: '#007aff',
-      cancelButtonColor: ' #007aff',
-      cancelButtonText: 'Annuler',
-      confirmButtonText: 'Confirmer',
-      input: "range",
-      inputLabel: '',
-      inputAttributes: {
-        min: 1,
-        max: 100,
-        step: 1
-      },
-      inputValue: 10
-    }).then((result) => {
-      if (result.value > this.walletValue) {
-        Swal.fire("Tu n'as plus assez de BetKoins our parier", `Solde actuel ${Math.round(this.walletValue)}`, 'info')
-      } else {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-          const event = new CustomEvent(`confirmedyes${id}`)
-          window.dispatchEvent(event)
-        } else if (result.isDenied) {
-          Swal.fire('Changes are not saved', '', 'info')
-        }
+        allowOutsideClick: false,
+        confirmButtonColor: '#000',
+        cancelButtonColor: ' #000',
+        cancelButtonText: 'Annuler',
+        confirmButtonText: 'Confirmer',
+        input: "range",
+        inputLabel: '',
+        inputAttributes: {
+          min: 1,
+          max: 100,
+          step: 1
+        },
+        inputValue: 10
+      }).then((result) => {
+        if (result.value > this.walletValue) {
+          Swal.fire("Tu n'as plus assez de BetKoins our parier", `Solde actuel ${Math.round(this.walletValue)}`, 'info')
+        } else {
+          /* Read more about isConfirmed, isDenied below */
+          if (result.isConfirmed) {
+            const event = new CustomEvent(`confirmedyes${id}`)
+            window.dispatchEvent(event)
+          } else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+          }
       }
     })
   }
@@ -63,8 +63,8 @@ export default class extends Controller {
       iconHtml: this.iconImg,
       showCancelButton: true,
       allowOutsideClick: false,
-      confirmButtonColor: '#007aff',
-      cancelButtonColor: ' #007aff',
+      confirmButtonColor: '#000',
+      cancelButtonColor: ' #000',
       cancelButtonText: 'Annuler',
       confirmButtonText: 'Confirmer',
       input: "range",

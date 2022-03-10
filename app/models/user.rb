@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
+  validates :username, presence: true
+
   before_save :default_values
 
   def default_values

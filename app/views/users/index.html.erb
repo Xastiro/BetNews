@@ -30,8 +30,12 @@
           <%= user.photo.key.nil? ?  (link_to image_tag("profilpicture.png", class: "avatar mt-2")) : (cl_image_tag user.photo.key, class: "avatar mt-2") %>
           <%# <div class="name-wallet"> %>
           <p class="name"><%= user.username %></p>
-          <p class="wallet"><%= user.wallet.round(0) %></p>
-          <%# </div> %>
+          <div class="wallet">
+            <% if index > 0 %>
+              <p class="gap"><i class="fas fa-caret-up"></i><%= " #{(user.wallet - @users[index-1].wallet.round(0)).to_i.abs()}" %></p>
+            <% end %>
+            <p><%= image_tag("BetKoin.png", size: "17x17", class: "mb-1")%> <%= user.wallet.round(0) %></p>
+          </div>
         </div>
       </div>
     <% end %>
