@@ -46,8 +46,9 @@
           <%= f.button :submit, "Créer un compte" %>
         </div>
       </div>
-      <br/>
-      <%= link_to "Se connecter", new_session_path(resource_name), class: "discret-link" %>
+      <div class="mb-5">
+      <%= link_to "Se connecter", new_session_path(resource_name), class: "forgotten-password" %>
+     </div>
 
     <% end %>
 
