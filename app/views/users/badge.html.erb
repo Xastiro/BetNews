@@ -1,0 +1,226 @@
+<%= render 'shared/navbar-user' %>
+
+
+<div class="light-grey-bckgrnd">
+  <div class="container-ranking mx-2 mt-4">
+
+    <div class="btn-group-user" role="group">
+      <%= link_to "Classement",  users_path, class: "btn-bet" %>
+      <%= link_to "Badges", badge_user_path(@user), class: "btn-active-bet" %>
+    </div>
+
+    <div class="badges">
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-money-bill-alt'></i>"
+           data-badge-title-value="Riche"
+           data-badge-main-text-value="Tu as au moins 2000 BetKoins!"
+           data-badge-footer-value="Actuellement tu as <%= current_user.wallet.round %> BetKoins"
+           class="badge <%= current_user.wallet.round > 2000 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-money-bill-alt"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-dollar-sign'></i>"
+           data-badge-title-value="Richissime"
+           data-badge-main-text-value="Tu as au moins 5000 BetKoins!"
+           data-badge-footer-value="Actuellement tu as <%= current_user.wallet.round %> BetKoins"
+           class="badge <%= current_user.wallet.round > 5000 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-dollar-sign"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fab fa-btc'></i>"
+           data-badge-title-value="Crésus"
+           data-badge-main-text-value="Tu as au moins 10000 BetKoins!"
+           data-badge-footer-value="Actuellement tu as <%= current_user.wallet.round %> BetKoins"
+           class="badge <%= current_user.wallet.round > 10000 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fab fa-btc"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-envelope'></i>"
+           data-badge-title-value="Facteur"
+           data-badge-main-text-value="Tu as publié ton premier pari!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.count %> paris"
+           class="badge <%= current_user.bets.count > 0  ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-envelope"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-mail-bulk'></i>"
+           data-badge-title-value="Éditeur"
+           data-badge-main-text-value="Tu as publié 10 paris!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.count %> paris"
+           class="badge <%= current_user.bets.count > 9  ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-mail-bulk"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-pen'></i>"
+           data-badge-title-value="Grand écrivain"
+           data-badge-main-text-value="Tu as publié 100 paris!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.count %> paris"
+           class="badge <%= current_user.bets.count > 99  ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-pen"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-poop'></i>"
+           data-badge-title-value="Banqueroute"
+           data-badge-main-text-value="Tu as moins de 10 BetKoins!"
+           data-badge-footer-value="Actuellement tu as <%= current_user.wallet.round %> BetKoins"
+           class="badge <%= current_user.wallet.round < 11 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-poop"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-check'></i>"
+           data-badge-title-value="Pari gagnant"
+           data-badge-main-text-value="Tu as gagné un pari!"
+           data-badge-footer-value="Actuellement tu as remporté <%= current_user.bettings.where(won: true).count %> paris"
+           class="badge <%= current_user.bettings.where(won: true).count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-check"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-medal'></i>"
+           data-badge-title-value="Vainqueur"
+           data-badge-main-text-value="Tu as gagné 10 paris!"
+           data-badge-footer-value="Actuellement tu as remporté <%= current_user.bettings.where(won: true).count %> paris"
+           class="badge <%= current_user.bettings.where(won: true).count > 9 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-medal"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-trophy'></i>"
+           data-badge-title-value="Grand chelem"
+           data-badge-main-text-value="Tu as gagné 100 paris!"
+           data-badge-footer-value="Actuellement tu as remporté <%= current_user.bettings.where(won: true).count %> paris"
+           class="badge <%= current_user.bettings.where(won: true).count > 99 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-trophy"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-times'></i>"
+           data-badge-title-value="Pari perdu"
+           data-badge-main-text-value="Tu as perdu 1 pari!"
+           data-badge-footer-value="Actuellement tu as perdu <%= current_user.bettings.where(won: false).count %> paris"
+           class="badge <%= current_user.bettings.where(won: false).count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-thumbs-down'></i>"
+           data-badge-title-value="Vaincu"
+           data-badge-main-text-value="Tu as perdu 10 pari!"
+           data-badge-footer-value="Actuellement tu as perdu <%= current_user.bettings.where(won: false).count %> paris"
+           class="badge <%= current_user.bettings.where(won: false).count > 9 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class='fas fa-thumbs-down'></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-skull-crossbones'></i>"
+           data-badge-title-value="La Loose"
+           data-badge-main-text-value="Tu as perdu 100 pari!"
+           data-badge-footer-value="Actuellement tu as perdu <%= current_user.bettings.where(won: false).count %> paris"
+           class="badge <%= current_user.bettings.where(won: false).count > 99 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-skull-crossbones"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-book'></i>"
+           data-badge-title-value="Cultivé"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Culture!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Culture").count %> paris dans la categorie Culture"
+           class="badge <%= current_user.bets.where(category: "Culture").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-book"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-comment-dollar'></i>"
+           data-badge-title-value="Économiste"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Économie!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Economie").count %> paris dans la categorie Économie"
+           class="badge <%= current_user.bets.where(category: "Economie").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-comment-dollar"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-landmark'></i>"
+           data-badge-title-value="Politicien"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Politique!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Politique").count %> paris dans la categorie Politique"
+           class="badge <%= current_user.bets.where(category: "Politique").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-landmark"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-dumbbell'></i>"
+           data-badge-title-value="Athlète"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Sport!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Sport").count %> paris dans la categorie Sport"
+           class="badge <%= current_user.bets.where(category: "Sport").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-dumbbell"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-globe-americas'></i>"
+           data-badge-title-value="Écologiste"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Planète!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Planète").count %> paris dans la categorie Planète"
+           class="badge <%= current_user.bets.where(category: "Planète").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-globe-americas"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-satellite-dish'></i>"
+           data-badge-title-value="Technologue"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Technologie!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Technologie").count %> paris dans la categorie Technologie"
+           class="badge <%= current_user.bets.where(category: "Technologie").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-satellite-dish"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-grin-squint-tears'></i>"
+           data-badge-title-value="Bout-en-train"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Divertissement!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Divertissement").count %> paris dans la categorie Divertissement"
+           class="badge <%= current_user.bets.where(category: "Divertissement").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-grin-squint-tears"></i>
+      </div>
+
+      <div data-controller="badge"
+           data-badge-icon-value="<i class='fas fa-heartbeat'></i>"
+           data-badge-title-value="Hypochondriaque"
+           data-badge-main-text-value="Tu as publié un pari dans la categorie Santé!"
+           data-badge-footer-value="Actuellement tu as publié <%= current_user.bets.where(category: "Santé").count %> paris dans la categorie Santé"
+           class="badge <%= current_user.bets.where(category: "Santé").count > 0 ? "active" : "inactive" %>"
+           data-action="click->badge#badgeinfo">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+
+    </div>
+  </div>
+</div>
