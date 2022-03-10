@@ -5,6 +5,6 @@ export default class extends Controller {
   connect() {
     setTimeout(() => {
       this.flashesTarget.remove()
-    }, 100000);
+    }, 3000);
   }
 }

@@ -229,8 +229,8 @@ parité = Bet.new(
 tourdefrance = Bet.new(
   hashtag: "#Alaphilippe #TDF",
   description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que le champion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
-  expiring_at: Date.new(2022,03,07),
-  question: "Le francais Julian alaphilippe gagnera t-il le tour de France 2022 ?",
+  expiring_at: Date.new(2022,07,24),
+  question: "Le francais Julian Alaphilippe gagnera t-il le tour de France 2022 ?",
   category: "Sport",
   publisher: luc
 )
