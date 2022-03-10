@@ -90,14 +90,14 @@ macron = Bet.new(
   publisher: matthias
 )
 
-coraux = Bet.new(
-  hashtag: "#coraux",
-  description: "Pour la toute première fois, des scientifiques ont découvert que des coraux censés avoir été tués par le stress thermique ont repoussé. Cette découverte constitue une lueur d’espoir pour les récifs menacés par le changement climatique dans le monde, alors que ce phénomène ne cesse d’empirer. Et c’est par le fruit du hasard que cette découverte a été faite. La découverte a été réalisée par Diego Kersting et Cristina Linares, des chercheurs de la Freie Universität à Berlin et de l’université de Barcelone. Ils ont dévoilé les premières preuves vivantes de cette stratégie de renaissance des coraux – connue sous le nom de « rajeunissement » – en menant des recherches sur une espèce de corail qu’on trouve dans la mer Méditerranée. Le fruit de leurs études a été publié dans la revue Science Advances.",
-  expiring_at: Date.new(2022,15,06),
-  question: "Les coraux survivront-ils au réchauffement climatique ?",
-  category: "Planète",
-  publisher: Christiane
-)
+# coraux = Bet.new(
+#   hashtag: "#coraux",
+#   description: "Pour la toute première fois, des scientifiques ont découvert que des coraux censés avoir été tués par le stress thermique ont repoussé. Cette découverte constitue une lueur d’espoir pour les récifs menacés par le changement climatique dans le monde, alors que ce phénomène ne cesse d’empirer. Et c’est par le fruit du hasard que cette découverte a été faite. La découverte a été réalisée par Diego Kersting et Cristina Linares, des chercheurs de la Freie Universität à Berlin et de l’université de Barcelone. Ils ont dévoilé les premières preuves vivantes de cette stratégie de renaissance des coraux – connue sous le nom de « rajeunissement » – en menant des recherches sur une espèce de corail qu’on trouve dans la mer Méditerranée. Le fruit de leurs études a été publié dans la revue Science Advances.",
+#   expiring_at: Date.new(2022,15,06),
+#   question: "Les coraux survivront-ils au réchauffement climatique ?",
+#   category: "Planète",
+#   publisher: Christiane
+# )
 
 foot = Bet.new(
   hashtag: "#PSG #OM",
@@ -343,9 +343,9 @@ file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
 goldman.save!
 
-file_coraux= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646921404/betnews/coraux-mous-89285862_ofzk8n.jpg')
-coraux.photo.attach(io: file_coraux, filename: 'nes.jpg', content_type: 'image/jpg')
-coraux.save!
+# file_coraux= URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646921404/betnews/coraux-mous-89285862_ofzk8n.jpg')
+# coraux.photo.attach(io: file_coraux, filename: 'nes.jpg', content_type: 'image/jpg')
+# coraux.save!
 
 
 # file_meteo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646838401/meteo.png')
@@ -709,11 +709,11 @@ goncourtmedia = Media.create!(
   bet: goncourt,
 )
 
-corauxmedia = Media.create!(
-  source: "ScienceAdvance",
-  url: "https://www.science.org/doi/10.1126/sciadv.aax2950",
-  bet: coraux,
-)
+# corauxmedia = Media.create!(
+#   source: "ScienceAdvance",
+#   url: "https://www.science.org/doi/10.1126/sciadv.aax2950",
+#   bet: coraux,
+# )
 
 puts 'Medias well generated'
 
