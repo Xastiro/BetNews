@@ -175,6 +175,9 @@
         margin-left: auto;
         margin-right: 18px;
         margin-bottom: 0px;
+        p {
+          margin-bottom: 0;
+        }
       }
       .avatar {
       width: 53px;
@@ -184,6 +187,13 @@
       object-fit: cover;
       margin-right: 18px;
       margin-left: 18px;
+      }
+
+      .gap {
+        font-weight: 500;
+        color: $myblack;
+        margin-bottom: 0;
+        text-align: center;
       }
     }
 
@@ -212,6 +222,9 @@
         margin-left: auto;
         margin-right: 18px;
         margin-bottom: 0px;
+        p {
+          margin-bottom: 0;
+        }
       }
       .avatar {
       width: 53px;
@@ -224,4 +237,11 @@
       }
     }
   }
+}
+
+.gap {
+  font-weight: 500;
+  color: $mywhite;
+  margin-bottom: 0;
+  text-align: center;
 }
