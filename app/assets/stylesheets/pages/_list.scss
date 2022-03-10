@@ -1,13 +1,16 @@
 .swal2-range {
+  align-items: center;
+  color:lightgray ;
   input[type="range"] {
     background-color: lightgray;
     border-radius: 35px;
     height: 5px;
-    // width: 16px;
+    align-items: center;
+    color:lightgray ;
   }
   output::after {
-    margin-left: none;
     content: asset-url("BetKoinSmall.png");
+      margin-left: 4px;
     // content: ":pièce:";
     display: inline-block;
     // width: 16px;
