@@ -44,7 +44,7 @@
                               </div>
                             </div>
                           </div>
-                          <p class="win-reminder"> Gagné !<i class="fas fa-award"></i></p>
+                          <p class="win-reminder"> Gagné <%= " +#{betting.winning_odds.to_i * betting.wager.to_i}" %> <%= image_tag("BetKoin.png", size: "22x22")%></p>
                         </div>
                       <% else %>
                         <div>
@@ -64,7 +64,8 @@
                               </div>
                             </div>
                           </div>
-                          <p class="lose-reminder"> Perdu...</p>
+                          <p class="lose-reminder"> Perdu <%= " -#{betting.wager.to_i}" %> <%= image_tag("BetKoin.png", size: "22x22")%> </p>
+                          <p class="lose-reminder-detail"> La bonne réponse était OUI </p>
                         </div>
                       <% end %>
                     <% else %>
@@ -86,7 +87,8 @@
                               </div>
                             </div>
                           </div>
-                          <p class="lose-reminder"> Perdu...</p>
+                          <p class="lose-reminder"> Perdu <span><%= " -#{betting.wager.to_i}" %> <%= image_tag("BetKoin.png", size: "22x22")%> </span></p>
+                          <p class="lose-reminder-detail"> La bonne réponse était NON </p>
                         </div>
                       <% else %>
                         <div>
@@ -106,7 +108,7 @@
                               </div>
                             </div>
                           </div>
-                          <p class="win-reminder">Gagné ! <i class="fas fa-award"></i></p>
+                          <p class="win-reminder"> Gagné <%= " +#{betting.winning_odds.to_i * betting.wager.to_i}" %> <%= image_tag("BetKoin.png", size: "22x22")%></p>
                         </div>
                       <% end %>
                     <% end %>
