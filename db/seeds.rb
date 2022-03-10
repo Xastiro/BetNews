@@ -11,26 +11,26 @@ User.destroy_all
 
 puts 'Creating Users Bets Bettings and Medias'
 
-hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo', wallet: 3600)
-sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille', wallet: 3500)
-christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44', wallet: 4000)
-matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro', wallet: 3900)
-john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe', wallet: 2300)
-lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma', wallet: 2000)
-gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Malerto', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle', wallet: 2600)
-mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89', wallet: 2900)
-julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne', wallet: 2400)
-malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos', wallet: 2300)
-juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23', wallet: 2100)
-marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce', wallet: 2000)
-louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2', wallet: 2900)
-karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI', wallet: 2850)
-charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25', wallet: 2600)
-leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A', wallet: 2000)
-arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98', wallet: 2300)
-nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE', wallet: 2700)
-armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90', wallet: 2600)
-luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc', password: 'azerty', username: 'LucFX', wallet: 2500)
+hugo = User.create!(email: 'hugo@email.com', last_name: 'Ferrand', first_name: 'Hugo', password: 'azerty', username: 'Ougo', wallet: 3682)
+sarah = User.create!(email: 'sarah@email.com', last_name: 'Guillon', first_name: 'Sarah', password: 'azerty', username: 'Laguille', wallet: 3521)
+christiane = User.create!(email: 'christiane@email.com', last_name: 'Bugel', first_name: 'Christiane', password: 'azerty', username: 'Christiane44', wallet: 4328)
+matthias = User.create!(email: 'matthias@email.com', last_name: 'Seeburger', first_name: 'Matthias', password: 'azerty', username: 'Xastiro', wallet: 3911)
+john = User.create!(email: 'john@email.com', last_name: 'Smith', first_name: 'John', password: 'azerty', username: 'Joe', wallet: 2376)
+lea = User.create!(email: 'lea@email.com', last_name: 'de la Tour', first_name: 'Léa', password: 'azerty', username: 'MadameIrma', wallet: 2192)
+gaelle = User.create!(email: 'gaelle@email.com', last_name: 'Malerto', first_name: 'Gaelle', password: 'azerty', username: 'Gaelle', wallet: 2670)
+mathis = User.create!(email: 'mathis@email.com', last_name: 'Correz', first_name: 'Mathis', password: 'azerty', username: 'Mat89', wallet: 2901)
+julien = User.create!(email: 'julien@email.com', last_name: 'Lalou', first_name: 'Julien', password: 'azerty', username: 'Juliexne', wallet: 2432)
+malo = User.create!(email: 'malo@email.com', last_name: 'Rilain', first_name: 'Malo', password: 'azerty', username: 'Malodos', wallet: 2351)
+juliette = User.create!(email: 'juliette@email.com', last_name: 'Fitchi', first_name: 'Juliette', password: 'azerty', username: 'Juju23', wallet: 2198)
+marin = User.create!(email: 'marin@email.com', last_name: 'Seedzberger', first_name: 'Marin', password: 'azerty', username: 'Marindodouce', wallet: 2003)
+louis = User.create!(email: 'louis@email.com', last_name: 'Denier', first_name: 'Louis', password: 'azerty', username: 'Loul2', wallet: 2991)
+karl = User.create!(email: 'karl@email.com', last_name: 'Ditzberger', first_name: 'Karl', password: 'azerty', username: 'KarlosMOI', wallet: 2858)
+charlotte = User.create!(email: 'charlotte@email.com', last_name: 'Drai', first_name: 'Charlotte', password: 'azerty', username: 'Chacha25', wallet: 2604)
+leo = User.create!(email: 'leo@email.com', last_name: 'Leroy', first_name: 'Leo', password: 'azerty', username: 'LeoA1A', wallet: 2093)
+arthur = User.create!(email: 'arthur@email.com', last_name: 'Querty', first_name: 'Arthur', password: 'azerty', username: 'ArthurKing98', wallet: 2310)
+nina = User.create!(email: 'nina@email.com', last_name: 'Uraz', first_name: 'Nina', password: 'azerty', username: 'NinaaBE', wallet: 2771)
+armand = User.create!(email: 'armand@email.com', last_name: 'Creps', first_name: 'Armand', password: 'azerty', username: 'Armandrier90', wallet: 2660)
+luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc', password: 'azerty', username: 'LucFX', wallet: 2504)
 
 puts 'Users well generated'
 
@@ -229,8 +229,8 @@ parité = Bet.new(
 tourdefrance = Bet.new(
   hashtag: "#Alaphilippe #TDF",
   description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que le champion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
-  expiring_at: Date.new(2022,03,07),
-  question: "Le francais Julian alaphilippe gagnera t-il le tour de France 2022 ?",
+  expiring_at: Date.new(2022,07,24),
+  question: "Le francais Julian Alaphilippe gagnera t-il le tour de France 2022 ?",
   category: "Sport",
   publisher: luc
 )

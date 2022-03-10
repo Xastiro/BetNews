@@ -1,0 +1,14 @@
+.swal2-range {
+  input[type="range"] {
+    background-color: white;
+  }
+
+  output::after {
+    margin-left: 5px;
+    content: asset-url("BetKoinSmall.png");
+    // content: "🪙";
+    display: inline-block;
+    // width: 16px;
+    // height: 16px;
+  }
+}
