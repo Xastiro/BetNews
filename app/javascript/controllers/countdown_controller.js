@@ -22,7 +22,9 @@ export default class extends Controller {
 
       const now = new Date().getTime();
 
+      // const date = new Date(this.dateValue).getTime();
       const date = new Date(this.dateValue).getTime();
+
       // // Find the distance between now and the count down date
       var distance = date - now;
 
@@ -34,11 +36,11 @@ export default class extends Controller {
     // console.log(this.dateValue);
     // Output the result in an element with id="countdown"
       if (days > 0) {
-        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + days + " j";
+        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + days + 1 + " j";
       } else if (hours > 0) {
-        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + hours + " h";
+        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + hours + 1 + " h";
       } else if (minutes > 0) {
-        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + minutes + " m";
+        this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + minutes + 1 + " min";
       } else if (seconds > 0) {
         this.element.innerHTML = "<i class='fas fa-hourglass-half'></i> " + seconds + " s";
       } else {

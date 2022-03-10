@@ -6,7 +6,7 @@
       <div class="card-top p-3">
         <p class="card-title mb-0"><%= bet.hashtag %></p>
         <div class="index-border-radius-style card-img-bg p-3 d-flex" style="background-image: url(<%= cl_image_path(bet.photo.key, alt: "Image that illustrates the bet") %>);">
-          <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at %>"></p>
+          <p class="tag-position" data-controller="countdown" data-countdown-target='timer' data-countdown-date-value="<%= bet.expiring_at.to_time.iso8601 %>"></p>
         </div>
         <div class="pt-3">
           <%# <%= link_to bet_path(bet), class: "text-decoration-none index-learn-more-hover" do %>

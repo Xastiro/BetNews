@@ -10,6 +10,7 @@ class BetsController < ApplicationController
       @bets = @bets.filter_by_category(params[:category]) if params[:category].present?
     end
     @bets = @bets.sort_by(&:expiring_at).select { |bet| bet.expiring_at > DateTime.now }
+    
 
     @betting = Betting.new
 
