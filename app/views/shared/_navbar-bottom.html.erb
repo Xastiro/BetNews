@@ -1,23 +1,21 @@
 <div class="navbar navbar-expand-sm">
   <div class="container-fluid">
-    <%# <p>paris</p> %>
 
+    <%# <p>paris</p> %>
     <%= link_to bets_path do  %>
       <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name != 'new' && action_name != 'published' %>">
-
-
-        <i class="fas fa-dice"></i>
-        <%# <p>paris</p> %>
-
+      <i class="fas fa-dice"></i>
       </div>
     <% end %>
+
 <%= link_to workinprogress_path do  %>
     <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'pages' && action_name == 'workinprogress' %>">
+
       <i class="fas fa-users fa-sm"></i>
-      <%# <p>friends</p> %>
     </div>
   <% end %>
 
+<%# <p>Publier</p> %>
 <div></div>
   <%= link_to user_signed_in? ? new_bet_path : new_user_session_path, class: "link-to-publish" do  %>
     <div class="d-flex align-items-center flex-column publish-button <%= 'active' if controller_name == 'bets' && action_name == 'new' %>">
@@ -27,10 +25,10 @@
         </span>
       </button>
     </div>
-    <%# <p>Publier</p> %>
   <% end %>
 
 <div></div>
+
 
   <%= link_to users_path do  %>
     <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'users' && action_name == 'index' %>" >
@@ -41,10 +39,13 @@
 
 
 
+<%# <p>Profil</p> %>
   <%= link_to profile_bettings_path do  %>
+
     <div class="d-flex align-items-center flex-column <%= 'active' if controller_name == 'bets' && action_name == 'published' || controller_name == 'bettings' && action_name == 'index'%>">
       <i class="fas fa-user-circle"></i>
       <%# <p>Profil</p> %>
     </div>
   <% end %>
+
 </div>

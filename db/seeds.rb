@@ -35,20 +35,20 @@ luc = User.create!(email: 'luc@email.com', last_name: 'Dulul', first_name: 'Luc'
 puts 'Users well generated'
 
 chomage = Bet.new(
-  hashtag: "#chomage #zoneEuro",
-  description: "En décembre 2021, le taux de chômage corrigé des variations saisonnières de la zone euro était de 7,0%, en baisse par rapport au taux de 7,1% enregistré en novembre 2021 et au taux de 8,2% de décembre 2020. Le taux de chômage de l'UE était de 6,4% en décembre 2021, en baisse par rapport au taux de 6,5% de novembre 2021 et au taux de 7,5% enregistré en décembre 2020. Ces chiffres sont publiés par Eurostat, l’office statistique de l’Union européenne",
+  hashtag: "#chômage #zoneEuro",
+  description: "En décembre 2021, le taux de chômage corrigé des variations saisonnières de la zone euro était de 7,0%, en baisse par rapport au taux de 7,1% enregistré en novembre 2021 et au taux de 8,2% de décembre 2020. Le taux de chômage de l'UE était de 6,4% en décembre 2021, en baisse par rapport au taux de 6,5% de novembre 2021 et au taux de 7,5% enregistré en décembre 2020. Ces chiffres sont publiés par Eurostat, l’office statistique de l’Union européenne.",
   expiring_at: Date.new(2022,02,01),
-  question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en janvier 2022?",
+  question: "Le taux de chomage sera t-il supérieur à 7% dans la zone euro en janvier 2022 ?",
   category: "Economie",
   publisher: hugo,
-  result: "no"
+  result: "no",
 )
 
 cesar = Bet.new(
   hashtag: "#cinéma #César #Niney",
-  description: "Sont nommés pour le César du meilleur acteur: Damien Bonnard dans Les Intranquilles, Adam Driver dans Annette, Gilles Lellouche dans BAC Nord, Vincent Macaigne dans Médecin de nuit, Benoît Magimel dans De son vivant, Pio Marmaï dans La Fracture, Pierre Niney dans Boîte noire",
+  description: "Sont nommés pour le César du meilleur acteur : Damien Bonnard dans Les Intranquilles, Adam Driver dans Annette, Gilles Lellouche dans BAC Nord, Vincent Macaigne dans Médecin de nuit, Benoît Magimel dans De son vivant, Pio Marmaï dans La Fracture, Pierre Niney dans Boîte noire.",
   expiring_at: Date.new(2022,02,25),
-  question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire?",
+  question: "Pierre Niney va t-il recevoir un César pour le film Boîte noire ?",
   category: "Culture",
   publisher: gaelle,
   result: "no"
@@ -58,7 +58,7 @@ goldman = Bet.new(
   hashtag: "#musique #Goldman",
   description: "Et si le chanteur aux quelques 30 millions d'albums vendus faisait son grand retour dans les studios ? C'est en tout cas ce qu'espèrent très fort les fans de Jean-Jacques Goldman qui attendent depuis près de 20 ans un nouveau titre de leur idole. Et leurs espoirs ont été réchauffés par une petite phrase, non pas du chanteur mais de l'un de ses proches. Erick Benzi, l’arrangeur historique de Jean-Jacques Goldman s'est confié lors d'une interview avec nos confrères du Figaro. Il a mentionné un éventuel prochain album de Jean-Jacques Goldman en disant : C’est drôle, dans les notes de pochette de Chansons pour les pieds, son dernier disque, il avait inscrit : Erick, tu es libre pour le prochain ?.",
   expiring_at: Date.new(2022,02,25),
-  question: "JJ Goldman va t-il sortir un nouvel album?",
+  question: "JJ Goldman va t-il sortir un nouvel album ?",
   category: "Culture",
   publisher: sarah,
 )
@@ -75,51 +75,51 @@ goncourt = Bet.new(
 kohlanta = Bet.new(
   hashtag: "#Koh-Lanta #tvshow",
   description: "Cette nouvelle saison de Koh-Lanta est totalement inédite. C’est du jamais vu : il n’y aura pas un, mais 2 totems cette année ! Celui que vous connaissez, le totem d’immunité, qui protège les gagnants… et le Totem maudit ! Perdre une épreuve, c’est en hériter, et subir l’une de ses nombreuses malédictions. Son ombre plane sur cette saison, du premier au dernier jour de l’aventure. C’est une certitude, le Totem maudit va bousculer les destins des 24 nouveaux aventuriers qui ont décidé de se mesurer les uns aux autres. Dans des conditions dantesques, au pied des spectaculaires falaises de l’archipel de Palawan aux Philippines, ces 24 apprentis Robinsons vont découvrir la vie à la dure, la faim, la fatigue et les stratégies. Avec courage et détermination, ces 12 femmes et ces 12 hommes vont tout faire pour réaliser leur rêve, et gagner Koh-Lanta. Mais la route longue, et semée d’embûches, au premier rang desquelles se trouve, cette année, le Totem maudit.",
-  expiring_at: Date.new(2022,03,05),
-  question: "Alexandra va t-elle se faire éliminer de koh lanta mardi prochain?",
+  expiring_at: Date.new(2022,03,02),
+  question: "Alexandra va t-elle se faire éliminer de Koh-Lanta mardi prochain ?",
   category: "Divertissement",
   publisher: hugo
 )
 
 macron = Bet.new(
-  hashtag: "#election #france",
+  hashtag: "#élection #France",
   description: "L'élection présidentielle 2022 permettra d'élire le ou la futur(e) président(e) de la République pour un mandat de cinq ans. Le premier tour aura lieu dimanche 10 avril 2022, et le second tour entre les deux premiers candidats dimanche 24 avril 2022.",
   question: "Macron va t'il être réélu ?",
-  expiring_at: Date.new(2022,04,22),
+  expiring_at: Date.new(2022,04,24),
   category: "Politique",
   publisher: matthias
 )
 
 foot = Bet.new(
-  hashtag: "#psg #om",
-  description: "Le match PSG - Marseille de Ligue 1 est programmé pour le Dimanche 17 Avril 2022. Au lundi 28 février 2022, l'équipe de Paris Saint-Germain se classe 1e de la Ligue 1, avec un total de 59 points. Elle totalise 18 victoires, 5 matchs nuls et 1 défaites. PSG a marqué 52 buts et en a encaissés 19, ce qui lui donne un goal average de 33. De son côté, l'équipe de Olympique de Marseille se classe 2e de la Ligue 1, avec un total de 46 points. Elle compte 13 victoires, 7 matchs nuls et 4 défaites. Marseille a inscrit 38 buts et en a encaissés 21. Elle présente un goal average de 17.",
+  hashtag: "#PSG #OM",
+  description: "Le match PSG-Marseille de Ligue 1 est programmé pour le Dimanche 17 Avril 2022. Au lundi 28 février 2022, l'équipe de Paris Saint-Germain se classe 1e de la Ligue 1, avec un total de 59 points. Elle totalise 18 victoires, 5 matchs nuls et 1 défaites. PSG a marqué 52 buts et en a encaissés 19, ce qui lui donne un goal average de 33. De son côté, l'équipe de Olympique de Marseille se classe 2e de la Ligue 1, avec un total de 46 points. Elle compte 13 victoires, 7 matchs nuls et 4 défaites. Marseille a inscrit 38 buts et en a encaissés 21. Elle présente un goal average de 17.",
   expiring_at: Date.new(2022,04,17),
-  question: "Le PSG va t-il gagner face à l'OM le 24/04?",
+  question: "Le PSG va t-il gagner face à l'OM le 17/04 ?",
   category: "Sport",
   publisher: john
 )
 
 ukraine = Bet.new(
-  hashtag: "#ukraine #war #UE",
+  hashtag: "#Ukraine #UE",
   description: "Ces dernières années, dans le contexte de la guerre civile contre les séparatistes pro-russes dans le Donbass, l’Ukraine fait part de sa volonté de rejoindre l’Union européenne. En février 2019, le Parlement ukrainien grave dans la Constitution son aspiration d’adhésion à l’UE, obligeant les pouvoirs législatif et exécutif à œuvrer pour réaliser cet objectif. Alors que les tensions avec la Russie vont croissant, le nouveau président ukrainien Volodymyr Zelensky exhorte en avril 2021 les Européens à initier une procédure d’adhésion de l’Etat qu’il préside à l’Union européenne.
   En février 2022, la Russie pénètre sur le territoire ukrainien après avoir reconnu l’indépendance de Donetsk et de Louhansk. Elle lance une offensive militaire contre l’Ukraine et l’Union européenne condamne fermement cette décision. L’Europe affiche son soutien à l’Ukraine et prend de nouvelles sanctions particulièrement lourdes contre la Russie. Kiev effectue officiellement une demande d’adhésion le 28 février 2022, cinq jours après l’invasion russe. Un jour plus tôt, la présidente de la Commission européenne Ursula von der Leyen s’est prononcée en faveur de cette adhésion de l’Ukraine à l’Union européenne : “ils sont des nôtres et nous les voulons parmi nous”. Le président Volodymyr Zelensky, le Premier ministre Denys Chmyhal et le président du Parlement Rouslan Stefantchouk signent ainsi une demande formelle d’entrée de l’Ukraine dans l’UE. Le chef d’Etat ukrainien appelle même à une intégration “sans délai” via “une nouvelle procédure spéciale” pour bénéficier de ce statut qui assurerait une protection à son pays. A ce sujet, le président du Conseil européen Charles Michel rappelle qu’un avis officiel de la Commission et un accord unanime des Vingt-Sept sont nécessaires.",
   expiring_at: Date.new(2022,12,31),
-  question: "L'Ukraine va t-elle intégrer l'union européenne ?",
+  question: "L'Ukraine va t-elle intégrer l'Union Européenne ?",
   category: "Politique",
   publisher: lea
 )
 
 petrole = Bet.new(
-  hashtag: "#petrole #baril",
+  hashtag: "#pétrole #baril",
   description: "Jusqu'où iront les cours du pétrole et du gaz ? Comme redouté ces derniers jours, le prix du baril de brent a franchi pour la première fois depuis 2014 la barre des 100 dollars. En début de matinée, quand Vladimir Poutine a annoncé le déclenchement de son opération militaire en Ukraine, il a même culminé brièvement à 105 dollars. Même tendance pour le WTI, référence américaine du baril de pétrole, qui se négocie à 96 dollars, après un pic à plus de 100 dollars dans la matinée.",
   expiring_at: Date.new(2022,04,30),
-  question: " Le prix du baril va t-il dépasser les 120 dollars?",
+  question: " Le prix du baril va t-il dépasser les 120 dollars ?",
   category: "Economie",
   publisher: gaelle
 )
 
 zemmour = Bet.new(
-  hashtag: "#election #parrainage",
+  hashtag: "#élection #parrainages",
   description: "Tout citoyen français âgé de 18 ans et plus, jouissant de ses droits civiques, peut se présenter à l’élection pour la présidence de la République, mais sa candidature n’est validée par le Conseil constitutionnel que s’il obtient au minimum 500 parrainages d’élus. Ce système a été mis en place par la loi du 6 novembre 1962 instaurant l’élection du président au suffrage universel afin d’en limiter le nombre de candidats. Il exige actuellement un minimum de 500 parrainages (ou présentations), que les élus suivants sont habilités à donner. Les candidats à la présidence de la République sont contraints de collecter des parrainages dans au moins 30 départements ou collectivités d’outre-mer différents, sans que l’un d’entre eux dépasse un dixième des parrainages (soit 50). Cela assure un minimum de représentativité géographique.",
   question: "Eric Zemmour aura t-il ses 500 parrainages ?",
   expiring_at: Date.new(2022,03,04),
@@ -128,27 +128,27 @@ zemmour = Bet.new(
 )
 
 thevoice = Bet.new(
-  hashtag: "#thevoice #vianney",
+  hashtag: "#TheVoice #Vianney",
   description: "Charles Kaylan est originaire de Côte d’Ivoire, et a emménagé en Italie pour ses études. Il a appris à maîtriser sa voix en autodidacte. Ce soir, il réalise son rêve d'enfant en participant à l'aventure The Voice. Il chante 'Bruises' de Lewis Capaldi et met tous les coachs d'accord. Amel Bent buzze dès la première note. Mais c'est Vianney qui réussit à recruter ce nouveau talent dans son équipe.",
   expiring_at: Date.new(2022,05,15),
-  question: "Charles va t-il gagner The Voice 2022?",
+  question: "Charles va t-il gagner The Voice 2022 ?",
   category: "Divertissement",
   publisher: julien
 )
 
 covid = Bet.new(
-  hashtag: "#covid #france",
+  hashtag: "#Covid #France",
   description: "Le ministre de la Santé Olivier Véran a indiqué le 16 février que la fin du port du masque en intérieur était envisageable à la mi-mars si la circulation du Covid-19 est 'très faible'. Un allègement du pass vaccinal est également possible. 'À la mi-mars, si les hôpitaux sont en état normal de fonctionnement, et si la circulation du virus est très faible, nous pourrons enlever les masques pour les adultes et pour les enfants, pour tout ou partie des lieux fermés, y compris sans pass', a déclaré Olivier Véran. 'Nous pourrons commencer à alléger fortement le dispositif du pass vaccinal, peut-être pas tout en bloc, peut-être qu'on gardera des mesures pour la fin mars début avril', a-t-il poursuivi.",
   expiring_at: Date.new(2022,04,15),
-  question: "Le masque sera t-il toujours obligatoire en France en avril 2022?",
+  question: "Le masque sera t-il toujours obligatoire en France en avril 2022 ?",
   category: "Santé",
   publisher: malo
 )
 
 chasse = Bet.new(
-  hashtag: "#chasse #france",
+  hashtag: "#chasse #France",
   description: "La chasse à courre, aussi appelée vénerie, consiste à traquer un animal (un cerf, sanglier, chevreuil, renard ou lièvre) jusqu’à épuisement à l’aide d’une meute de chiens et de cavaliers à cheval. 84% des Français sont opposés à cette pratique (sondage Ifop 2017) et la chasse à courre est déjà interdite dans plusieurs pays, dont la Grande-Bretagne et l’Allemagne. Très tôt dans la campagne, Yannick Jadot a fait de cette question l’un des marqueurs de sa candidature. Le candidat écologiste propose que les accidents de chasse soient davantage réprimés et que le permis de chasse soit renouvelé tous les cinq ans. Il veut aussi mettre fin à l’agrainage et à la chasse à enclos. Sur cette question, la candidate socialiste Anne Hidalgo ne s’est pas directement prononcée, mais sa porte-parole, Carole Delga, se disait fin octobre sur France Bleu ,pas d’accord ​avec cette proposition du candidat écologiste. Jean-Luc Mélenchon rejoint Yannick Jadot sur l’interdiction de la chasse le week-end et lors des vacances scolaires. C’est là que le risque serait le plus grand​, a-t-il déclaré dimanche dernier sur France 3 . Le leader de La France Insoumise propose également de cesser de vendre des armes qui sont aussi puissantes​. Dans son programme, il promet enfin d’interdire les pratiques cruelles telles que le déterrage et la chasse à courre. À droite, tous les candidats s’accordent plus ou moins pour défendre cette pratique. Il faut arrêter la chasse aux chasseurs​, a lancé Valérie Pécresse la semaine dernière lors du grand oral du Mouvement de la ruralité (anciennement ' Chasse, pêche, nature et traditions '​). On n’entrave pas la pêche et la chasse qui sont des libertés issues de la Révolution​, a insisté la candidate LR. Également présent, Eric Zemmour a plaidé pour un grand ministère de l’agriculture de la protection de l’environnement et de la ruralité qui regroupera agriculture, environnement, biodiversité ainsi que la chasse, la pêche et la forêt​.",
-  expiring_at: Date.new(2022,03,15),
+  expiring_at: Date.new(2022,12,31),
   question: "La chasse à courre sera t-elle interdite en France en 2022 ?",
   category: "Planète",
   publisher: juliette
@@ -157,7 +157,7 @@ chasse = Bet.new(
 cac40 = Bet.new(
   hashtag: "#CAC40 #bourse",
   description: "Le CAC40, l'indice qui regroupe les 40 plus grosses sociétés françaises cotées, a perdu 5,73% en 5 jours à cause de la guerre en Ukraine. Entre espoir de voir la guerre prendre fin et craintes de voir le conflit durer, les jours à venir sont bien incertains pour les marchés financiers.",
-  expiring_at: Date.new(2022,03,8),
+  expiring_at: Date.new(2022,03,12),
   question: "Le CAC40 clôturera t-il au dessus de 6500 points le 11 mars 2022 ?",
   category: "Economie",
   publisher: marin
@@ -165,9 +165,9 @@ cac40 = Bet.new(
 
 rugby = Bet.new(
   hashtag: "#6nations #XVdeFrance",
-  description: "Le XV de France de Fabien Galthié réalise de très bonnes performances en ce tournois des 6 nations. Après avoir battu les All Black en novembre, le groupe emmené par Antoine Dupont, a gagné se matchs du tournois des 6 nations.",
-  expiring_at: Date.new(2022,03,19),
-  question: "Le 19/03 le XV de France remportera le tournois des 6 nations ?",
+  description: "Le XV de France de Fabien Galthié réalise de très bonnes performances en ce tournois des 6 nations. Après avoir battu les All Black en novembre, le groupe emmené par Antoine Dupont, a gagné tous ses matchs du tournois des 6 nations.",
+  expiring_at: Date.new(2022,03,20),
+  question: "Le 19/03 le XV de France remportera le Tournois des 6 nations ?",
   category: "Sport",
   publisher: louis
 )
@@ -183,9 +183,9 @@ rassemblementNational = Bet.new(
 
 quiveutêtremonassocié = Bet.new(
   hashtag: "#QVEMA #business",
-  description: "Alors que la Startup nation est sur un nuage depuis plusieurs maintenant, les startups francaises continuent à nous faire rêver. La création de certaines licornes représentent de belles opportunités d'investissement pour des investisseurs fortunés.",
+  description: "Alors que la Startup nation est sur un nuage depuis plusieurs années, les startups tricolores continuent à nous faire rêver. La création de certaines licornes représentent de belles opportunités d'investissement pour des investisseurs.",
   expiring_at: Date.new(2022,03,31),
-  question: "Elone Musk aura t-il rejoint les investisseurs de Qui veut être mon associé avant avril ?",
+  question: "Elone Musk aura t-il rejoint les investisseurs de Qui veut être mon associé avant avril 2022 ?",
   category: "Divertissement",
   publisher: charlotte
 )
@@ -194,14 +194,14 @@ train = Bet.new(
   hashtag: "#SNCF #mobilité",
   description: "Depuis décembre 2021, l'opérateur italien Trenitalia propose son service de voyage sur la ligne Paris Lyon à des tarifs bien moins élevés que ceux du TGV français. Beaucoup d'autres passagers aimeraient voir d'autres lignes s'ouvrir à la concurrence. D'un autre côté, certains s'inquiètent de la baisse de qualité de service qui pourrait en résulter.",
   expiring_at: Date.new(2022,05,31),
-  question: "D'ici fin mai, une entreprise ferroviaire, autre que la SNCF, opérera sur la ligne Paris Nantes ?",
+  question: "D'ici fin mai 2022, une entreprise ferroviaire, autre que la SNCF, opérera sur la ligne Paris Nantes ?",
   category: "Economie",
   publisher: leo
 )
 
 tennis = Bet.new(
-  hashtag: "#djocko #tennis",
-  description: "Alors que le monde entier a suivi l'expulsion de Novak Djokovic de l'Open d'Australie 2022, l'avenir du l'expulsion du N°1 mondial est incertain. Sa participation aux prochains tournois ne serait envisageable uniquement si le Serbe accepte de se faire vacciner contre la Covid-19.",
+  hashtag: "#Djocko #RG #tennis",
+  description: "Alors que le monde entier a suivi l'expulsion de Novak Djokovic de l'Open d'Australie 2022, l'avenir du N°1 mondial est incertain. Sa participation aux prochains tournois n'est envisageable uniquement si le Serbe accepte de se faire vacciner contre la Covid-19.",
   expiring_at: Date.new(2022,05,10),
   question: "Novak Djokovic participera t-il à Roland-Garros 2022 ?",
   category: "Sport",
@@ -209,17 +209,17 @@ tennis = Bet.new(
 )
 
 truthsocial = Bet.new(
-  hashtag: "#réseau_social #Trump",
+  hashtag: "#app #social #Trump",
   description: "Le groupe de l’ancien président américain Donald Trump prévoit de lancer l’application mobile de son nouveau réseau social, TRUTH Social, le 21 février 2022. TRUTH Social, présentée par le Trump Media & Technology Group (TMTG) comme une alternative à Twitter, dont Donald Trump a été exclu après l’assaut de ses partisans contre le Capitole le 6 janvier 2021",
   expiring_at: Date.new(2022,06,01),
-  question: "Le réseau social de Donal Trump, TRUTH Social, sera disponible en France avant l'été ?",
+  question: "Le réseau social de Donal Trump, TRUTH Social, sera disponible en France avant l'été 2022 ?",
   category: "Divertissement",
   publisher: nina
 )
 
 parité = Bet.new(
   hashtag: "#présidentille #mixité",
-  description: "Alors que plusieurs femmes sont engagées dans la course à l'Élysée, peut-être que l'une d'elles deviendra la première femme présidente de France. Pour rappel, Valérie Pécresse, Anne Hidalgo Marine Le Pen sont toutes les trois candidates de grands partis",
+  description: "Alors que plusieurs femmes sont engagées dans la course à l'Élysée, peut-être que l'une d'elles deviendra la première femme présidente de France. Pour rappel, Valérie Pécresse, Anne Hidalgo et Marine Le Pen sont toutes les trois candidates de grands partis",
   expiring_at: Date.new(2022,04,24),
   question: "Une femme élue Présidente de la République en 2022 ?",
   category: "Politique",
@@ -227,13 +227,22 @@ parité = Bet.new(
 )
 
 tourdefrance = Bet.new(
-  hashtag: "#alaphilippe #TDF",
-  description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que lechampion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
+  hashtag: "#Alaphilippe #TDF",
+  description: "Le Tour de France 2022 partira de Copenhague au Danemark le 01/07/2022. Les espoirs que le champion du monde sur route 2021, J. Alaphilippe, remporte cette épreuve sont nombreux.",
   expiring_at: Date.new(2022,03,07),
   question: "Le francais Julian alaphilippe gagnera t-il le tour de France 2022 ?",
   category: "Sport",
   publisher: luc
 )
+
+# meteo = Bet.new(
+#   hashtag: "#MarsPluvieux #EnvieDeSoleil",
+#   description: "Alors que le soleil n'a pas été vu à Nantes depuis plusieurs semaines, nombreux sont ceux à se demander quand est-ce qu'il sera de retour...",
+#   expiring_at: Date.new(2022,03,9),
+#   question: "Pleuvra t-il à Nantes entre 17h et 18h30 mercredi 9 mars 2022 ?",
+#   category: "Planète",
+#   publisher: sarah
+# )
 
 # Bets photos
 
@@ -325,20 +334,26 @@ file_goldman = URI.open('https://res.cloudinary.com/dqtnidhro/image/upload/v1646
 goldman.photo.attach(io: file_goldman, filename: 'nes.jpg', content_type: 'image/jpg')
 goldman.save!
 
+# file_meteo = URI.open('https://res.cloudinary.com/dbitcpujz/image/upload/v1646838401/meteo.png')
+# meteo.photo.attach(io: file_meteo, filename: 'nes.jpg', content_type: 'image/jpg')
+# meteo.save!
+
 puts 'Bets well generated'
 
 Betting.create!(
   answer: "no",
   user: luc,
   bet: chomage,
-  won: true
+  won: true,
+  winning_odds: 1.2
 )
 
 Betting.create!(
   answer: "yes",
   user: armand,
   bet: cesar,
-  won: false
+  won: false,
+  winning_odds: 2.3
 )
 
 Betting.create!(
@@ -369,14 +384,16 @@ Betting.create!(
   answer: "yes",
   user: hugo,
   bet: cesar,
-  won: false
+  won: false,
+  winning_odds: 2.1
 )
 
 Betting.create!(
   answer: "no",
   user: hugo,
   bet: chomage,
-  won: true
+  won: true,
+  winning_odds: 2.3,
 )
 
 Betting.create!(
@@ -560,7 +577,7 @@ cesarmedia = Media.create!(
 )
 
 kohlantamedia = Media.create!(
-  source: "Huffingtonpos",
+  source: "Huffingtonpost",
   url: "https://www.huffingtonpost.fr/entry/franck-quitte-koh-lanta-et-sattire-les-foudres-de-son-equipe_fr_621f289ae4b0783a8f089531",
   bet: kohlanta,
 )

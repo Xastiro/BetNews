@@ -135,8 +135,17 @@
 }
 
 .container-form {
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 500;
+  input {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 18px;
+  }
   ::placeholder {
     color: $mylightgrey;
+    font-size: 12px;
   }
 }
 
@@ -147,3 +156,10 @@
     width: 80%;
   }
 }
+
+.bet_description {
+  textarea {
+    height: 60px;
+  }
+}
+

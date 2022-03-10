@@ -58,28 +58,46 @@
       color: white;
       font-weight: 700;
       font-size: larger;
+      line-height: 30px;
       position: absolute;
       right: 0;
       left: 0;
       top: 90px;
       font-family: poppins;
-      width: 40%;
+      width: 45%;
       border-radius: 5px;
       margin: auto;
+      img {
+        margin-bottom: 4px;
+      }
     }
+
+    .lose-reminder-detail {
+      font-family: poppins;
+      font-size: 14px;
+      color: $red-lose;
+      font-weight: bold;
+      margin-top: 16px;
+      margin-bottom: 0px;
+    }
+
     .win-reminder {
       background-color: $green-win;
       color: white;
       font-weight: 700;
       font-size: larger;
+      line-height: 30px;
       position: absolute;
       right: 0;
       left: 0;
       top: 90px;
       font-family: poppins;
-      width: 40%;
+      width: 45%;
       border-radius: 5px;
       margin: auto;
+      img {
+        margin-bottom: 4px;
+      }
     }
 
     .image-card-link {

@@ -3,7 +3,6 @@
 
 <div class="container-account px-4">
 
-
   <h1 class="py-3"> <strong> Mon compte </strong> </h1>
   <div class="edit-info">
     <p> <strong> Prénom : </strong> <%= current_user.first_name %> </p>
@@ -25,7 +24,7 @@
 
   <div class="deconnexion-button">
     <%= link_to destroy_user_session_path, method: :delete do %>
-      <p> Se déconnecter </p>
+      <p><strong> Se déconnecter </strong></p>
     <% end %>
   </div>
 </div>

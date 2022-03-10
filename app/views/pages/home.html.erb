@@ -21,17 +21,17 @@
 
         <div class="carousel-inner">
           <div class="banner">
-            <div class="carousel-item p-5 active">
+            <div class="carousel-item px-5 py-4 active">
               <h5><strong>Parie sur le futur</strong></h5>
               <br>
               <p class="mb-5">Découvre les grandes questions du jour et partage ton avis avec notre communauté en pariant sur les événements à venir!</p>
             </div>
-            <div class="carousel-item p-5">
+            <div class="carousel-item px-5 py-4">
               <h5> <strong>Lance des paris </strong></h5>
               <br>
               <p class="mb-5">Devient propulseur de conversations autour d'un nouveau sujet et partage tes connaissances avec la communauté Betnews.</p>
             </div>
-            <div class="carousel-item p-5">
+            <div class="carousel-item px-5 py-4">
               <h5><strong>Vote</strong></h5>
               <br>
               <p class="mb-5">Suis les sujets d'actualités et questionne toi sur les événements à venir.
@@ -43,12 +43,17 @@
     </div>
   </div>
 
+<div>
+<%= link_to bets_path, class: "text-decoration-none" do %>
   <div class="d-flex justify-content-around pt-4">
-    <p class="bets-available-button bets-available-hover bets-available-shadow"><%= link_to "Paris disponibles", bets_path %></p>
+    <p class="bets-available-button bets-available-hover bets-available-shadow">Paris disponibles</p>
   </div>
+<% end %>
   <div class="connexion-button">
-    <%= link_to new_user_session_path do %>
-      <p> Se connecter </p>
+    <% if !user_signed_in? %>
+      <%= link_to new_user_session_path do %>
+        <p> Se connecter </p>
+      <% end %>
     <% end %>
   </div>
 </div>
