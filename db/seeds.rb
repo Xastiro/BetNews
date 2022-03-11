@@ -111,10 +111,10 @@ foot = Bet.new(
 psg = Bet.new(
   hashtag: "#PSG #championsleague",
   description: "Après l’immense déception de ce mercredi soir, le Paris SG va avoir du mal à garder le cap dans les prochains jours, tant le coeur n’y est plus. Le titre de champion de France, quasiment déjà en poche, ne fait plus forcément vibrer à Paris, d’autant que la concurrence est quasiment inexistante. Le PSG va surtout devoir s’attacher à tirer dans le même sens, et éviter les polémiques qui laissent à penser que cette saison 2021-2022 est à ranger au rayon des pires fiascos de ces dernières années. Après la terrible élimination face au Real Madrid, le sort de Mauricio Pochettino semble scellé. Son avenir devrait s’écrire loin de la capitale française.",
-  expiring_at: Date.new(2022,03,11),
+  expiring_at: DateTime.new(2022, 3, 10, 10, 10, 10),
   question: "Mauricio Pochettino aura annoncé son départ avant la fin de la semaine ?",
   category: "Sport",
-  publisher: christiane
+  publisher: hugo
 )
 
 ukraine = Bet.new(
