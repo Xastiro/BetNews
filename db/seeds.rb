@@ -204,7 +204,7 @@ quiveutêtremonassocié = Bet.new(
   hashtag: "#QVEMA #business",
   description: "Alors que la Startup nation est sur un nuage depuis plusieurs années, les startups tricolores continuent à nous faire rêver. La création de certaines licornes représentent de belles opportunités d'investissement pour des investisseurs.",
   expiring_at: Date.new(2022,03,31),
-  question: "Elone Musk aura t-il rejoint les investisseurs de Qui veut être mon associé avant avril 2022 ?",
+  question: "Elon Musk aura t-il rejoint les investisseurs de Qui veut être mon associé avant avril 2022 ?",
   category: "Divertissement",
   publisher: charlie
 )
