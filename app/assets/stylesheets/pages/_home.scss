@@ -16,7 +16,7 @@
 }
 
 .bets-available-button {
-  
+
   color: #FEFD02;
 
   font-family: poppins;
@@ -82,5 +82,12 @@
     font-size: 15px;
     font-weight: 600;
 
+  }
+}
+
+.yellow-icon {
+  .fas {
+    color: $myyellow;
+    font-size: 40px;
   }
 }
