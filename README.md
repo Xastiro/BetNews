@@ -21,3 +21,4 @@ We would like to add the following features :
 - As a publisher, you can receive a notification on his phone or an email as a reminder when he has to publish the result of his published bet
 - As a user, you can add a profile picture.
 - As user, you can create or join a league to play only with your friends 
+- Add validations checks before saving a bet published by an user
