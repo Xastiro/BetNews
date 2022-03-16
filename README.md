@@ -1,4 +1,5 @@
-# BetNews
+# BetNews 
+http://www.betnews.fr/
 
 ## The project
 BetNews is an application created in 2 weeks by 4 students of Le Wagon, Nantes. This is the final project after 9 weeks of an intensive bootcamp.
